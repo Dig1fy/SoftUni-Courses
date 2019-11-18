@@ -1,0 +1,43 @@
+using System;
+
+namespace TopNumber
+{
+    class Program
+    {
+        static void Main()
+        {
+            int range = int.Parse(Console.ReadLine());
+            int sumOfDigits = 0;
+            int currentNum = 0;
+            bool isThereOddNum = false;
+
+            for (int i = 8; i <= range; i++)
+            {
+                currentNum = i;
+                sumOfDigits = 0;
+                isThereOddNum = false;
+
+                while (currentNum != 0)
+                {
+                    if (currentNum % 10 % 2 == 1)
+                    {
+                        isThereOddNum = true;
+                    }
+
+                    sumOfDigits += currentNum % 10;
+                    currentNum /= 10;
+                }
+
+                Print(sumOfDigits, isThereOddNum, i);
+            }
+        }
+
+        private static void Print(int sumOfDigits, bool isThereOddNum, int i)
+        {
+            if (sumOfDigits % 8 == 0 && isThereOddNum)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
