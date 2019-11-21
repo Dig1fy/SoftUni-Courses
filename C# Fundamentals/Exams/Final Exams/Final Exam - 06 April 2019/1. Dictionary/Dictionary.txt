@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace Dictionary
+{
+    class Program
+    {
+        static void Main()
+        {
+            var listOfWords = new Dictionary<string, List<string>>();
+            var builder = new StringBuilder();
+            var initialInput = Console.ReadLine();
+            var currentWord = initialInput
+                .Split(" | ")
+                .ToArray();
+
+            for (int i = 0; i < currentWord.Length; i++)
+            {
+                var separatedWords = currentWord[i]
+                    .Split(": ")
+                    .ToArray();
+                var word = separatedWords[0];
+                var definition = separatedWords[1];
+
+                if (!listOfWords.ContainsKey(word))
+                {
+                    listOfWords.Add(word, new List<string>());
+                }
+
+                listOfWords[word].Add(definition);
+            }
+
+            var secondInput = Console.ReadLine()
+                .Split(" | ")
+                .ToArray();
+
+            for (int j = 0; j < secondInput.Length; j++)
+            {
+                if (listOfWords.ContainsKey(secondInput[j]))
+                {
+                    builder.AppendLine($"{secondInput[j]}");
+
+                    foreach (var word in listOfWords.Where(x => x.Key == secondInput[j]))
+                    {
+                        foreach (var definition in word.Value.OrderByDescending(x => x.Length))
+                        {
+                            builder.AppendLine($" -{definition}");
+                        }
+                    }
+                }
+            }
+
+            var thirdInput = Console.ReadLine();
+
+            if (thirdInput == "List")
+            {
+                foreach (var word in listOfWords.OrderBy(x => x.Key))
+                {
+                    builder.Append($"{word.Key} ");
+                }
+
+                var listResult = builder.ToString();
+                Console.WriteLine(listResult);
+            }
+
+            else
+            {
+                var endResult = builder.ToString();
+                Console.WriteLine(endResult);
+            }
+        }
+    }
+}

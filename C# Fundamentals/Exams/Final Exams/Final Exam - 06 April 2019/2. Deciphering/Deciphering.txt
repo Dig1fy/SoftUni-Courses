@@ -1,0 +1,46 @@
+using System;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Deciphering
+{
+    class Program
+    {
+        static void Main()
+        {
+            var input = Console.ReadLine();
+            var secondInput = Console.ReadLine()
+                .Split()
+                .ToList();
+            var firstSubstring = secondInput[0];
+            var secondSubstring = secondInput[1];
+
+            var result = DecodeTheString(input);
+            result = result.Replace(firstSubstring, secondSubstring);
+
+            var pattern = @"[^A-Za-z#{}| ]";
+            var isMatch = Regex.IsMatch(result, pattern);
+
+            if (isMatch)
+            {
+                Console.WriteLine("This is not the book you are looking for.");
+            }
+            else
+            {
+                Console.WriteLine(result);
+            }
+        }
+
+        public static string DecodeTheString(string input)
+        {
+            var decrypted = string.Empty;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                decrypted += (char)(input[i] - 3);
+            }
+
+            return decrypted;
+        }
+    }
+}
