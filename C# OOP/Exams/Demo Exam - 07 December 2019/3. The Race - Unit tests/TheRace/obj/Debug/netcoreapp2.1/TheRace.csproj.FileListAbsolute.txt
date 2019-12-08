@@ -1,0 +1,8 @@
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\bin\Debug\netcoreapp2.1\TheRace.deps.json
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\bin\Debug\netcoreapp2.1\TheRace.dll
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\bin\Debug\netcoreapp2.1\TheRace.pdb
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\obj\Debug\netcoreapp2.1\TheRace.csprojAssemblyReference.cache
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\obj\Debug\netcoreapp2.1\TheRace.AssemblyInfoInputs.cache
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\obj\Debug\netcoreapp2.1\TheRace.AssemblyInfo.cs
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\obj\Debug\netcoreapp2.1\TheRace.dll
+C:\Users\q2kfo\OneDrive\Documents\Visual Studio 2019\SOFTUNI\OOP\Exams\Demo Exam - 07 December 2019\3. Unit tests\TheRace\obj\Debug\netcoreapp2.1\TheRace.pdb
