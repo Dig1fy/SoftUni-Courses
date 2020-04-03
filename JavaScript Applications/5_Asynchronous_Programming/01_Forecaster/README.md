@@ -1,0 +1,1 @@
+Added 'h1' to the html with id = "notification". The same appears in the css file, so the errors will pop up with  style :). 
