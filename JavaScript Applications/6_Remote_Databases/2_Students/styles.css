@@ -1,0 +1,87 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+}
+
+table{
+    border:0.5px solid #234465;
+    padding: 1%;
+    margin: 0 auto;
+    width: 65%;
+    border-radius: 4px;
+}
+table th{
+    text-decoration: rgb(red, green, blue);
+    font-style: oblique;
+    border-bottom-style: inset;
+    border-style: ridge;
+    text-align: left;
+}
+table tbody td{
+    text-align: left;
+    border-bottom:1px solid black;
+    padding: 0.5%;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #234465;
+    color: rgb(233, 233, 233)
+}
+
+table tbody tr:nth-child(odd){
+    color: #234465;
+    border-bottom: 1px solid black;
+}
+
+table tbody tr:nth-child(odd) button{
+    background: #2d5f91;
+    color:rgb(255, 255, 255);
+}
+
+table tbody tr:nth-child(even) button{
+    background: rgb(255, 255, 255);
+    color:#234465;
+}
+
+table tr:hover{
+    text-decoration: underline;
+}
+#extractAll{
+    text-align: center;
+    text-decoration: wavy;
+    color: rgb(153, 37, 47);
+    background-color: rgb(213, 231, 233);
+    border-bottom: 2px solid black;
+    border-radius: 1cm;
+    border-left-style: groove;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#deleteBtn{
+    text-align: center;
+    text-decoration: wavy;
+    color: rgb(153, 37, 47);
+    background-color: rgb(213, 231, 233);
+    border-bottom: 2px solid black;
+    border-radius: 1cm;
+    border-left-style: groove;
+    font-size: 16px;
+}
+h2{
+    text-align: center;
+    text-decoration: wavy;
+    color: black;
+    background-color: rgb(247, 250, 253);
+    border-bottom: 1px solid rgb(231, 236, 236);
+    font-size: 15px;
+}
+
+#submit{
+    text-shadow: aqua;
+    font-size: 16px;
+    /* font-style: italic; */
+    background-color: rgb(241, 241, 241);
+    background-size: cover;
+    border-right: #5a2f06;
+    border-radius: 10ch;
+}
