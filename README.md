@@ -57,7 +57,7 @@ Ivaylo Petrov
  </li>
  </ul>
 
-<td colspan="2" width="50%">
+<td colspan="2" width="55%">
   <ul>
   <li><p><a title="Conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/2_Conditional-statements" target="_blank">Conditional statements - exercises</a></p>
   </li>
