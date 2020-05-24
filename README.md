@@ -243,7 +243,7 @@ Ivaylo Petrov
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
 
 <tr><th align="left" width="50%">C# Advanced - September 2019 <br /> 17.09.2019 - 26.10.2019</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 07/11/2019:</th><th>
-<p><a title="C# Advanced" href="https://softuni.bg/certificates/details/76354/4b5497b1" target="_blank">Certificate</a></p>
+<p><a title="C# Advanced" href="https://softuni.bg/certificates/details/72147/9addc663" target="_blank">Certificate</a></p>
 </th></tr>
 </table>
 </summary>
