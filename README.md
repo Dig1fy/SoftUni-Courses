@@ -133,7 +133,7 @@ Ivaylo Petrov
 <!-- Summary Begin -->
 <details>
 <summary> More Details
-<table border="0.3" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0" width="100%" cellspacing="11" cellpadding="3" align="left">
 <tbody>
 <tr><th align="left" width="50%">C# Fundamentals - May 2019<br /> 
 15.05.2019 - 03.08.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 12/08/2019</th><th>
@@ -144,7 +144,7 @@ Ivaylo Petrov
 </summary>
 <!-- Summary End -->
   
-<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0" width="100%" cellspacing="1" cellpadding="1" align="left">
 <tbody>
 <!-- Course Body -->
 <tr>
