@@ -149,50 +149,114 @@ Ivaylo Petrov
 <!-- Course Body -->
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Basic sintax, conditional statements and loops" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/01_BasicSyntaxConditionalStatementsAndLoops/Exercises/Exercisesss" target="_blank">Basic sintax, conditional statements and loops - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
 <p><a title="Basic sintax, conditional statements and loops" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/01_BasicSyntaxConditionalStatementsAndLoops/Exercises/Exercisesss" target="_blank">Basic sintax, conditional statements and loops - additional exercises</a></p>
+  </li>
+  </ul>
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="Lists" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/05_Lists/Exercises" target="_blank">Lists - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
   <p><a title="Lists" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/05_Lists/MoreExercises" target="_blank">Lists - additional exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Data types and variables" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/02_DataTypesAndVariables" target="_blank">Data types and variables - exercises</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="Arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/03_Arrays/Exercises" target="_blank">Arrays - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
   <p><a title="Arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/03_Arrays/MoreExercises" target="_blank">Arrays - additional exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr> 
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Methods" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/04_Methods/Exercises" target="_blank">Methods - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
   <p><a title="Arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/04_Methods/MoreExercises" target="_blank">Methods - additional exercises</a></p>
+  </li>
+  </ul>
 </td>
   
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="Objects and classes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/06_ObjectsAndClasses/Exercises" target="_blank">Objects and classes - exercises</a></p> 
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Associative arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/07_AssociativeArrays/Exercises" target="_blank">Associative arrays - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
   <p><a title="Associative arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/07_AssociativeArrays/MoreExercises" target="_blank">Associative arrays - additional exercises</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="Text processing" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/08_TextProcessing/Exercises" target="_blank">Text processing - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
   <p><a title="Text processing" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/08_TextProcessing/MoreExercises" target="_blank">Text processing - additional exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td  width="50%">
+  <ul>
+  <li>
 <p><a title="Regular expressions" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/09_RegularExpressions/Exercises" target="_blank">Regular expressions - exercises</a></p>
+  </li>
+  </ul>
+  <ul>
+  <li>
   <p><a title="Regular expressions" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/09_RegularExpressions/MoreExercises" target="_blank">Regular expressions - additional exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
@@ -203,19 +267,35 @@ Ivaylo Petrov
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Mid exam 10 March 2019 - group 2" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Mid%20Exams/Mid%20Exam%20-%2010%20March%202019%20Group%202" target="_blank">Mid exam 10 March 2019 - group 2</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="Mid exam 30 June 2019 - group 1" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Mid%20Exams/Mid%20Exam%20-%2030%20June%202019%20Group%201" target="_blank">Mid exam 30 June 2019 - group 1</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Mid exam 4 November 2018" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Mid%20Exams/Mid%20Exam%20-%204%20November%202018" target="_blank">Mid exam 4 November 2018</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="Mid exam 16 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Mid%20Exams/Retake%20Mid%20Exam%20-%2016%20April%202019" target="_blank">Mid exam 16 April 2019</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
@@ -225,34 +305,62 @@ Ivaylo Petrov
 
 <tr>
 <td width="50%">
-<p><a title="Final exam" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2003%20August%202019%20Group%201" target="_blank">Final exam - 3 August 2019 - group 1</a></p>
-</td>
+  <ul>
+  <li>
+<p><a title="Final exam" href="https://github.com/q2kPetrov/SoftUni-  Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2003%20August%202019%20Group%201" target="_blank">Final exam - 3 August 2019 - group 1</a></p>
+  </li>
+  </ul>
+</td>  
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="06 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2006%20April%202019" target="_blank">Final exam - 06 April 2019</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Final exam" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20I" target="_blank">Final exam - 14 April 2019 - group 1</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
+  <ul>
+  <li>
 <p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Final exam" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2016%20December%202018" target="_blank">Final exam - 16 December 2018</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
+   <ul>
+   <li>
 <p><a title="Final exam" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20Preparation%20-%2024%20July%202019" target="_blank">Final exam - 24 July 2019</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
 <td width="50%">
+  <ul>
+  <li>
 <p><a title="Retake Final exam" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Retake%20Final%20Exam%20-%2018%20April%202018" target="_blank">Final exam - Retake - 18 April 2018</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
