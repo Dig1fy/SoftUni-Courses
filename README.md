@@ -410,14 +410,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="Stacks and queues" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/01_StacksAndQueues" target="_blank">Stacks and queues - exercises</a>
+  <li><p><a title="Working with abstraction" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/01_WorkingWithAbstraction" target="_blank">Working with abstraction - exercises</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="Multidimensional arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/02_MultidimensionalArrays" target="_blank">Multidimensional arrays - exercises</a></p>
+  <li><p><a title="Inheritance" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/02_Inheritance" target="_blank">Inheritance - exercises</a></p>
   </li>
   </ul>
 </td>
@@ -426,14 +426,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="Sets and dictionaries" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/03_SetsAndDictionaries" target="_blank">Sets and dictionaries - exercises</a>
+  <li><p><a title="Encapsulation" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/03_Encapsulation" target="_blank">Encapsulation - exercises</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="Functional programming" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/04_FunctionalProgramming" target="_blank">Functional programming - exercises</a></p>
+  <li><p><a title="Interfaces and abstraction" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/04_InterfacesAndAbstraction" target="_blank">Interfaces and abstraction - exercises</a></p>
   </li>
   </ul>
 </td>
@@ -442,14 +442,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="Defining classes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/05_DefiningClasses" target="_blank">Defining classes - exercises</a>
+  <li><p><a title="Polymorphism" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/05_Polymorphism" target="_blank">Polymorphism - exercises</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="Generics" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/06_Generics" target="_blank">Generics - exercises</a></p>
+  <li><p><a title="Reflection" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/06_Reflection/Exercises" target="_blank">Reflection - exercises</a></p>
   </li>
   </ul>
 </td>
@@ -458,7 +458,7 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="Iterators and comparators" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/07_IteratorsAndComparators" target="_blank">Iterators and comparators - exercises</a>
+  <li><p><a title="Unit testing" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/07_UnitTesting" target="_blank">Unit testing - exercises</a>
    </p>
    </li>
 </ul>
@@ -472,14 +472,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="13 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/13_August_2019" target="_blank">Exam - 13 August 2019</a>
+  <li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/Exams/14%20April%202019" target="_blank">Exam - 14 April 2019</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="16 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/16_April_2019" target="_blank">Exam - 16 April 2019</a></p>
+  <li><p><a title="18 November 2018" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/Exams/C%23%20OOP%20Exam%20-%2018%20November%202018" target="_blank">Exam - 18 November 2018</a></p>
   </li>
   </ul>
 </td>
@@ -488,14 +488,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="17 February 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/17_Feb_2019" target="_blank">Exam - 17 February 2019</a>
+  <li><p><a title="07 December 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/Exams/Demo%20Exam%20-%2007%20December%202019" target="_blank">Exam - 07 December 2019</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="23 June 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/23_June_2019" target="_blank">Exam - 23 June 2019</a></p>
+  <li><p><a title="11 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/Exams/OOP%20Exam%20-%2011%20August%202019" target="_blank">Exam - 11 August 2019</a></p>
   </li>
   </ul>
 </td>
@@ -504,14 +504,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="23 October 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/23_October_2019" target="_blank">Exam - 23 October 2019</a>
+  <li><p><a title="15 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/Exams/OOP%20Retake%20Exam%20-%2015%20August%202019" target="_blank">Exam - 15 August 2019</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="24 February 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/24_Feb_2019" target="_blank">Exam - 24 February 2019</a></p>
+  <li><p><a title="18 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20OOP/Exams/OOP%20Retake%20Exam%20-%2018%20April%202019" target="_blank">Exam - 18 April 2019</a></p>
   </li>
   </ul>
 </td>
