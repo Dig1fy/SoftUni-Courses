@@ -66,7 +66,7 @@ Ivaylo Petrov
 </tr>
 
 <tr>
-<td width="23%">
+<td width="50%">
   <ul>
   <li><p><a title="Nested conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/3_Nested-conditional-statements" target="_blank">Nested conditional statements - exercises</a></p>  
   </li>
