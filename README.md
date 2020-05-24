@@ -253,6 +253,39 @@ Ivaylo Petrov
 
 
 
+<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+
+
+<!-- Course Body -->
+
+
+
+<tr >
+<td width="50%">
+<ul >
+<li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p></li>
+</ul>
+</td>
+<td colspan="2" width="50%">
+<ul >
+<li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p></li>
+</ul>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+</table>
+</details>
+<hr />
+
+
+
 
 
 
