@@ -495,17 +495,6 @@ Ivaylo Petrov
 <hr />
 <!-- C# OOP End -->
 
-
-
-
-
-
-
-
-
-
-
-
 <!-- JavaScript Advanced Start -->  
 <hr />
 <!-- Summary Begin -->
@@ -649,8 +638,154 @@ Ivaylo Petrov
 </table>
 </details>
 <hr />
-<!-- C# OOP End -->
+<!-- JS Advanced End -->
 
+
+
+
+
+
+
+
+
+
+<!-- JavaScript Applications Start -->  
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> More Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+
+<tr><th align="left" width="50%">JavaScript Applications - February 2020 <br /> 24.02.2020 - 05.04.2020</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 21/04/2020:</th><th>
+<p><a title="C# OOP" href="https://softuni.bg/certificates/details/80325/d2299076" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+<!-- Course Body -->
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="This" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/1_This" target="_blank">This - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Object composition" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/2_Object_Composition" target="_blank">Object composition - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Prototypes and inheritance" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/3_Prototypes_and_Inheritance" target="_blank">Prototypes and inheritance - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="REST Services and AJAX" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/4_Rest_Services_and_AJAX" target="_blank">REST services and AJAX - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Asynchronous programming" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/5_Asynchronous_Programming" target="_blank">Asynchronous programming - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Remote DB" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/6_Remote_Databases" target="_blank">Remote DataBases - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Templating" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/7_Templating" target="_blank">Templating - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+  <td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Routing" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/8.%20Unit%20Testing" target="_blank">Routing - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+
+
+<tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="26 October 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20-%2026%20October%202019" target="_blank">Exam - 26 October 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="07 July 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Exam%20-%2007%20July%202019" target="_blank">Exam - 07 July 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="July 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Exam%20Preparation%20-%20July%202019" target="_blank">Exam preparation -  July  2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="08 April 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20-%2008%20April%202020" target="_blank">Exam - 08 April 2020</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="08 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20-%2008%20August%202019" target="_blank">Exam - 08 August 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="10 December 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20Exam%20-%2010%20December%202019" target="_blank">Exam - 10 December 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+</table>
+</details>
+<hr />
+<!-- JS Applications End -->
 
 
 
