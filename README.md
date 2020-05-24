@@ -108,7 +108,7 @@ Ivaylo Petrov
 <summary> More Details
 <table border="0.3" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">C# Fundamentals - May 2019: <br /> 
+<tr><th align="center" width="50%">C# Fundamentals - May 2019<br /> 
 15.05.2019 - 03.08.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 12/08/2019</th><th>
 <p><a title="C# Fundamentals" href="https://softuni.bg/certificates/details/69255/3315630e" target="_blank">Certificate</a></p>
 </th></tr>
@@ -242,11 +242,22 @@ Ivaylo Petrov
 <summary> More Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">C# Advanced - January 2019: <br /> 
-14.01.2020 - 24.02.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 28/02/2020</th><th>
+<tr><th align="center" width="50%">C# Advanced - January 2019 <br /> 14.01.2020 - 24.02.2019</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 28/02/2020:</th><th>
 <p><a title="C# Advanced" href="https://softuni.bg/certificates/details/76354/4b5497b1" target="_blank">Certificate</a></p>
 </th></tr>
 </table>
 </summary>
-</tbody>
-</details>
+<!-- Summary End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
