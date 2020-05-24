@@ -6,7 +6,7 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
 <table border="0" width="100%" cellspacing="2" cellpadding="3" align="left">
 <tbody>
 <tr>
-<td align="left" width="33%"><img style="text-align: ce;" src="http://conf.softuni.bg/wp-content/uploads/2015/01/SoftUni-Logo-Flat_square-blue-300x235.png"/></td>
+<td align="left" width="33%"><img style="text-align: center;" src="http://conf.softuni.bg/wp-content/uploads/2015/01/SoftUni-Logo-Flat_square-blue-300x235.png"/></td>
   
 <td align="left" width="33%">
 <h1><a href="https://softuni.bg/">SoftUni</a></h1>
