@@ -1,0 +1,36 @@
+using System;
+
+namespace ConditionalStatements
+{
+    class Program
+    {
+        static void Main()
+        {
+            double speed = double.Parse(Console.ReadLine());
+            string yourSpeedIs = "";
+
+            if (speed <= 10)
+            {
+                yourSpeedIs = "slow";
+            }
+            else if (speed > 10 && speed <= 50)
+            {
+                yourSpeedIs = "average";
+            }
+            else if (speed > 50 && speed <= 150)
+            {
+                yourSpeedIs = "fast";
+            }
+            else if (speed > 150 && speed <= 1000)
+            {
+                yourSpeedIs = "ultra fast";
+            }
+            else if (speed > 1000)
+            {
+                yourSpeedIs = "extremely fast";
+            }
+
+            Console.WriteLine(yourSpeedIs);
+        }
+    }
+}
