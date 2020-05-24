@@ -235,8 +235,8 @@ Ivaylo Petrov
 <hr />
 <!-- C# Fundamentals End -->
 
-<!-- C# Advanced Start -->
-
+<!-- C# Advanced Start -->  
+<hr />
 <!-- Summary Begin -->
 <details>
 <summary> More Details
@@ -246,26 +246,53 @@ Ivaylo Petrov
 14.01.2020 - 24.02.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 28/02/2020</th><th>
 <p><a title="C# Advanced" href="https://softuni.bg/certificates/details/76354/4b5497b1" target="_blank">Certificate</a></p>
 </th></tr>
-</tbody>
 </table>
 </summary>
 <!-- Summary End -->
-  
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
+
 <!-- Course Body -->
 <tr>
 <td width="50%">
-<p><a title="Stacks and queues" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/01_StacksAndQueues" target="_blank">Stacks and queues - exercises</a></p>
+<p><a title="Defining Classes - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Defining%20Classes%20-%20Lab" target="_blank">Defining Classes - Lab</a></p>
 </td>
-  <td colspan="2" width="50%">
-<p><a title="Multidimensional arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/02_MultidimensionalArrays" target="_blank">Multidimensional arrays - exercises</a></p>
-</td>  
-
+<td colspan="2" width="50%">
+<p><a title="Defining Classes - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Defining%20Classes%20-%20Exercise" target="_blank">Defining Classes - Exercise</a></p>
+</td>
 </tr>
-
-
-
+<tr>
+<td width="50%">
+<p><a title="Encapsulation - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Encapsulation%20-%20Lab" target="_blank">Encapsulation - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Encapsulation - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Encapsulation%20-%20Exercise" target="_blank">Encapsulation - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Inheritance - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Inheritance%20-%20Lab" target="_blank">Inheritance - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Inheritance - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Inheritance%20-%20Exercise" target="_blank">Inheritance - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Polymorphism - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Polymorphism%20-%20Lab" target="_blank">Polymorphism - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Polymorphism - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Polymorphism%20-%20Exercise" target="_blank">Polymorphism - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Exam Preparation" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Exam%20Preparation" target="_blank">Exam Preparation</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Exam" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Exam" target="_blank">Exam</a></p>
+</td>
+</tr>
 </tbody>
 </table>
 </details>
