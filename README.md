@@ -242,50 +242,284 @@ Ivaylo Petrov
 <summary> More Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
 
-<tr><th align="left" width="50%">C# Advanced - January 2019 <br /> 14.01.2020 - 24.02.2019</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 28/02/2020:</th><th>
+<tr><th align="left" width="50%">C# Advanced - September 2019 <br /> 17.09.2019 - 26.10.2019</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 07/11/2019:</th><th>
 <p><a title="C# Advanced" href="https://softuni.bg/certificates/details/76354/4b5497b1" target="_blank">Certificate</a></p>
 </th></tr>
 </table>
 </summary>
 <!-- Summary End -->
 
-
-
-
-
 <table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
-
-
 <!-- Course Body -->
-
-
-
 <tr >
 <td width="20%">
 <ul >
-<li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p></li>
+  <li><p><a title="Stacks and queues" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/01_StacksAndQueues" target="_blank">Stacks and queues - exercises</a>
+   </p>
+   </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-<li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p></li>
+  <li><p><a title="Multidimensional arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/02_MultidimensionalArrays" target="_blank">Multidimensional arrays - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Sets and dictionaries" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/03_SetsAndDictionaries" target="_blank">Sets and dictionaries - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Functional programming" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/04_FunctionalProgramming" target="_blank">Functional programming - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Defining classes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/05_DefiningClasses" target="_blank">Defining classes - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Generics" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/06_Generics" target="_blank">Generics - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Iterators and comparators" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/07_IteratorsAndComparators" target="_blank">Iterators and comparators - exercises</a>
+   </p>
+   </li>
 </ul>
 </td>
 </tr>
 
+<tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+</tr>
 
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="13 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/13_August_2019" target="_blank">Exam - 13 August 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="16 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/16_April_2019" target="_blank">Exam - 16 April 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
 
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="17 February 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/17_Feb_2019" target="_blank">Exam - 17 February 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="23 June 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/23_June_2019" target="_blank">Exam - 23 June 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
 
-
-
-
-
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="23 October 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/23_October_2019" target="_blank">Exam - 23 October 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="24 February 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/24_Feb_2019" target="_blank">Exam - 24 February 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
 </table>
 </details>
 <hr />
+<!-- C# Advanced End -->
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- C# OOP Start -->  
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> More Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+
+<tr><th align="left" width="50%">C# OOP - October 2019 <br /> 29.10.2019 - 15.12.2019</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 23/12/2019:</th><th>
+<p><a title="C# OOP" href="https://softuni.bg/certificates/details/75306/fc669a56" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+<!-- Course Body -->
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Stacks and queues" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/01_StacksAndQueues" target="_blank">Stacks and queues - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Multidimensional arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/02_MultidimensionalArrays" target="_blank">Multidimensional arrays - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Sets and dictionaries" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/03_SetsAndDictionaries" target="_blank">Sets and dictionaries - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Functional programming" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/04_FunctionalProgramming" target="_blank">Functional programming - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Defining classes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/05_DefiningClasses" target="_blank">Defining classes - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Generics" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/06_Generics" target="_blank">Generics - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Iterators and comparators" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/07_IteratorsAndComparators" target="_blank">Iterators and comparators - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="13 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/13_August_2019" target="_blank">Exam - 13 August 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="16 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/16_April_2019" target="_blank">Exam - 16 April 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="17 February 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/17_Feb_2019" target="_blank">Exam - 17 February 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="23 June 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/23_June_2019" target="_blank">Exam - 23 June 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="23 October 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/23_October_2019" target="_blank">Exam - 23 October 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="24 February 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/ExamPreparation/24_Feb_2019" target="_blank">Exam - 24 February 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+</table>
+</details>
+<hr />
+<!-- C# Advanced End -->
 
 
 
