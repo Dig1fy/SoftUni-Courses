@@ -36,7 +36,7 @@ Ivaylo Petrov
 <!-- Summary Begin -->
 <details>
 <summary> More Details
-<table border="0.3" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
 <tbody>
 <tr><th align="left" width="50%">Programming basics with C# - March 2019 <br /> 
 09.03.2019 - 20.04.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 24/04/2019</th><th>
@@ -51,28 +51,46 @@ Ivaylo Petrov
 <tbody>
 <!-- Course Body -->
 <tr>
-<td width="50%">
-<p><a title="Simple operations and calculations" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/1.%20Simple%20Operations%20and%20Calculations" target="_blank">Simple operations and calculations - exercises</a></p>
+<td width="23%">
+ <ul>
+ <li><p><a title="Simple operations and calculations" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/1.%20Simple%20Operations%20and%20Calculations" target="_blank">Simple operations and calculations - exercises</a></p>
+ </li>
+ </ul>
 
-<td colspan="2" width="50%">
-<p><a title="Conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/2_Conditional-statements" target="_blank">Conditional statements - exercises</a></p>
+<td colspan="2" width="23%">
+  <ul>
+  <li><p><a title="Conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/2_Conditional-statements" target="_blank">Conditional statements - exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
 <tr>
-<td width="50%">
-<p><a title="Nested conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/3_Nested-conditional-statements" target="_blank">Nested conditional statements - exercises</a></p>
+<td width="23%">
+  <ul>
+  <li><p><a title="Nested conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/3_Nested-conditional-statements" target="_blank">Nested conditional statements - exercises</a></p>  
+  </li>
+  </ul>  
 </td>
 <td colspan="2" width="50%">
-<p><a title="While loop" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/4_While-loop" target="_blank">While loop - exercises</a></p>
+  <ul>
+  <li><p><a title="While loop" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/4_While-loop" target="_blank">While loop - exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<p><a title="For loop" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/5_For-loop" target="_blank">For loop - exercises</a></p>
+  <ul>
+  <li><p><a title="For loop" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/5_For-loop" target="_blank">For loop - exercises</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
-<p><a title="Nested loops" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/6_Nested-loops" target="_blank">Nested loops - exercises</a></p>
+  <ul>
+  <li><p><a title="Nested loops" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/6_Nested-loops" target="_blank">Nested loops - exercises</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 
@@ -82,16 +100,25 @@ Ivaylo Petrov
 </tr>
 <tr>
 <td width="50%">
-<p><a title="Exam 24 November 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exams/Exam%20-%2024%20November%202019" target="_blank">Programming basics with C# Exam - 24 November 2019</a></p>
+  <ul>
+  <li><p><a title="Exam 24 November 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exams/Exam%20-%2024%20November%202019" target="_blank">Programming basics with C# Exam - 24 November 2019</a></p>
+  </li>
+  </ul>
 </td>
 <td colspan="2" width="50%">
-<p><a title="Exam 20 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exams/Exam%20-%2020%20%20April%202019" target="_blank">Programming basics with C# - 20 April 2019 (exam)</a></p>
+  <ul>
+  <li><p><a title="Exam 20 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exams/Exam%20-%2020%20%20April%202019" target="_blank">Programming basics with C# - 20 April 2019 (exam)</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 <tr>
 <tr>
 <td width="50%">
-<p><a title="Programming basics Exam - 9/10 March" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exams/Exams%20-%209%20and%2010%20March%202019" target="_blank">Programming basics Exams - 9 and 10 March 2019</a></p>
+  <ul>
+  <li><p><a title="Programming basics Exam - 9/10 March" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exams/Exams%20-%209%20and%2010%20March%202019" target="_blank">Programming basics Exams - 9 and 10 March 2019</a></p>
+  </li>
+  </ul>
 </td>
 </tr>
 </tbody>
