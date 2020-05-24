@@ -234,3 +234,40 @@ Ivaylo Petrov
 </details>
 <hr />
 <!-- C# Fundamentals End -->
+
+<!-- C# Advanced Start -->
+
+<!-- Summary Begin -->
+<details>
+<summary> More Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">C# Advanced - January 2019: <br /> 
+14.01.2020 - 24.02.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 28/02/2020</th><th>
+<p><a title="C# Advanced" href="https://softuni.bg/certificates/details/76354/4b5497b1" target="_blank">Certificate</a></p>
+</th></tr>
+</tbody>
+</table>
+</summary>
+<!-- Summary End -->
+  
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="Stacks and queues" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/01_StacksAndQueues" target="_blank">Stacks and queues - exercises</a></p>
+</td>
+  <td colspan="2" width="50%">
+<p><a title="Multidimensional arrays" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23Advanced/Exercises/02_MultidimensionalArrays" target="_blank">Multidimensional arrays - exercises</a></p>
+</td>  
+
+</tr>
+
+
+
+</tbody>
+</table>
+</details>
+<hr />
+<!-- C# Advanced End -->
