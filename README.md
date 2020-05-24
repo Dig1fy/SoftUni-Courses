@@ -78,7 +78,7 @@ Ivaylo Petrov
 
 
 <tr>
-<tr><td colspan="3" align="left" width="100%"><p>Exam Preparation</p></td></tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
 </tr>
 <tr>
 <td width="50%">
@@ -171,7 +171,7 @@ Ivaylo Petrov
 
 
 <tr>
-<tr><td colspan="3" align="left" width="100%"><p>Mid Exam Preparation</p></td></tr>
+<tr><td colspan="3" align="center" width="100%"><p>Mid Exam Preparation</p></td></tr>
 </tr>
 
 <tr>
@@ -193,7 +193,7 @@ Ivaylo Petrov
 </tr>
 
 <tr>
-<tr><td colspan="3" align="left" width="100%"><p>Final Exam Preparation</p></td></tr>
+<tr><td colspan="3" align="center" width="100%"><p>Final Exam Preparation</p></td></tr>
 </tr>
 
 <tr>
@@ -261,12 +261,12 @@ Ivaylo Petrov
 
 
 <tr >
-<td width="50%">
+<td width="20%">
 <ul >
 <li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p></li>
 </ul>
 </td>
-<td colspan="2" width="50%">
+<td colspan="2" width="20%">
 <ul >
 <li><p><a title="14 April 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Fundamentals/Exams/Final%20Exams/Final%20Exam%20-%2014%20April%202019%20Group%20II" target="_blank">Final exam - 14 April 2019 - group 2</a></p></li>
 </ul>
