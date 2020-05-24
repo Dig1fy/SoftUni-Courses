@@ -728,9 +728,6 @@ Ivaylo Petrov
   </ul>
 </td>
 </tr>
-
-
-
 <tr>
 <tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
 </tr>
@@ -738,46 +735,14 @@ Ivaylo Petrov
 <tr >
 <td width="20%">
 <ul >
-  <li><p><a title="26 October 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20-%2026%20October%202019" target="_blank">Exam - 26 October 2019</a>
+  <li><p><a title="05 April 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/Exams" target="_blank">Exam - 05 April 2020</a>
    </p>
    </li>
 </ul>
 </td>
 <td colspan="2" width="20%">
 <ul >
-  <li><p><a title="07 July 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Exam%20-%2007%20July%202019" target="_blank">Exam - 07 July 2019</a></p>
-  </li>
-  </ul>
-</td>
-</tr>
-
-<tr >
-<td width="20%">
-<ul >
-  <li><p><a title="July 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Exam%20Preparation%20-%20July%202019" target="_blank">Exam preparation -  July  2019</a>
-   </p>
-   </li>
-</ul>
-</td>
-<td colspan="2" width="20%">
-<ul >
-  <li><p><a title="08 April 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20-%2008%20April%202020" target="_blank">Exam - 08 April 2020</a></p>
-  </li>
-  </ul>
-</td>
-</tr>
-
-<tr >
-<td width="20%">
-<ul >
-  <li><p><a title="08 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20-%2008%20August%202019" target="_blank">Exam - 08 August 2019</a>
-   </p>
-   </li>
-</ul>
-</td>
-<td colspan="2" width="20%">
-<ul >
-  <li><p><a title="10 December 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20Exam%20-%2010%20December%202019" target="_blank">Exam - 10 December 2019</a></p>
+  <li><p><a title="07 December 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/Exams" target="_blank">Exam - 07 December 2019</a></p>
   </li>
   </ul>
 </td>
@@ -786,8 +751,3 @@ Ivaylo Petrov
 </details>
 <hr />
 <!-- JS Applications End -->
-
-
-
-
-
