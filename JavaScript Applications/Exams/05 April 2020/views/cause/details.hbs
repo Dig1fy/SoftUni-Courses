@@ -1,0 +1,19 @@
+{{>header}}
+<!-- Details -->
+    <div class="container details">
+        <div class="details-content">
+            <h2>{{title}}</h2>
+            <strong>{{category}}</strong>
+            <p>{{content}}</p>
+            <div class="buttons">
+                {{#if isNotAuthor}}
+                <a href="#/home" class="btn edit">Back</a>
+                
+                {{else}}
+                <a href="#/close/{{id}}" class="btn delete">Delete</a>
+                <a href="#/edit/{{id}}" class="btn edit">Edit</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+{{>footer}}
