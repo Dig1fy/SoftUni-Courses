@@ -11,7 +11,8 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
 <td align="left" width="33%">
 <h1><a href="https://softuni.bg/">SoftUni</a></h1>
 <h2>C#</h2>
-  <h2>JavaScript</h2>
+<h2>JavaScript</h2>
+<h2>MS SQL</h2>
 </td>
 
 <td align="left" width="33%">
