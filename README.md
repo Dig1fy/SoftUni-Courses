@@ -39,10 +39,12 @@ Ivaylo Petrov
 <summary> More Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
 <tbody>
-<tr><th align="left" width="50%">Programming basics with C# - March 2019 <br /> 
+ <tr>
+  <th align="left" width="50%">Programming basics with C# - March 2019 <br /> 
 09.03.2019 - 20.04.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 24/04/2019</th><th>
 <p><a title="C# Basics" href="https://softuni.bg/certificates/details/66322/4f0418c3" target="_blank">Certificate</a></p>
-</th></tr>
+  </th>
+ </tr>
 </tbody>
 </table>
 </summary>
