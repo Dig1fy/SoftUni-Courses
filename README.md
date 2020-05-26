@@ -883,7 +883,45 @@ Ivaylo Petrov
   </ul>
 </td>
 </tr>
+<!-- JavaScript Applications End --> 
+
+<!-- MS SQL Basics Start -->  
+<hr />
+</table>
+</details>
+<!-- Summary Begin -->
+<details>
+<summary> More Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+
+<tr><th align="left" width="50%">MS SQL Basics - May 2020 <br /> 18.05.2020 - 21.06.2020</th><th width="40%">Grade: X.XX (out of 6.00) <br /> Issue Date: XX/XX/2020:</th><th>
+<p><a title="MS SQL Basics" href="https://softuni.bg/certificates/details/80325/d2299076" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+<!-- Course Body -->
+  
+<tr >
+<td width="20%">
+<ul >
+  <li><p><a title="Data definition and datatypes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/01.Data-definition-%D0%B0nd-datatypes">Data definition and datatypes - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Basic CRUD" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/02.Basic-CRUD" target="_blank">Basic CRUD - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<hr />
 </table>
 </details>
 <hr />
-<!-- JS Applications End -->
+<!-- MS SQL Basics End -->
