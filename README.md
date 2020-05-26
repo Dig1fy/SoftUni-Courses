@@ -650,7 +650,7 @@ Ivaylo Petrov
 <table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
 <!-- Course Body -->
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Syntax, functions and statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/1.%20Syntax%2C%20Functions%20and%20Statements" target="_blank">Syntax, functions and statements - exercises</a>
    </p>
@@ -666,7 +666,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Objects" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/3.%20Objects" target="_blank">Objects - exercises</a>
    </p>
@@ -682,7 +682,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="DOM" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/5.%20DOM" target="_blank">DOM - exercises</a>
    </p>
@@ -698,7 +698,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Classes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/7.%20Classes" target="_blank">Classes - exercises</a>
    </p>
@@ -727,7 +727,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="26 October 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20-%2026%20October%202019" target="_blank">Exam - 26 October 2019</a>
    </p>
@@ -743,7 +743,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="July 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Exam%20Preparation%20-%20July%202019" target="_blank">Exam preparation -  July  2019</a>
    </p>
@@ -759,7 +759,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="08 August 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Exercises/Mid%20Exams/JS%20Advanced%20Retake%20-%2008%20August%202019" target="_blank">Exam - 08 August 2019</a>
    </p>
@@ -804,7 +804,7 @@ Ivaylo Petrov
 <table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
 <!-- Course Body -->
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="This" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/1_This" target="_blank">This - exercises</a>
    </p>
@@ -820,7 +820,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Prototypes and inheritance" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/3_Prototypes_and_Inheritance" target="_blank">Prototypes and inheritance - exercises</a>
    </p>
@@ -836,7 +836,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Asynchronous programming" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/5_Asynchronous_Programming" target="_blank">Asynchronous programming - exercises</a>
    </p>
@@ -852,7 +852,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Templating" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/7_Templating" target="_blank">Templating - exercises</a>
    </p>
@@ -871,7 +871,7 @@ Ivaylo Petrov
 </tr>
 
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="05 April 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/JavaScript%20Applications/Exams" target="_blank">Exam - 05 April 2020</a>
    </p>
@@ -907,7 +907,7 @@ Ivaylo Petrov
 <!-- Course Body -->
   
 <tr >
-<td width="20%">
+<td width="19.5%">
 <ul >
   <li><p><a title="Data definition and datatypes" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/01.Data-definition-%D0%B0nd-datatypes">Data definition and datatypes - exercises</a>
    </p>
