@@ -922,6 +922,24 @@ Ivaylo Petrov
 </td>
 </tr>
 
+<tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="Table relations" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/03.Table-relations">Table relations - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+  
+  <td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Build-in Functions" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/04.Built-in-Functions" target="_blank">Built-in functions - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+  
+
 <hr />
 </table>
 </details>
