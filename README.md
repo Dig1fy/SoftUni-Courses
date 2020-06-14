@@ -939,6 +939,23 @@ Ivaylo Petrov
 </td>
 </tr>
   
+  
+  <tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="Subqueries and joins" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/05.Subqueries-and-JOINs">Subqueries and JOINs - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+  
+  <td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Indices and data aggregation" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/06.Indices-and-Data-Aggregation" target="_blank">Indices and data aggregation - exercises</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
 
 <hr />
 </table>
