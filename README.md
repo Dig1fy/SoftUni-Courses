@@ -957,6 +957,15 @@ Ivaylo Petrov
 </td>
 </tr>
 
+<tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="Functions and procedures" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exercises/07.Functions%20and%20procedures">Functions and stored procedures - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+</tr>
 <hr />
 </table>
 </details>
