@@ -966,6 +966,27 @@ Ivaylo Petrov
 </ul>
 </td>
 </tr>
+
+
+<tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+</tr>
+
+<tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="Databases MSSQL Exam - 13 Oct 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2013%20Oct%202019" target="_blank">Databases MSSQL Exam - 13 Oct 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Databases MSSQL Exam - 16 Apr 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2016%20Apr%202019" target="_blank">Databases MSSQL Exam - 16 Apr 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
 <hr />
 </table>
 </details>
