@@ -778,15 +778,6 @@ Ivaylo Petrov
 <hr />
 <!-- JS Advanced End -->
 
-
-
-
-
-
-
-
-
-
 <!-- JavaScript Applications Start -->  
 <hr />
 <!-- Summary Begin -->
@@ -1007,7 +998,7 @@ Ivaylo Petrov
 <tr >
 <td width="19.5%">
 <ul >
-  <li><p><a title="My MSSQL Exam - 21 Jun 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2021%20Jun%202020" target="_blank">My MSSQL Exam - 21 Jun 2020</a>
+  <li><p><a title="My MSSQL Exam - 21 July 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2021%20Jun%202020" target="_blank">My MSSQL Exam - 21 July 2020</a>
    </p>
    </li>
 </ul>
