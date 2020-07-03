@@ -896,8 +896,8 @@ Ivaylo Petrov
 <summary> More Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
 
-<tr><th align="left" width="50%">MS SQL Basics - May 2020 <br /> 18.05.2020 - 21.06.2020</th><th width="40%">Grade: X.XX (out of 6.00) <br /> Issue Date: XX/XX/2020:</th><th>
-<p><a title="MS SQL Basics" href="https://softuni.bg/certificates/details/80325/d2299076" target="_blank">Certificate</a></p>
+<tr><th align="left" width="50%">MS SQL Basics - May 2020 <br /> 18.05.2020 - 21.06.2020</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 28/06/2020:</th><th>
+<p><a title="MS SQL Basics" href="https://softuni.bg/certificates/details/83021/5bb4e9e7" target="_blank">Certificate</a></p>
 </th></tr>
 </table>
 </summary>
@@ -987,6 +987,32 @@ Ivaylo Petrov
   </ul>
 </td>
 </tr>
+
+<tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="Databases MSSQL Exam - 17 Feb 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2017%20Feb%202019" target="_blank">Databases MSSQL Exam - 17 Feb 2019</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Databases MSSQL Exam - 20 Oct 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2020%20Oct%202019" target="_blank">Databases MSSQL Exam - 20 Oct 2019</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
+<tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="My MSSQL Exam - 21 Jun 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exams/Databases%20MSSQL%20Exam%20-%2021%20Jun%202020" target="_blank">My MSSQL Exam - 21 Jun 2020</a>
+   </p>
+   </li>
+</ul>
+</td>
+
 <hr />
 </table>
 </details>
