@@ -1031,6 +1031,21 @@ Ivaylo Petrov
 
 <table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
 <!-- Course Body -->
-  
+  <tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="ADO.Net" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/01.ADO.Net">ADO.Net - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Mini ORM" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/02.%20ORM-Fundamentals-MiniORM" target="_blank">Custom Mini ORM - exercise</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
+
   
   <!-- MS SQL Advanced / EF Core End -->  
