@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Users>
+  <User>
+    <soldProducts>
+      <Product>
+        <name>Meloxicam</name>
+        <price>809.18</price>
+      </Product>
+      <Product>
+        <name>Goats Milk</name>
+        <price>298.53</price>
+      </Product>
+      <Product>
+        <name>Aspirin</name>
+        <price>925.45</price>
+      </Product>
+      <Product>
+        <name>Retin-A MICRO</name>
+        <price>995.98</price>
+      </Product>
+      <Product>
+        <name>Topex</name>
+        <price>1258.49</price>
+      </Product>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <Product>
+        <name>IOPE SUPER VITAL</name>
+        <price>824.68</price>
+      </Product>
+      <Product>
+        <name>Triamterene and Hydrochlorothiazide</name>
+        <price>1416.59</price>
+      </Product>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <Product>
+        <name>Allopurinol</name>
+        <price>48.80</price>
+      </Product>
+      <Product>
+        <name>Eszopiclone</name>
+        <price>405.03</price>
+      </Product>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <Product>
+        <name>CVS Therapeutic Menthol Pain Reliever</name>
+        <price>1033.42</price>
+      </Product>
+      <Product>
+        <name>Cold and Cough</name>
+        <price>218.14</price>
+      </Product>
+      <Product>
+        <name>Glipizide</name>
+        <price>621.78</price>
+      </Product>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <Product>
+        <name>Ibuprofen</name>
+        <price>1305.96</price>
+      </Product>
+      <Product>
+        <name>No7 Protect and Perfect Foundation Sunscreen Broad Spectrum SPF 15 Cool Ivory</name>
+        <price>616.19</price>
+      </Product>
+      <Product>
+        <name>CHAMOMILLA</name>
+        <price>37.97</price>
+      </Product>
+      <Product>
+        <name>Benazepril Hydrochloride and Hydrochlorothiazide</name>
+        <price>1187.27</price>
+      </Product>
+    </soldProducts>
+  </User>
+</Users>
