@@ -1047,5 +1047,19 @@ Ivaylo Petrov
 </td>
 </tr>
 
-  
+   <tr >
+<td width="19.5%">
+<ul >
+  <li><p><a title="Entity Framework Introduction" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/03.%20Entity%20Framework%20Introduction">Entity Framework Introduction - exercises</a>
+   </p>
+   </li>
+</ul>
+</td>
+<td colspan="2" width="20%">
+<ul >
+  <li><p><a title="Entity Relations" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/04.%20Entity%20Relations" target="_blank">Entity Relations - exercise</a></p>
+  </li>
+  </ul>
+</td>
+</tr>
   <!-- MS SQL Advanced / EF Core End -->  
