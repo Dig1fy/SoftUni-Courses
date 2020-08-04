@@ -16,18 +16,18 @@
 
             Mapper.Initialize(config => config.AddProfile<CinemaProfile>());
 
-            //ResetDatabase(context, shouldDropDatabase: true);
+            ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
 
-           //ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
+            ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
             ExportEntities(context, projectDir + @"ExportResults/");
 
-            //using (var transaction = context.Database.BeginTransaction())
-            //{
-            //    transaction.Rollback();
-            //}
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                transaction.Rollback();
+            }
         }
 
         private static void ImportEntities(CinemaContext context, string baseDir, string exportDir)
