@@ -54,13 +54,13 @@ Ivaylo Petrov
 <tbody>
 <!-- Course Body -->
 <tr>
-<td width="19.5%">
+<td width="50%">
  <ul>
  <li><p><a title="Simple operations and calculations" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/1.%20Simple%20Operations%20and%20Calculations" target="_blank">Simple operations and calculations - exercises</a></p>
  </li>
  </ul>
 
-<td colspan="2" width="20%">
+<td colspan="2" width="50%">
   <ul>
   <li><p><a title="Conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/2_Conditional-statements" target="_blank">Conditional statements - exercises</a></p>
   </li>
