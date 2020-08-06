@@ -2,7 +2,7 @@
 C# / JavaScript - homeworks and exams according to the Software University(SoftUni) program. 
 
 
-<!-- Head Start -->
+<!-- HEAD START -->
 <table border="0" width="100%" cellspacing="2" cellpadding="3" align="left">
 <tbody>
 <tr>
@@ -30,14 +30,16 @@ Ivaylo Petrov
 </tr>
 </tbody>
 </table>
-<!-- Head End -->
+<!-- HEAD END -->
 
 <!-- C# Basics Start -->
+<hr />
+<hr />
 <hr />
 <!-- Summary Begin -->
 <details>
 <summary> More Details
-<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0.5" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
  <tr>
   <th align="left" width="50%">Programming basics with C# - March 2019 <br /> 
@@ -50,7 +52,7 @@ Ivaylo Petrov
 </summary>
 <!-- Summary End -->
   
-<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0.5" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <!-- Course Body -->
 <tr>
