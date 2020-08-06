@@ -1065,17 +1065,9 @@ Ivaylo Petrov
   <!-- MS SQL Advanced / EF Core End -->  
   
   
-  
-  
-  
-  <!-- Summary Begin -->
-<details>
-<summary> TEST Details
-<table border="0" width="90%" cellspacing="1" cellpadding="3" align="left">
-
-<tr><th align="left" width="50%">Test course - now <br /> xx.xx.xx - 05.04.2020</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 21/04/2020:</th><th>
-<p><a title="C# OOP" href="https://softuni.bg/certificates/details/80325/d2299076" target="_blank">Certificate</a></p>
-</th></tr>
+  </th></tr>
 </table>
 </summary>
-<!-- Summary End -->
+  
+  
+ 
