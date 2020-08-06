@@ -1065,9 +1065,10 @@ Ivaylo Petrov
   <!-- MS SQL Advanced / EF Core End -->  
   
   
-  </th></tr>
+ </tbody>
 </table>
-</summary>
+</details>
+<hr />
   
   
  
