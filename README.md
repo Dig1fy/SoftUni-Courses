@@ -3,7 +3,7 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
 
 
 <!-- HEAD START -->
-<table border="0" width="100%" cellspacing="2" cellpadding="3" align="left">
+<table border="0.5" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr>
 <td align="left" width="33%"><img style="text-align: center;" src="http://conf.softuni.bg/wp-content/uploads/2015/01/SoftUni-Logo-Flat_square-blue-300x235.png"/></td>
@@ -38,7 +38,7 @@ Ivaylo Petrov
 <hr />
 <!-- Summary Begin -->
 <details>
-<summary> More Details
+<summary><strong> Click </strong> for more detailed information
 <table border="0.5" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
  <tr>
