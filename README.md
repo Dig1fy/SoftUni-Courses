@@ -3,7 +3,7 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
 
 
 <!-- HEAD START -->
-<table border="0.5" width="100%" cellspacing="1" cellpadding="3" align="center">
+<table border="0.9" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr>
 <td align="left" width="33%"><img style="text-align: center;" src="http://conf.softuni.bg/wp-content/uploads/2015/01/SoftUni-Logo-Flat_square-blue-300x235.png"/></td>
@@ -39,12 +39,12 @@ Ivaylo Petrov
 <!-- Summary Begin -->
 <details>
 <summary><strong> Click </strong> for more detailed information
-<table border="0.8" width="125%" cellspacing="1" cellpadding="1" align="center">
+<table border="0" width="100%" cellspacing="3" cellpadding="4" align="left">
 <tbody>
  <tr>
-  <th align="left" width="110%">Programming basics with C# - March 2019 <br /> 
-09.03.2019 - 20.04.2019</th><th width="20%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 24/04/2019</th><th>
-<p><a width="10% title="C# Basics" href="https://softuni.bg/certificates/details/66322/4f0418c3" target="_blank">Certificate</a></p>
+  <th align="left" width="40%">Programming basics with C# - March 2019 <br /> 
+09.03.2019 - 20.04.2019</th><th width="30%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 24/04/2019</th><th>
+<p><a width="20% title="C# Basics" href="https://softuni.bg/certificates/details/66322/4f0418c3" target="_blank">Certificate</a></p>
   </th>
  </tr>
 </tbody>
@@ -52,7 +52,7 @@ Ivaylo Petrov
 </summary>
 <!-- Summary End -->
   
-<table border="0.5" width="100%" cellspacing="1" cellpadding="3" align="center">
+<table border="0" width="100%" cellspacing="3" cellpadding="4" align="left">
 <tbody>
 <!-- Course Body -->
 <tr>
@@ -138,7 +138,7 @@ Ivaylo Petrov
 <!-- Summary Begin -->
 <details>
 <summary> More Details
-<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0" width="100%" cellspacing="3" cellpadding="4" align="left">
 <tbody>
 <tr><th align="left" width="50%">C# Fundamentals - May 2019<br /> 
 15.05.2019 - 03.08.2019</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 12/08/2019</th><th>
@@ -380,7 +380,7 @@ Ivaylo Petrov
 <!-- Summary Begin -->
 <details>
 <summary> More Details
-<table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
+<table border="0" width="100%" cellspacing="3" cellpadding="4" align="left">
 
 <tr><th align="left" width="50%">C# Advanced - September 2019 <br /> 17.09.2019 - 26.10.2019</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 07/11/2019:</th><th>
 <p><a title="C# Advanced" href="https://softuni.bg/certificates/details/72147/9addc663" target="_blank">Certificate</a></p>
