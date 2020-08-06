@@ -19,14 +19,14 @@
             ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
-            
-            ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-            //ExportEntities(context, projectDir + @"ExportResults/");
 
-            //using (var transaction = context.Database.BeginTransaction())
-            //{
-            //    transaction.Rollback();
-            //}
+            ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
+            ExportEntities(context, projectDir + @"ExportResults/");
+
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                transaction.Rollback();
+            }
         }
 
         private static void ImportEntities(MusicHubDbContext context, string baseDir, string exportDir)
