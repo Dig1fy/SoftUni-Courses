@@ -54,13 +54,13 @@ Ivaylo Petrov
 <tbody>
 <!-- Course Body -->
 <tr>
-<td width="50%">
+<td width="19.5%">
  <ul>
  <li><p><a title="Simple operations and calculations" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/1.%20Simple%20Operations%20and%20Calculations" target="_blank">Simple operations and calculations - exercises</a></p>
  </li>
  </ul>
 
-<td colspan="2" width="50%">
+<td colspan="2" width="19.5%">
   <ul>
   <li><p><a title="Conditional statements" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/2_Conditional-statements" target="_blank">Conditional statements - exercises</a></p>
   </li>
@@ -75,7 +75,7 @@ Ivaylo Petrov
   </li>
   </ul>  
 </td>
-<td colspan="2" width="20%">
+<td colspan="2" width="19.5%">
   <ul>
   <li><p><a title="While loop" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/C%23%20Basics/Exercises/4_While-loop" target="_blank">While loop - exercises</a></p>
   </li>
@@ -1063,3 +1063,19 @@ Ivaylo Petrov
 </td>
 </tr>
   <!-- MS SQL Advanced / EF Core End -->  
+  
+  
+  
+  
+  
+  <!-- Summary Begin -->
+<details>
+<summary> TEST Details
+<table border="0" width="90%" cellspacing="1" cellpadding="3" align="left">
+
+<tr><th align="left" width="50%">Test course - now <br /> xx.xx.xx - 05.04.2020</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 21/04/2020:</th><th>
+<p><a title="C# OOP" href="https://softuni.bg/certificates/details/80325/d2299076" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
