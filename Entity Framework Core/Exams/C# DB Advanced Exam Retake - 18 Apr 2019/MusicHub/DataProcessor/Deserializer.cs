@@ -18,23 +18,22 @@
     {
         private const string ErrorMessage = "Invalid data";
 
-        private const string SuccessfullyImportedWriter
+        private const string SuccessfullyImportedWriter 
             = "Imported {0}";
-        private const string SuccessfullyImportedProducerWithPhone
+        private const string SuccessfullyImportedProducerWithPhone 
             = "Imported {0} with phone: {1} produces {2} albums";
         private const string SuccessfullyImportedProducerWithNoPhone
             = "Imported {0} with no phone number produces {1} albums";
-        private const string SuccessfullyImportedSong
+        private const string SuccessfullyImportedSong 
             = "Imported {0} ({1} genre) with duration {2}";
         private const string SuccessfullyImportedPerformer
             = "Imported {0} ({1} songs)";
 
         public static string ImportWriters(MusicHubDbContext context, string jsonString)
         {
-            var sb = new StringBuilder();
-            var listOfWriters = new List<Writer>();
-
             var writersDtos = JsonConvert.DeserializeObject<JsonImportWritersDto[]>(jsonString);
+            var sb = new StringBuilder();
+            var listOfValidWriters = new List<Writer>();
 
             foreach (var writerDto in writersDtos)
             {
@@ -50,11 +49,11 @@
                     Pseudonym = writerDto.Pseudonym
                 };
 
+                listOfValidWriters.Add(writer);
                 sb.AppendLine(string.Format(SuccessfullyImportedWriter, writer.Name));
-                listOfWriters.Add(writer);
             }
 
-            context.Writers.AddRange(listOfWriters);
+            context.Writers.AddRange(listOfValidWriters);
             context.SaveChanges();
 
             return sb.ToString().Trim();
@@ -62,15 +61,22 @@
 
         public static string ImportProducersAlbums(MusicHubDbContext context, string jsonString)
         {
+            var prodDtos = JsonConvert.DeserializeObject<JsonImportProducersAlbumsDto[]>(jsonString);
             var sb = new StringBuilder();
             var listOfProducers = new List<Producer>();
 
-            var producersDtos = JsonConvert.DeserializeObject<ImportProducersAndAlbumsDto[]>(jsonString);
-
-            foreach (var producerDto in producersDtos)
+            foreach (var prodDto in prodDtos)
             {
-                //If ANY of the albums is incorrect, we should skip the entire entity (producer)
-                if (!IsValid(producerDto) || !producerDto.Albums.All(IsValid))
+                if (!IsValid(prodDto))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                //If there is invalid album (even one), we should skip adding the entire entity (Producer)
+                var isInvalidAlbum = prodDto.Albums.Any(x => !IsValid(x));
+
+                if (isInvalidAlbum)
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
@@ -78,27 +84,34 @@
 
                 var producer = new Producer
                 {
-                    Name = producerDto.Name,
-                    Pseudonym = producerDto.Pseudonym,
-                    PhoneNumber = producerDto.PhoneNumber
+                    Name = prodDto.Name,
+                    Pseudonym = prodDto.Pseudonym,
+                    PhoneNumber = prodDto.PhoneNumber
                 };
 
-                foreach (var albumDto in producerDto.Albums)
+                //After passing the album's validation, we could add all albums to the producer
+                foreach (var album in prodDto.Albums)
                 {
-                    producer.Albums.Add(new Album
-                    {
-                        Name = albumDto.Name,
-                        ReleaseDate = DateTime.ParseExact(albumDto.ReleaseDate, "dd/MM/yyyy", CultureInfo.InvariantCulture)
-                    });
+                   var currentAlbum =  new Album 
+                   {
+                       Name = album.Name, 
+                       ReleaseDate = DateTime.ParseExact(album.ReleaseDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None)
+                   };
 
+                    producer.Albums.Add(currentAlbum);
                 }
 
-                var message = producer.PhoneNumber == null ?
-                    string.Format(SuccessfullyImportedProducerWithNoPhone, producer.Name, producer.Albums.Count) :
-                    string.Format(SuccessfullyImportedProducerWithPhone, producer.Name, producer.PhoneNumber, producer.Albums.Count);
-
-                sb.AppendLine(message);
                 listOfProducers.Add(producer);
+
+                //We have 2 outputs for successfully added producer so we need to check if producer has pseudonym or not
+                if (producer.PhoneNumber == null)
+                {
+                    sb.AppendLine(string.Format(SuccessfullyImportedProducerWithNoPhone, producer.Name, producer.Albums.Count));
+                }
+                else
+                {
+                    sb.AppendLine(string.Format(SuccessfullyImportedProducerWithPhone, producer.Name, producer.PhoneNumber, producer.Albums.Count));
+                }                
             }
 
             context.Producers.AddRange(listOfProducers);
@@ -109,16 +122,17 @@
 
         public static string ImportSongs(MusicHubDbContext context, string xmlString)
         {
-            var xmlSerializer = new XmlSerializer(typeof(ImportSongsDto[]), new XmlRootAttribute("Songs"));
-
             var sb = new StringBuilder();
-            var listOfSongs = new List<Song>();
+            var listOfValidSongs = new List<Song>();
+
+            var xmlSerializer = new XmlSerializer(typeof(XmlImportSongsDto[]), new XmlRootAttribute("Songs"));
 
             using (var stringReader = new StringReader(xmlString))
             {
-                var xmlDtos = (ImportSongsDto[])xmlSerializer.Deserialize(stringReader);
+                //deserializing the string reader will return an object so we need to explicitly cast it to the array of Dtos
+                var songsDtos = (XmlImportSongsDto[])xmlSerializer.Deserialize(stringReader);
 
-                foreach (var songDto in xmlDtos)
+                foreach (var songDto in songsDtos)
                 {
                     if (!IsValid(songDto))
                     {
@@ -126,60 +140,71 @@
                         continue;
                     }
 
-                    var genre = Enum.TryParse(songDto.Genre, out Genre genreResult);
-                    var album = context.Albums.Find(songDto.AlbumId);
-                    var writer = context.Writers.Find(songDto.WriterId);
-                    var songTitle = listOfSongs.Any(s => s.Name == songDto.Name);
-
-                    if (!genre || album == null || writer == null || songTitle)
+                    if (!songDto.AlbumId.HasValue)
                     {
                         sb.AppendLine(ErrorMessage);
                         continue;
                     }
+
+                    var isWriterValid = context.Writers.Find(songDto.WriterId);
+                    var isAlbumValid = context.Albums.Find(songDto.AlbumId);
+                    var isGenreValid = Enum.TryParse(songDto.Genre, out Genre genre);
+
+                    if (isWriterValid == null || isAlbumValid == null || !isGenreValid)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    DateTime createdOnResult;
+                    var isCreatedOnValid = DateTime.TryParseExact(songDto.CreatedOn, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out createdOnResult);
+
+                    if (!isCreatedOnValid)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    //after passing all validations, we can create our entities and add them to the context
+                    //Genre genreResult;
 
                     var song = new Song
                     {
                         Name = songDto.Name,
                         Duration = TimeSpan.Parse(songDto.Duration),
-                        CreatedOn = DateTime.ParseExact(songDto.CreatedOn, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                        Genre = (Genre)Enum.Parse(typeof(Genre), songDto.Genre),
+                        CreatedOn = createdOnResult,
+                        Genre = genre /*(Genre)Enum.Parse(typeof(Genre), songDto.Genre)*/,
                         AlbumId = songDto.AlbumId,
                         WriterId = songDto.WriterId,
                         Price = songDto.Price
                     };
 
-                    listOfSongs.Add(song);
+                    listOfValidSongs.Add(song);
                     sb.AppendLine(string.Format(SuccessfullyImportedSong, song.Name, song.Genre, song.Duration));
                 }
 
-                context.Songs.AddRange(listOfSongs);
+                context.Songs.AddRange(listOfValidSongs);
                 context.SaveChanges();
 
-                return sb.ToString();
+                return sb.ToString().Trim();
             }
         }
 
         public static string ImportSongPerformers(MusicHubDbContext context, string xmlString)
         {
-            var xmlSerializer = new XmlSerializer(typeof(ImportPerformerDto[]), new XmlRootAttribute("Performers"));
             var sb = new StringBuilder();
             var listOfPerformers = new List<Performer>();
+            var listOfSongsPerformers = new List<SongPerformer>();
+
+            var xmlSerializer = new XmlSerializer(typeof(XmlImportSongsPerformersDto[]), new XmlRootAttribute("Performers"));
 
             using (var stringReader = new StringReader(xmlString))
             {
-                var perfDtos = (ImportPerformerDto[])xmlSerializer.Deserialize(stringReader);
+                var prodDtos = (XmlImportSongsPerformersDto[])xmlSerializer.Deserialize(stringReader);
 
-                foreach (var per in perfDtos)
+                foreach (var perfDto in prodDtos)
                 {
-                    if (!IsValid(per))
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-                    var songsCount = context.Songs.Count(x => per.PerformersSongs.Any(y => y.Id == x.Id));
-
-                    if (songsCount != per.PerformersSongs.Length)
+                    if (!IsValid(perfDto))
                     {
                         sb.AppendLine(ErrorMessage);
                         continue;
@@ -187,17 +212,48 @@
 
                     var performer = new Performer
                     {
-                        FirstName = per.FirstName,
-                        LastName = per.LastName,
-                        Age = per.Age,
-                        NetWorth = per.NetWorth
+                        FirstName = perfDto.FirstName,
+                        LastName = perfDto.LastName,
+                        Age = perfDto.Age,
+                        NetWorth = perfDto.NetWorth
                     };
 
-                    listOfPerformers.Add(performer);
-                    sb.AppendLine(string.Format(SuccessfullyImportedPerformer, performer.FirstName, songsCount));
+                    var areAllSongsValid = true;
+                    var tempListOfSongPerformers = new List<SongPerformer>();
+                    
+
+                    //Check if all songs pass the validation and only then add them to the performer
+                    foreach (var songDto in perfDto.PerformersSongs.Distinct())
+                    {
+                        if (!IsValid(songDto) || !context.Songs.Any(x=>x.Id == songDto.Id))
+                        {
+                            areAllSongsValid = false;
+                            sb.AppendLine(ErrorMessage);
+                            break;
+                        }
+
+                        var songPerformer = new SongPerformer
+                        {
+                            Performer = performer,
+                            SongId = songDto.Id 
+                        };
+
+                        tempListOfSongPerformers.Add(songPerformer);
+                    }
+
+                    if (areAllSongsValid)
+                    {
+                        listOfPerformers.Add(performer);
+
+                        listOfSongsPerformers.AddRange(tempListOfSongPerformers);
+                        sb.AppendLine(string.Format(SuccessfullyImportedPerformer, performer.FirstName, tempListOfSongPerformers.Count));
+
+                        tempListOfSongPerformers.Clear();
+                    }
                 }
 
                 context.Performers.AddRange(listOfPerformers);
+                context.SongsPerformers.AddRange(listOfSongsPerformers);
                 context.SaveChanges();
 
                 return sb.ToString().Trim();
