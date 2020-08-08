@@ -7,7 +7,7 @@
     using Microsoft.EntityFrameworkCore;
    
     using Data;
-       //                                    18/25 in Judge on Data Import - last test fails
+
     public class StartUp
     {
         public static void Main(string[] args)
@@ -16,17 +16,17 @@
 
             Mapper.Initialize(config => config.AddProfile<MusicHubProfile>());
 
-            ResetDatabase(context, shouldDropDatabase: true);
+            //ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
 
-            ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
+            //ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
             ExportEntities(context, projectDir + @"ExportResults/");
 
-            using (var transaction = context.Database.BeginTransaction())
-            {
-                transaction.Rollback();
-            }
+            //using (var transaction = context.Database.BeginTransaction())
+            //{
+            //    transaction.Rollback();
+            //}
         }
 
         private static void ImportEntities(MusicHubDbContext context, string baseDir, string exportDir)
