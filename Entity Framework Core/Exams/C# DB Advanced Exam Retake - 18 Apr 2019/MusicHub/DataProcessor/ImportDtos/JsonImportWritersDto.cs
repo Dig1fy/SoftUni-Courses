@@ -7,7 +7,8 @@ namespace MusicHub.DataProcessor.ImportDtos
         [Required, MinLength(3), MaxLength(20)]
         public string Name { get; set; }
 
-        [RegularExpression("^([A-Z]{1}[a-z]+) ([A-Z]{1}[a-z]+)$")]
+        [RegularExpression(@"^[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+$")]
         public string Pseudonym { get; set; }
+
     }
 }
