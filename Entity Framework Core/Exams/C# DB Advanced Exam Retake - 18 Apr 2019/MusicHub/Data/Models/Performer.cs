@@ -13,7 +13,7 @@ namespace MusicHub.Data.Models
         [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(20)]
+        [Required,MaxLength(20)]
         public string FirstName { get; set; }
 
         [Required, MaxLength(20)]

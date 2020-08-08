@@ -25,13 +25,16 @@ namespace MusicHub.Data.Models
         public Genre Genre { get; set; }
 
         public int? AlbumId { get; set; }
-        public virtual Album Album { get; set; }
+
+        public Album Album { get; set; }
 
         public int WriterId { get; set; }
-        public virtual Writer Writer { get; set; }
+
+        public Writer Writer { get; set; }
 
         public decimal Price { get; set; }
 
         public virtual ICollection<SongPerformer> SongPerformers { get; set; }
+
     }
 }
