@@ -1024,8 +1024,8 @@ Ivaylo Petrov
 <summary> More Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="left">
 
-<tr><th align="left" width="50%">Entity Framework Core - June 2020 <br /> 22.06.2020 - 08.08.2020</th><th width="40%">Grade: XX.00 (out of 6.00) <br /> Issue Date: XX/XX/2020:</th><th>
-<p><a title="MSSQL advanced - Entity Framework Core" href="https://softuni.bg/certificates/details/83021/5bb4e9e7" target="_blank">Certificate</a></p>
+<tr><th align="left" width="50%">Entity Framework Core - June 2020 <br /> 22.06.2020 - 08.08.2020</th><th width="40%">Grade: 6.00 (out of 6.00) <br /> Issue Date: 18/08/2020:</th><th>
+<p><a title="MSSQL advanced - Entity Framework Core" href="https://softuni.bg/certificates/details/86322/358ff520" target="_blank">Certificate</a></p>
 </th></tr>
 </table>
 </summary>
