@@ -137,7 +137,7 @@ Ivaylo Petrov
 <hr />
 <!-- Summary Begin -->
 <details>
-<summary> More Details
+<summary> <p>More Details<p>
 <table border="0" width="100%" cellspacing="3" cellpadding="4" align="left">
 <tbody>
 <tr><th align="left" width="50%">C# Fundamentals - May 2019<br /> 
