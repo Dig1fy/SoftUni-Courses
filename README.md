@@ -1201,6 +1201,33 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
             </ul>
          </td>
       </tr>
+      
+      
+      <tr>
+         <tr>
+            <td colspan="3" align="center" width="100%">
+               <h3><i><b>Exam Preparation</b></i></h3>
+            </td>
+         </tr>
+         </tr>
+	 <tr >
+         <td width="19.5%">
+            <ul >
+               <li>
+                  <p><a title="C# DB Advanced Exam - 07 Apr 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exams/C%23%20DB%20Advanced%20Exam%20-%2007%20Apr%202019" target="_blank">Entity Framework Core Exam - 07 Apr 2019</a>
+                  </p>
+               </li>
+            </ul>
+         </td>
+         <td colspan="2" width="20%">
+            <ul >
+               <li>
+                  <p><a title="Databases MSSQL Exam - 07 Dec 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exams/C%23%20DB%20Advanced%20Exam%20-%2007%20Dec%202019" target="_blank">Entity Framework Core Exam - 07 Dec 2019</a></p>
+               </li>
+            </ul>
+         </td>
+      </tr>
+	 
       <!-- MS SQL Advanced / EF Core End -->  
       </tbody>
    </table>
