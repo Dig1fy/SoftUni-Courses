@@ -1176,7 +1176,7 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
          <td colspan="2" width="20%">
             <ul >
                <li>
-                  <p><a title="JSON Processing" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/08.%20JSON%20Processing" target="_blank">Advanced Querying - exercise</a></p>
+                  <p><a title="JSON Processing" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/08.%20JSON%20Processing" target="_blank">JSON Processing - exercise</a></p>
                </li>
             </ul>
          </td>
@@ -1196,7 +1196,7 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
          <td colspan="2" width="20%">
             <ul >
                <li>
-                  <p><a title="Best Practices and Architectures" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/10.%20Best%20Practices%20and%20Architecture" target="_blank">Advanced Querying - exercise</a></p>
+                  <p><a title="Best Practices and Architectures" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exercises/10.%20Best%20Practices%20and%20Architecture" target="_blank">Best Practices and Architectures - exercise</a></p>
                </li>
             </ul>
          </td>
@@ -1224,8 +1224,7 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
                </li>
             </ul>
          </td>
-      </tr>
-	 
+      </tr>	 
       <!-- MS SQL Advanced / EF Core End -->  
       </tbody>
    </table>
