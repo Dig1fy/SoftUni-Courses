@@ -1201,8 +1201,6 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
             </ul>
          </td>
       </tr>
-      
-      
       <tr>
          <tr>
             <td colspan="3" align="center" width="100%">
