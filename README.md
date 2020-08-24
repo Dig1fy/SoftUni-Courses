@@ -1224,7 +1224,34 @@ C# / JavaScript - homeworks and exams according to the Software University(SoftU
                </li>
             </ul>
          </td>
-      </tr>	 
+      </tr>	
+      <tr >
+         <td width="19.5%">
+            <ul >
+               <li>
+                  <p><a title="Entity Framework Core Exam - 13 Dec 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exams/C%23%20DB%20Advanced%20Exam%20-%2013%20Dec%202019" target="_blank">Entity Framework Core Exam - 13 Dec 2019</a>
+                  </p>
+               </li>
+            </ul>
+         </td>
+         <td colspan="2" width="20%">
+            <ul >
+               <li>
+                  <p><a title="Entity Framework Core Retake Exam - 18 Apr 2019" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exams/C%23%20DB%20Advanced%20Exam%20Retake%20-%2018%20Apr%202019" target="_blank">Entity Framework Core Retake Exam - 18 Apr 2019</a></p>
+               </li>
+            </ul>
+         </td>
+      </tr>
+      <tr >
+         <td width="19.5%">
+            <ul >
+               <li>
+                  <p><a title="Entity Framework Core Retake Exam - 14 August 2020" href="https://github.com/q2kPetrov/SoftUni-Courses/tree/master/Entity%20Framework%20Core/Exams/C%23%20DB%20Advanced%20Retake%20Exam%20-%2014%20August%202020" target="_blank">Entity Framework Core Retake Exam - 14 August 2020</a>
+                  </p>
+               </li>
+            </ul>
+         </td>
+	 <tr >
       <!-- MS SQL Advanced / EF Core End -->  
       </tbody>
    </table>
