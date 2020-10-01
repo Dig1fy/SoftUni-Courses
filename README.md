@@ -1,5 +1,5 @@
 # SoftUni-Courses
-C# / JavaScript - homeworks and exams according to the Software University(SoftUni) program. 
+C# / JavaScript / MS SQL - homeworks and exams according to the Software University(SoftUni) program. 
 <!-- HEAD START -->
 <table border="0.9" width="100%" cellspacing="12" cellpadding="5" align="center">
    <tbody>
