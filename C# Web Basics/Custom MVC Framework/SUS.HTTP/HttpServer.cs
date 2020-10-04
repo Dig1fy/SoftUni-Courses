@@ -1,4 +1,5 @@
 ﻿using SUS.HTTP.GlobalConstants;
+using SUS.MvcFramework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,22 +15,12 @@ namespace SUS.HTTP
 {
     public class HttpServer : IHttpServer
     {
-
         //We will use Dictionary, giving key 'path' + action for each path
-        IDictionary<string, Func<HttpRequest, HttpResponse>> routeTable = new Dictionary<string, Func<HttpRequest, HttpResponse>>();
+        List<Route> routeTable;
 
-        public void AddRoute(string path, Func<HttpRequest, HttpResponse> action)
+        public HttpServer(List<Route> routeTable)
         {
-            //Check if the path already exist in our routeTable. In this case, we adjust the action which corresponds to the path.
-            if (routeTable.ContainsKey(path))
-            {
-                routeTable[path] = action;
-            }
-            else
-            {
-                routeTable.Add(path, action);
-            }
-
+            this.routeTable = routeTable;
         }
 
         public async Task StartAsync(int port)
@@ -93,10 +84,11 @@ namespace SUS.HTTP
                     Console.WriteLine($"{request.Method} {request.Path} => ");
 
                     HttpResponse response;
-                    if (this.routeTable.ContainsKey(request.Path))
+                    var route = this.routeTable.FirstOrDefault(x => x.Path == request.Path);
+
+                    if (route != null)
                     {
-                        var action = this.routeTable[request.Path];
-                        response = action(request);
+                        response = route.Action(request);
                     }
                     else
                     {

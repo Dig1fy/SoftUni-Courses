@@ -1,16 +1,15 @@
 ﻿using MyMvcApp.Controllers;
-using SUS.HTTP;
 using SUS.MvcFramework;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MyMvcApp
 {
-    class Program
+    class Startup
     {
         static async Task Main(string[] args)
         {
-
+            //VIDEO 2:50:00 youtube
             /*
             *  Route table
             */
