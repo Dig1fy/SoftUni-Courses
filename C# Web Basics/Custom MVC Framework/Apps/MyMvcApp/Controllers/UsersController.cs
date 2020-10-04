@@ -1,26 +1,20 @@
 ﻿using SUS.HTTP;
+using SUS.MvcFramework;
+using System.IO;
 using System.Linq;
 using System.Text;
 
 namespace MyMvcApp.Controllers
 {
-    public class UsersController
+    public class UsersController : Controller
     {
         public HttpResponse Login(HttpRequest request)
         {
-            var responseHtml = "<h1>LOGIN !!!!!</h1>" + request.Headers.FirstOrDefault(x => x.Name == "User-Agent")?.Value;
-            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
-            var response = new HttpResponse("text/html", responseBodyBytes);
-
-            return response;
+            return this.View("Views/Users/Login.html");
         }
         public HttpResponse Register(HttpRequest request)
         {
-            var responseHtml = "<h1>REGISTER !!!!!</h1>" + request.Headers.FirstOrDefault(x => x.Name == "User-Agent")?.Value;
-            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
-            var response = new HttpResponse("text/html", responseBodyBytes);
-
-            return response;
+            return this.View("Views/Users/Register.html");
         }
     }
 }

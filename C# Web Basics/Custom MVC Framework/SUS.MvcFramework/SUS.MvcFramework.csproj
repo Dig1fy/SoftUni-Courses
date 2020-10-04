@@ -5,4 +5,8 @@
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SUS.HTTP\SUS.HTTP.csproj" />
+  </ItemGroup>
+
 </Project>
