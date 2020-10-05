@@ -9,7 +9,7 @@ namespace MyMvcApp.Controllers
     {
         public HttpResponse Index(HttpRequest request)
         {
-            return this.View("Views/Home/Index.html");
+            return this.View();
         }
     }
 }
