@@ -13,9 +13,9 @@ namespace SUS.MvcFramework
             var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.html");
 
             //GetType will get the type of the invoked class. Then we take it's Name GetType().Name. (HomeController, CardsController, StaticFIlesController)
-            var viewContent = System.IO.File.ReadAllText($"Views/{GetType().Name.Replace("Controller", string.Empty).Trim()}/{viewPath}.html");
+            var viewContent = System.IO.File.ReadAllText($"Views/{GetType().Name.Replace("Controller", string.Empty)}/{viewPath}.html");
 
-            var responseHtml = layout.Replace("@RenderBody", viewContent);
+            var responseHtml = layout.Replace("@RenderBody()", viewContent);
             //body length is always counted as number of bytes. 
             var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
 
