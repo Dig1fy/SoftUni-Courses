@@ -10,10 +10,10 @@ namespace SUS.MvcFramework
        public HttpResponse View([CallerMemberName]string viewPath = null)
         {
             //The layout is always placed in Views/Shared/_Layout.html by convention
-            var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.html");
+            var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
 
             //GetType will get the type of the invoked class. Then we take it's Name GetType().Name. (HomeController, CardsController, StaticFIlesController)
-            var viewContent = System.IO.File.ReadAllText($"Views/{GetType().Name.Replace("Controller", string.Empty)}/{viewPath}.html");
+            var viewContent = System.IO.File.ReadAllText($"Views/{GetType().Name.Replace("Controller", string.Empty)}/{viewPath}.cshtml");
 
             var responseHtml = layout.Replace("@RenderBody()", viewContent);
             //body length is always counted as number of bytes. 

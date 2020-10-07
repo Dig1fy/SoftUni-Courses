@@ -2,20 +2,14 @@
 using SUS.MvcFramework;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Text;
 
 namespace MyMvcApp
 {
-    class Startup
+    public class Startup : IMvcApplication
     {
-        static async Task Main(string[] args)
+        public void Configure(List<Route> routeTable)
         {
-            //VIDEO 2:50:00 youtube
-            /*
-            *  Route table
-            */
-            var routeTable = new List<Route>();
-
             routeTable.Add(new Route("/", new HomeController().Index));
             routeTable.Add(new Route("/users/login", new UsersController().Login));
             routeTable.Add(new Route("/users/register", new UsersController().Register));
@@ -28,9 +22,11 @@ namespace MyMvcApp
             routeTable.Add(new Route("/js/bootstrap.bundle.min.js", new StaticFilesController().BoostrapJs));
             routeTable.Add(new Route("/css/custom.css", new StaticFilesController().CustomCss));
             routeTable.Add(new Route("/js/custom.js", new StaticFilesController().CustomJs));
+        }
 
-            //The default port (defined in the CreateHost) is 80
-            await Host.CreateHost(routeTable);
+        public void ConfigureServices()
+        {
+           
         }
     }
 }
