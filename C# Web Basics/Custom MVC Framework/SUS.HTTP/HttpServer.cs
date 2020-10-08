@@ -85,7 +85,7 @@ namespace SUS.HTTP
 
                     HttpResponse response;
                     var route = this.routeTable.FirstOrDefault(
-                        x => string.Compare(x.Path, request.Path, true) == 0);
+                        x => string.Compare(x.Path, request.Path, true) == 0 && x.Method == request.Method);
                     var routePath = routeTable.FirstOrDefault(x => x.Path == request.Path);
 
                     if (route != null)

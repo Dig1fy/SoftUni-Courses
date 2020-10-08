@@ -7,7 +7,7 @@ namespace SUS.MvcFramework
 {
     public abstract class Controller
     {
-       public HttpResponse View([CallerMemberName]string viewPath = null)
+        public HttpResponse View([CallerMemberName] string viewPath = null)
         {
             //The layout is always placed in Views/Shared/_Layout.html by convention
             var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
@@ -29,6 +29,14 @@ namespace SUS.MvcFramework
         {
             var fileBytes = System.IO.File.ReadAllBytes(filePath);
             var response = new HttpResponse(contentType, fileBytes);
+            return response;
+        }
+
+        public HttpResponse Redirect(string path)
+        {
+            var response = new HttpResponse(HTTP.Enums.HttpStatusCode.Found);
+            //In order to redirect, we need "location" 
+            response.Headers.Add(new Header("Location", path));
             return response;
         }
     }
