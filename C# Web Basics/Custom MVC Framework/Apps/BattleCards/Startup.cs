@@ -1,11 +1,11 @@
-﻿using MyMvcApp.Controllers;
+﻿using BattleCards.Controllers;
 using SUS.HTTP.Enums;
 using SUS.MvcFramework;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyMvcApp
+namespace BattleCards
 {
     public class Startup : IMvcApplication
     {
@@ -17,6 +17,7 @@ namespace MyMvcApp
             //POST
             routeTable.Add(new Route("/users/login", HttpMethod.Post, new UsersController().DoLogin));
 
+            routeTable.Add(new Route("/home/about", HttpMethod.Get, new HomeController().About));
             routeTable.Add(new Route("/users/register", HttpMethod.Get, new UsersController().Register));
             routeTable.Add(new Route("/cards/add", HttpMethod.Get, new CardsController().Add));
             routeTable.Add(new Route("/cards/all", HttpMethod.Get, new CardsController().All));

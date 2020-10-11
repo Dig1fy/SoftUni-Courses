@@ -44,8 +44,7 @@ namespace SUS.MvcFramework.Tests
 }", new List<int> { 1, 2, 3 });
             var expectedResult = @"<span>1</span>
 <span>2</span>
-<span>3</span>
-";
+<span>3</span>";
             Assert.Equal(expectedResult, actualResult);
         }
     }

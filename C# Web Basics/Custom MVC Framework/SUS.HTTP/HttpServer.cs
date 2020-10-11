@@ -78,10 +78,10 @@ namespace SUS.HTTP
 
                     //Finally, byte[] => string(text)
                     var requestAsString = Encoding.UTF8.GetString(data.ToArray());
-                    Console.WriteLine(requestAsString);
+                    //Console.WriteLine(requestAsString);
 
                     var request = new HttpRequest(requestAsString);
-                    Console.WriteLine($"{request.Method} {request.Path} => ");
+                    //Console.WriteLine($"{request.Method} {request.Path} => ");
 
                     HttpResponse response;
                     var route = this.routeTable.FirstOrDefault(

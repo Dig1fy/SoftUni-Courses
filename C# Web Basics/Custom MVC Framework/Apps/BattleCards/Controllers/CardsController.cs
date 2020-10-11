@@ -1,7 +1,7 @@
 ﻿using SUS.HTTP;
 using SUS.MvcFramework;
 
-namespace MyMvcApp.Controllers
+namespace BattleCards.Controllers
 {
     public class CardsController : Controller
     {

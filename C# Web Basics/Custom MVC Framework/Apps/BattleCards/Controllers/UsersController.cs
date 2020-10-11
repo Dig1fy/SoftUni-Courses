@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace MyMvcApp.Controllers
+namespace BattleCards.Controllers
 {
     public class UsersController : Controller
     {
