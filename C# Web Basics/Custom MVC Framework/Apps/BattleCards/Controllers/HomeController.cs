@@ -8,6 +8,7 @@ namespace BattleCards.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet("/")]
         public HttpResponse Index(HttpRequest request)
         {
             return this.View();
