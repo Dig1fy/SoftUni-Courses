@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SUS.MvcFramework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BattleCards.Data
 {
-    public class User
+    public class User: UserIdentity
     {
         //Since the Id is string, we can initialize it in the constructor
         public User()

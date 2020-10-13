@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -12,6 +13,8 @@ namespace SUS.HTTP
 {
     public class HttpRequest
     {
+        public static IDictionary<string, Dictionary<string, string>> Sessions = new Dictionary<string, Dictionary<string, string>>();
+
         public HttpRequest(string requestString)
         {
             this.Headers = new List<Header>();
@@ -27,7 +30,7 @@ namespace SUS.HTTP
             this.Path = headerParts[1];
 
             var bodyBuilder = new StringBuilder();
-            
+
             var index = 1;
             var isInHeader = true;
 
@@ -55,9 +58,9 @@ namespace SUS.HTTP
                 index++;
             }
 
-            if (this.Headers.Any(x=>x.Name == HTTPConstants.RequestCookieHeader))
+            if (this.Headers.Any(x => x.Name == HTTPConstants.RequestCookieHeader))
             {
-                var coockiesAsString = this.Headers.FirstOrDefault(x=>x.Name == HTTPConstants.RequestCookieHeader).Value;
+                var coockiesAsString = this.Headers.FirstOrDefault(x => x.Name == HTTPConstants.RequestCookieHeader).Value;
 
                 var cookies = coockiesAsString.Split(new string[] { "; " }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -68,6 +71,27 @@ namespace SUS.HTTP
 
             }
 
+            //Session
+            var sessionCookie = this.Cookies.FirstOrDefault(x => x.Name == HTTPConstants.SessionCookieName);
+
+            if (sessionCookie == null)
+            {
+                var sessionId = Guid.NewGuid().ToString();
+                var session = new Dictionary<string,string>();
+                Sessions.Add(sessionId, session);
+
+                this.Cookies.Add(new Cookie(HTTPConstants.SessionCookieName, sessionId));
+            }
+            //in case we close our page and then run it again
+            else if (!Sessions.ContainsKey(sessionCookie.Value))
+            {
+                this.Session = new Dictionary<string, string>();
+                Sessions.Add(sessionCookie.Value, this.Session as Dictionary<string,string>);
+            }
+            else
+            {
+                this.Session = Sessions[sessionCookie.Value];
+            }
 
             //name = qqqqq & keyword = Tough & attack = 2 & health = 4 & description = qwq
             this.Body = bodyBuilder.ToString().Trim();
@@ -91,9 +115,11 @@ namespace SUS.HTTP
 
         public ICollection<Header> Headers { get; set; }
 
-        public IDictionary<string,string> FormData { get; set; }
+        public IDictionary<string, string> FormData { get; set; }
 
         public ICollection<Cookie> Cookies { get; set; }
+
+        public IDictionary<string,string> Session { get; set; }
 
         public string Body { get; set; }
 

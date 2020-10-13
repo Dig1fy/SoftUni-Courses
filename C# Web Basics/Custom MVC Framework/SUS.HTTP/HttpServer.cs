@@ -103,6 +103,7 @@ namespace SUS.HTTP
                     //Set-Cookie: Gosho's Cookie=fc0c3724-c519-4722-abd6-d39eb5522536; Path=/;Max-Age=2073600; HttpOnly;
                     //response.Cookies.Add(new ResponseCookie("Gosho's Cookie", Guid.NewGuid().ToString()) { HttpOnly = "true", MaxAge = 60 * 24 * 24 * 60 });
 
+                    //This is where we add every session cookie from request to the response
                     var sessionCookie = request.Cookies.FirstOrDefault(x => x.Name == HTTPConstants.SessionCookieName);
                     if (sessionCookie != null)
                     {
