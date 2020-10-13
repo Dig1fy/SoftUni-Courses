@@ -1,6 +1,6 @@
 ﻿using SUS.HTTP;
+using SUS.HTTP.Enums;
 using SUS.MvcFramework.ViewEngine;
-using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -16,26 +16,17 @@ namespace SUS.MvcFramework
             this.viewEngine = new SusViewEngine();
         }
 
-        //We do not support view models yet, so we will pass null to the viewContent;
-        object viewModel = null; 
-
         public HttpRequest Request { get; set; }
 
-        public HttpResponse View([CallerMemberName] object viewPath = null)
+        public HttpResponse View(object viewModel = null, [CallerMemberName] object viewPath = null)
         {
-            //The layout is always placed in Views/Shared/_Layout.html by convention
-            var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
-
-            layout = layout.Replace("@RenderBody()", "___WE REPLACE THE VIEW CONTENT IN HERE___");
-            layout = this.viewEngine.GetHtml(layout, viewModel);
-
             //GetType will get the type of the invoked class. Then we take it's Name GetType().Name. (HomeController, CardsController, StaticFIlesController)
             var viewContent = System.IO.File.ReadAllText($"Views/{GetType().Name.Replace("Controller", string.Empty)}/{viewPath}.cshtml");
 
             //This is where we connect the view engine
             viewContent = this.viewEngine.GetHtml(viewContent, viewModel);
 
-            var responseHtml = layout.Replace("___WE REPLACE THE VIEW CONTENT IN HERE___", viewContent);
+            var responseHtml = this.PutViewInLayout(viewContent, viewModel);
             //body length is always counted as number of bytes. 
             var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
 
@@ -58,6 +49,25 @@ namespace SUS.MvcFramework
             //In order to redirect, we need "location" 
             response.Headers.Add(new Header("Location", path));
             return response;
+        }
+
+        public HttpResponse Error(string errorText)
+        {
+            var viewContent = $"<div class=\"alert alert-danger\" role=\"alert\">{errorText}</div>";
+            var responseHtml = this.PutViewInLayout(viewContent);
+            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
+            var response = new HttpResponse("text/html", responseBodyBytes, HttpStatusCode.InternalServerError);
+            return response;
+        }
+
+        private string PutViewInLayout(string viewContent, object viewModel = null)
+        {
+            //The layout is always placed in Views/Shared/_Layout.html by convention
+            var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
+            layout = layout.Replace("@RenderBody()", "____WE REPLACE THE VIEW CONTENT IN HERE____");
+            layout = this.viewEngine.GetHtml(layout, viewModel);
+            var responseHtml = layout.Replace("____WE REPLACE THE VIEW CONTENT IN HERE____", viewContent);
+            return responseHtml;
         }
     }
 }
