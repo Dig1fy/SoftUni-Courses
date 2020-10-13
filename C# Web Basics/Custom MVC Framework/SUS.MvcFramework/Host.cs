@@ -77,9 +77,11 @@ namespace SUS.MvcFramework
 
                     routeTable.Add(new Route(url, httpMethod, (request) =>
                     {
-                        var instance = Activator.CreateInstance(controllerType);
+                        var instance = Activator.CreateInstance(controllerType) as Controller;
+                        instance.Request = request;
+
                         //We can afford to cast to HttpResponse since every action returns httpresponse. In ASP Core it will return IActionResult
-                        var response = method.Invoke(instance, new[] { request }) as HttpResponse;
+                        var response = method.Invoke(instance, new object[] { }) as HttpResponse;
                         return response;
                     }));
                     Console.WriteLine($" -> {method.Name}");

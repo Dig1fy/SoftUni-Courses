@@ -19,7 +19,9 @@ namespace SUS.MvcFramework
         //We do not support view models yet, so we will pass null to the viewContent;
         object viewModel = null; 
 
-        public HttpResponse View([CallerMemberName] string viewPath = null)
+        public HttpRequest Request { get; set; }
+
+        public HttpResponse View([CallerMemberName] object viewPath = null)
         {
             //The layout is always placed in Views/Shared/_Layout.html by convention
             var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");

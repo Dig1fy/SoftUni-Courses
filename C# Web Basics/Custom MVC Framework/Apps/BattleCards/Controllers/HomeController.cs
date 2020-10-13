@@ -1,4 +1,5 @@
-﻿using SUS.HTTP;
+﻿using BattleCards.ViewModels;
+using SUS.HTTP;
 using SUS.MvcFramework;
 using System;
 using System.Linq;
@@ -9,12 +10,13 @@ namespace BattleCards.Controllers
     public class HomeController : Controller
     {
         [HttpGet("/")]
-        public HttpResponse Index(HttpRequest request)
+        public HttpResponse Index()
         {
+
             return this.View();
         }
 
-        internal HttpResponse About(HttpRequest request)
+        internal HttpResponse About()
         {
             return this.View();
         }

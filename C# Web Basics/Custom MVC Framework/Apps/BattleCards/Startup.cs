@@ -5,7 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BattleCards
+namespace BattleCards               //TO DOOOOOOOOOOOOOOOOOOOOOOO - Implement logic for IndexViewModel
+                                    //1:39:00 video
 {
     public class Startup : IMvcApplication
     {

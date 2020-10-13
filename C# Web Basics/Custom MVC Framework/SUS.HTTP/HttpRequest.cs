@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -15,6 +16,7 @@ namespace SUS.HTTP
         {
             this.Headers = new List<Header>();
             this.Cookies = new List<Cookie>();
+            this.FormData = new Dictionary<string, string>();
 
             //We split the entire request to chunks
             var lines = requestString.Split(new string[] { HTTPConstants.NewLine }, System.StringSplitOptions.None);
@@ -66,7 +68,21 @@ namespace SUS.HTTP
 
             }
 
-            this.Body = bodyBuilder.ToString();
+
+            //name = qqqqq & keyword = Tough & attack = 2 & health = 4 & description = qwq
+            this.Body = bodyBuilder.ToString().Trim();
+            var parameters = this.Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var parameter in parameters)
+            {
+                var parameterParts = parameter.Split('=');
+                var name = parameterParts[0];
+                var value = WebUtility.UrlDecode(parameterParts[1]);
+                if (!this.FormData.ContainsKey(name))
+                {
+                    this.FormData.Add(name, value);
+                }
+            }
         }
 
         public string Path { get; set; }
@@ -74,6 +90,8 @@ namespace SUS.HTTP
         public HttpMethod Method { get; set; }
 
         public ICollection<Header> Headers { get; set; }
+
+        public IDictionary<string,string> FormData { get; set; }
 
         public ICollection<Cookie> Cookies { get; set; }
 
