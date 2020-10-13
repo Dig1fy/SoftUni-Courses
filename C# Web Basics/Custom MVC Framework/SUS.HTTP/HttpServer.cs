@@ -85,15 +85,15 @@ namespace SUS.HTTP
 
                     HttpResponse response;
                     var route = this.routeTable.FirstOrDefault(
-                        x => string.Compare(x.Path, request.Path, true) == 0 && x.Method == request.Method);
-                    var routePath = routeTable.FirstOrDefault(x => x.Path == request.Path);
-
+                        x => string.Compare(x.Path, request.Path, true) == 0
+                            && x.Method == request.Method);
                     if (route != null)
                     {
                         response = route.Action(request);
                     }
                     else
                     {
+                        // Not Found 404
                         response = new HttpResponse("text/html", new byte[0], Enums.HttpStatusCode.NotFound);
                     }
 
@@ -101,7 +101,15 @@ namespace SUS.HTTP
 
                     response.Headers.Add(new Header("Server", "SUS Server 1.69"));
                     //Set-Cookie: Gosho's Cookie=fc0c3724-c519-4722-abd6-d39eb5522536; Path=/;Max-Age=2073600; HttpOnly;
-                    response.Cookies.Add(new ResponseCookie("Gosho's Cookie", Guid.NewGuid().ToString()) { HttpOnly = "true", MaxAge = 60 * 24 * 24 * 60 });
+                    //response.Cookies.Add(new ResponseCookie("Gosho's Cookie", Guid.NewGuid().ToString()) { HttpOnly = "true", MaxAge = 60 * 24 * 24 * 60 });
+
+                    var sessionCookie = request.Cookies.FirstOrDefault(x => x.Name == HTTPConstants.SessionCookieName);
+                    if (sessionCookie != null)
+                    {
+                        var responseSessionCookie = new ResponseCookie(sessionCookie.Name, sessionCookie.Value);
+                        responseSessionCookie.Path = "/";
+                        response.Cookies.Add(responseSessionCookie);
+                    }
 
                     //HttpResponse .ToString() is overriden
                     var responseHeaderBytes = Encoding.UTF8.GetBytes(response.ToString());

@@ -2,6 +2,7 @@
 using BattleCards.ViewModels;
 using SUS.HTTP;
 using SUS.MvcFramework;
+using System.Linq;
 
 namespace BattleCards.Controllers
 {
@@ -38,7 +39,19 @@ namespace BattleCards.Controllers
 
         public HttpResponse All()
         {
-            return this.View();
+            //THIS WILL BE REMOVED. Instead, will use AutoMapper
+            var db = new ApplicationDbContext();
+            var cardsViewModel = db.Cards.Select(x => new CardViewModel
+            {
+                Name = x.Name,
+                Description = x.Description,
+                Attack = x.Attack,
+                Health = x.Health,
+                ImageUrl = x.ImageUrl,
+                Type = x.Keyword,
+            }).ToList();
+
+            return this.View(new AllCardsViewModel { Cards = cardsViewModel });
         }
 
         public HttpResponse Collection()

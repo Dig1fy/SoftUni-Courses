@@ -26,7 +26,10 @@ namespace BattleCards.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Set composite key for UserCard
             modelBuilder.Entity<UserCard>().HasKey(x => new { x.CardId, x.UserId });
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<User> Users { get; set; }
