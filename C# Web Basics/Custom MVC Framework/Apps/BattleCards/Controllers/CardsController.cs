@@ -34,7 +34,7 @@ namespace BattleCards.Controllers
             });
             dbContext.SaveChanges();
 
-            return this.Redirect("/");
+            return this.Redirect("/cards/all");
         }
 
         public HttpResponse All()
@@ -51,7 +51,8 @@ namespace BattleCards.Controllers
                 Type = x.Keyword,
             }).ToList();
 
-            return this.View(new AllCardsViewModel { Cards = cardsViewModel });
+            //Our SUS view engine allows generic types and we can pass the list directly
+            return this.View(cardsViewModel);
         }
 
         public HttpResponse Collection()

@@ -133,6 +133,18 @@ namespace ViewNamespace
 
             if (viewModel != null)
             {
+                //In case the type of our view model is generic, we add all references of the type 
+                if (viewModel.GetType().IsGenericType)
+                {
+                    //get an array of the generic type arguments
+                    var genericArguments = viewModel.GetType().GenericTypeArguments;
+                    foreach (var genericArg in genericArguments)
+                    {
+                        compileResult = compileResult
+                            .AddReferences(MetadataReference.CreateFromFile(genericArg.Assembly.Location));
+                    }
+                }
+
                 compileResult = compileResult
                     .AddReferences(MetadataReference.CreateFromFile(viewModel.GetType().Assembly.Location));
             }
