@@ -14,14 +14,15 @@ namespace SUS.MvcFramework
         public static async Task CreateHostAsync(IMvcApplication application, int port = 80)
         {
             var routeTable = new List<Route>();
-
-            AutoGenerateStaticFiles(routeTable);
+            var serviceCollection = new ServiceCollection();
 
             //We pass "application" so we can access the executing assembly ang get all types -> GetTypes().
-            AutoRegisterRoutes(routeTable, application);
 
-            application.ConfigureServices();
+            application.ConfigureServices(serviceCollection);
             application.Configure(routeTable);
+
+            AutoGenerateStaticFiles(routeTable);
+            AutoRegisterRoutes(routeTable, application, serviceCollection);
 
             //For debugging purposes
             System.Console.WriteLine("All registered routes");
@@ -36,7 +37,7 @@ namespace SUS.MvcFramework
             await server.StartAsync(80);
         }
 
-        private static void AutoRegisterRoutes(List<Route> routeTable, IMvcApplication application)
+        private static void AutoRegisterRoutes(List<Route> routeTable, IMvcApplication application, IServiceCollection serviceCollection)
         {
             //routeTable.Add(new Route("/cards/add", HttpMethod.Get, new CardsController().Add));
             var controllerTypes = application.GetType().Assembly.GetTypes()
@@ -77,7 +78,7 @@ namespace SUS.MvcFramework
 
                     routeTable.Add(new Route(url, httpMethod, (request) =>
                     {
-                        var instance = Activator.CreateInstance(controllerType) as Controller;
+                        var instance = serviceCollection.CreateInstance(controllerType) as Controller;
                         instance.Request = request;
 
                         //We can afford to cast to HttpResponse since every action returns httpresponse. In ASP Core it will return IActionResult

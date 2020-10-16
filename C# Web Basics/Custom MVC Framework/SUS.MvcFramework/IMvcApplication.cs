@@ -5,7 +5,7 @@ namespace SUS.MvcFramework
     public interface IMvcApplication
     {
         //Set dependencies
-        void ConfigureServices();
+        void ConfigureServices(IServiceCollection serviceCollection);
 
         //Set additional settings
         void Configure(List<Route> routeTable);
