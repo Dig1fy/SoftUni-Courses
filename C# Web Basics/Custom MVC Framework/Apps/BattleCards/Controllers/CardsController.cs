@@ -10,6 +10,11 @@ namespace BattleCards.Controllers
     {
         public HttpResponse Add()
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/users/login");
+            }
+
             return this.View();
         }
 
@@ -39,6 +44,11 @@ namespace BattleCards.Controllers
 
         public HttpResponse All()
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/users/login");
+            }
+
             //THIS WILL BE REMOVED. Instead, will use AutoMapper
             var db = new ApplicationDbContext();
             var cardsViewModel = db.Cards.Select(x => new CardViewModel
@@ -57,6 +67,11 @@ namespace BattleCards.Controllers
 
         public HttpResponse Collection()
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/users/login");
+            }
+
             return this.View();
         }
     }

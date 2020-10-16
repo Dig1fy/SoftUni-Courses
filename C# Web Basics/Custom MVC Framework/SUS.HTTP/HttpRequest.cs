@@ -94,7 +94,7 @@ namespace SUS.HTTP
             }
 
             //name = qqqqq & keyword = Tough & attack = 2 & health = 4 & description = qwq
-            this.Body = bodyBuilder.ToString().Trim();
+            this.Body = bodyBuilder.ToString().TrimEnd('\n', '\r');
             var parameters = this.Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var parameter in parameters)
