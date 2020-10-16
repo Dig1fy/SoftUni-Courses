@@ -77,7 +77,7 @@ namespace SUS.HTTP
             if (sessionCookie == null)
             {
                 var sessionId = Guid.NewGuid().ToString();
-                var session = new Dictionary<string,string>();
+                var session = new Dictionary<string, string>();
                 Sessions.Add(sessionId, session);
 
                 this.Cookies.Add(new Cookie(HTTPConstants.SessionCookieName, sessionId));
@@ -86,7 +86,7 @@ namespace SUS.HTTP
             else if (!Sessions.ContainsKey(sessionCookie.Value))
             {
                 this.Session = new Dictionary<string, string>();
-                Sessions.Add(sessionCookie.Value, this.Session as Dictionary<string,string>);
+                Sessions.Add(sessionCookie.Value, this.Session as Dictionary<string, string>);
             }
             else
             {
@@ -99,7 +99,7 @@ namespace SUS.HTTP
 
             foreach (var parameter in parameters)
             {
-                var parameterParts = parameter.Split('=');
+                var parameterParts = parameter.Split(new[] { '=' }, 2);
                 var name = parameterParts[0];
                 var value = WebUtility.UrlDecode(parameterParts[1]);
                 if (!this.FormData.ContainsKey(name))
@@ -119,7 +119,7 @@ namespace SUS.HTTP
 
         public ICollection<Cookie> Cookies { get; set; }
 
-        public IDictionary<string,string> Session { get; set; }
+        public IDictionary<string, string> Session { get; set; }
 
         public string Body { get; set; }
 
