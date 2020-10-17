@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BattleCards               //TO DOOOOOOOOOOOOOOOOOOOOOOO - Implement logic for IndexViewModel
-                                    //1:39:00 video
+                                    //2:55:00 video
 {
     public class Startup : IMvcApplication
     {

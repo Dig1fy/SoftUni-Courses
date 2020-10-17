@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace SUS.MvcFramework
@@ -48,7 +49,8 @@ namespace SUS.MvcFramework
             {
                 //With the current methods, even only x.DeclaringType == controllerType will do the job. 
                 var methods = controllerType.GetMethods()
-                    .Where(x => x.IsPublic && !x.IsStatic && !x.IsConstructor && x.DeclaringType == controllerType && !x.IsSpecialName);
+                    .Where(x => x.IsPublic && !x.IsStatic && x.DeclaringType == controllerType
+                    && !x.IsAbstract && !x.IsConstructor && !x.IsSpecialName);
 
                 //For testing purpose
                 //Console.WriteLine(controllerType.Name);
@@ -76,19 +78,66 @@ namespace SUS.MvcFramework
                         httpMethod = customAttribute.Method;
                     }
 
-                    routeTable.Add(new Route(url, httpMethod, (request) =>
+                    if (!string.IsNullOrEmpty(customAttribute?.Url))
                     {
-                        var instance = serviceCollection.CreateInstance(controllerType) as Controller;
-                        instance.Request = request;
+                        url = customAttribute.Url;
+                    }
 
-                        //We can afford to cast to HttpResponse since every action returns httpresponse. In ASP Core it will return IActionResult
-                        var response = method.Invoke(instance, new object[] { }) as HttpResponse;
-                        return response;
-                    }));
-                    Console.WriteLine($" -> {method.Name}");
+                    //We can afford to cast to HttpResponse since every action returns httpresponse. In ASP Core it will return IActionResult
+                    routeTable.Add(new Route(url, httpMethod, request => ExecuteAction(request, controllerType, method, serviceCollection)));
                 }
             }
 
+        }
+
+        private static HttpResponse ExecuteAction(HttpRequest request, Type controllerType, MethodInfo action, IServiceCollection serviceCollection)
+        {
+            var instance = serviceCollection.CreateInstance(controllerType) as Controller;
+            instance.Request = request;
+            var arguments = new List<object>();
+            var parameters = action.GetParameters();
+            foreach (var parameter in parameters)
+            {
+                var httpParamerValue = GetParameterFromRequest(request, parameter.Name);
+                var parameterValue = Convert.ChangeType(httpParamerValue, parameter.ParameterType);
+                if (parameterValue == null &&
+                    parameter.ParameterType != typeof(string)
+                    && parameter.ParameterType != typeof(int?))
+                {
+                    // complex type
+                    parameterValue = Activator.CreateInstance(parameter.ParameterType);
+                    var properties = parameter.ParameterType.GetProperties();
+                    foreach (var property in properties)
+                    {
+                        var propertyHttpParamerValue = GetParameterFromRequest(request, property.Name);
+                        var propertyParameterValue = Convert.ChangeType(propertyHttpParamerValue, property.PropertyType);
+                        property.SetValue(parameterValue, propertyParameterValue);
+                    }
+                }
+
+                arguments.Add(parameterValue);
+            }
+
+            var response = action.Invoke(instance, arguments.ToArray()) as HttpResponse;
+            return response;
+        }
+
+        private static string GetParameterFromRequest(HttpRequest request, string parameterName)
+        {
+            parameterName = parameterName.ToLower();
+            if (request.FormData.Any(x => x.Key.ToLower() == parameterName))
+            {
+                return request.FormData
+                    .FirstOrDefault(x => x.Key.ToLower() == parameterName).Value;
+            }
+
+            if (request.QueryData.Any(x => x.Key.ToLower() == parameterName))
+            {
+                return request.QueryData
+                    .FirstOrDefault(x => x.Key.ToLower() == parameterName).Value;
+            }
+
+            return null;
         }
 
         private static void AutoGenerateStaticFiles(List<Route> routeTable)

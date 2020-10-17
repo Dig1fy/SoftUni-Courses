@@ -16,18 +16,6 @@ namespace BattleCards.Data
             this.Id = Guid.NewGuid().ToString();
         }
 
-        public string Id { get; set; }
-
-        [Required]
-        [MaxLength(20)]
-        public string UserName { get; set; }
-
-        [Required]
-        public string Email { get; set; }
-
-        [Required]
-        public string Password { get; set; }
-
         public virtual ICollection<UserCard> Cards{ get; set; }
     }
 }

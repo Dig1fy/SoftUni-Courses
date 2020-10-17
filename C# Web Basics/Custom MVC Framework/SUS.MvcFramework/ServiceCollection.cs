@@ -20,16 +20,18 @@ namespace SUS.MvcFramework
                 type = this.DependencyContainer[type];
             }
 
-            //We want the constructor will fewer params
-            var constructor = type.GetConstructors().OrderBy(x => x.GetParameters().Count()).FirstOrDefault();
-            var parameterValues = new List<object>();
+            //We want the constructor with less params
+            var constructor = type.GetConstructors()
+                .OrderBy(x => x.GetParameters().Count()).FirstOrDefault();
+
             var parameters = constructor.GetParameters();
+            var parameterValues = new List<object>();
 
             //We need to create an instance for each of the constructor's params (recursively)
-            foreach (var param in parameters)
+            foreach (var parameter in parameters)
             {
-                var paramValue = Activator.CreateInstance(param.ParameterType);
-                parameterValues.Add(paramValue);
+                var parameterValue = CreateInstance(parameter.ParameterType);
+                parameterValues.Add(parameterValue);
             }
 
             //This has been implemented in ASP Core (dependency injection)
