@@ -1,82 +1,125 @@
-﻿using BattleCards.Data;
-using BattleCards.ViewModels;
+﻿using BattleCards.Services;
+using BattleCards.ViewModels.Cards;
 using SUS.HTTP;
 using SUS.MvcFramework;
-using System.Linq;
+using System;
 
 namespace BattleCards.Controllers
 {
     public class CardsController : Controller
     {
-        private readonly ApplicationDbContext db;
+        private readonly ICardsService cardsService;
 
-        public CardsController(ApplicationDbContext db)
+        public CardsController(ICardsService cardsService)
         {
-            this.db = db;
+            this.cardsService = cardsService;
         }
 
+        // GET /cards/add
         public HttpResponse Add()
         {
-            if (this.IsUserSignedIn())
+            if (!this.IsUserSignedIn())
             {
-                return this.Redirect("/users/login");
+                return this.Redirect("/Users/Login");
             }
 
             return this.View();
         }
 
-        [HttpPost("/Cards/Add")]
-        public HttpResponse DoAdd()
+        [HttpPost]
+        public HttpResponse Add(AddCardInputModel model)
         {
-
-            if (this.Request.FormData["name"].Length < 5)
+            if (!this.IsUserSignedIn())
             {
-                return this.Error("Name should be at least 5 characters long.");
+                return this.Redirect("/Users/Login");
             }
 
-            db.Cards.Add(new Card
+            if (string.IsNullOrEmpty(model.Name) || model.Name.Length < 5 || model.Name.Length > 15)
             {
-                Attack = int.Parse(this.Request.FormData["attack"]),
-                Health = int.Parse(this.Request.FormData["health"]),
-                Description = this.Request.FormData["description"],
-                Name = this.Request.FormData["name"],
-                ImageUrl = this.Request.FormData["image"],
-                Keyword = this.Request.FormData["keyword"],
-            });
-            db.SaveChanges();
+                return this.Error("Name should be between 5 and 15 characters long.");
+            }
 
-            return this.Redirect("/cards/all");
+            if (string.IsNullOrWhiteSpace(model.Image))
+            {
+                return this.Error("The image is required!");
+            }
+
+            if (!Uri.TryCreate(model.Image, UriKind.Absolute, out _))
+            {
+                return this.Error("Image url should be valid.");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Keyword))
+            {
+                return this.Error("Keyword is required.");
+            }
+
+            if (model.Attack < 0)
+            {
+                return this.Error("Attack should be non-negative integer.");
+            }
+
+            if (model.Health < 0)
+            {
+                return this.Error("Health should be non-negative integer.");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Description) || model.Description.Length > 200)
+            {
+                return this.Error("Description is required and its length should be at most 200 characters.");
+            }
+
+            var cardId = this.cardsService.AddCard(model);
+            var userId = this.GetUserId();
+            this.cardsService.AddCardToUserCollection(userId, cardId);
+            return this.Redirect("/Cards/All");
         }
 
+        // /cards/all
         public HttpResponse All()
         {
-            if (this.IsUserSignedIn())
+            if (!this.IsUserSignedIn())
             {
-                return this.Redirect("/users/login");
+                return this.Redirect("/Users/Login");
             }
-                        
-            var cardsViewModel = db.Cards.Select(x => new CardViewModel
-            {
-                Name = x.Name,
-                Description = x.Description,
-                Attack = x.Attack,
-                Health = x.Health,
-                ImageUrl = x.ImageUrl,
-                Type = x.Keyword,
-            }).ToList();
 
-            //Our SUS view engine allows generic types and we can pass the list directly
+            var cardsViewModel = this.cardsService.GetAll();
             return this.View(cardsViewModel);
         }
 
         public HttpResponse Collection()
         {
-            if (this.IsUserSignedIn())
+            if (!this.IsUserSignedIn())
             {
-                return this.Redirect("/users/login");
+                return this.Redirect("/Users/Login");
             }
 
-            return this.View();
+            var viewModel = this.cardsService.GetByUserId(this.GetUserId());
+            return this.View(viewModel);
+        }
+
+        public HttpResponse AddToCollection(int cardId)
+        {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
+            var userId = this.GetUserId();
+            this.cardsService.AddCardToUserCollection(userId, cardId);
+            return this.Redirect("/Cards/All");
+        }
+
+        public HttpResponse RemoveFromCollection(int cardId)
+        {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
+            var userId = this.GetUserId();
+            this.cardsService.RemoveCardFromUserCollection(userId, cardId);
+            return this.Redirect("/Cards/Collection");
         }
     }
 }

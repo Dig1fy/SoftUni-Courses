@@ -1,10 +1,8 @@
 ﻿using BattleCards.Services;
+using BattleCards.ViewModels.Users;
 using SUS.HTTP;
 using SUS.MvcFramework;
 using System.ComponentModel.DataAnnotations;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace BattleCards.Controllers
@@ -17,6 +15,8 @@ namespace BattleCards.Controllers
         {
             this.usersService = usersService;
         }
+
+        // GET /users/login
         public HttpResponse Login()
         {
             if (this.IsUserSignedIn())
@@ -27,23 +27,25 @@ namespace BattleCards.Controllers
             return this.View();
         }
 
-        [HttpPost("/Users/Login")]
-        public HttpResponse DoLogin()
+        [HttpPost]
+        public HttpResponse Login(string username, string password)
         {
-            //We get the formData names from the views
-            var username = this.Request.FormData["username"];
-            var password = this.Request.FormData["password"];
-            var userId = this.usersService.GetUserId(username, password);
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/");
+            }
 
+            var userId = this.usersService.GetUserId(username, password);
             if (userId == null)
             {
-                return this.Error("Invalid username or password. Please try again!");
+                return this.Error("Invalid username or password");
             }
 
             this.SignIn(userId);
-            return this.Redirect("/cards/all");
+            return this.Redirect("/Cards/All");
         }
 
+        // GET /users/register
         public HttpResponse Register()
         {
             if (this.IsUserSignedIn())
@@ -54,59 +56,58 @@ namespace BattleCards.Controllers
             return this.View();
         }
 
-        [HttpPost("/Users/Register")]
-        public HttpResponse DoRegister()
+        [HttpPost]
+        public HttpResponse Register(RegisterInputModel input)
         {
-            var username = this.Request.FormData["username"];
-            var email = this.Request.FormData["email"];
-            var password = this.Request.FormData["password"];
-            var confirmPassword = this.Request.FormData["confirmPassword"];
-
-            if (string.IsNullOrWhiteSpace(username) || username.Length < 6 || username.Length > 20)
+            if (this.IsUserSignedIn())
             {
-                return this.Error("Username should between 5 and 20 characters long");
+                return this.Redirect("/");
             }
 
-            if (!Regex.IsMatch(username, @"^[a-zA-Z0-9\.]+$"))
+            if (input.Username == null || input.Username.Length < 5 || input.Username.Length > 20)
+            {
+                return this.Error("Invalid username. The username should be between 5 and 20 characters.");
+            }
+
+            if (!Regex.IsMatch(input.Username, @"^[a-zA-Z0-9\.]+$"))
             {
                 return this.Error("Invalid username. Only alphanumeric characters are allowed.");
             }
 
-            if (password != confirmPassword)
-            {
-                return this.Error("Confirm passowrd seems to be different! Please type it again!");
-            }
-
-            if (!this.usersService.IsUsernameAvailable(username))
-            {
-                return this.Error("This username is already taken by another user.");
-            }
-
-            if (string.IsNullOrWhiteSpace(email) || !new EmailAddressAttribute().IsValid(email))
+            if (string.IsNullOrWhiteSpace(input.Email) || !new EmailAddressAttribute().IsValid(input.Email))
             {
                 return this.Error("Invalid email.");
             }
 
-            if (!this.usersService.IsEmailAvaliable(email))
+            if (input.Password == null || input.Password.Length < 6 || input.Password.Length > 20)
             {
-                return this.Error("This email is already taken by another user.");
+                return this.Error("Invalid password. The password should be between 6 and 20 characters.");
             }
 
-            if (password == null || password.Length < 6 || password.Length > 20)
+            if (input.Password != input.ConfirmPassword)
             {
-                return this.Error("Invalid password. The password should be between 6 and 20 characters long.");
+                return this.Error("Passwords should be the same.");
             }
 
-            var userId = this.usersService.CreateUser(username, email, password);
+            if (!this.usersService.IsUsernameAvailable(input.Username))
+            {
+                return this.Error("Username already taken.");
+            }
 
-            return this.Redirect("/users/login");
+            if (!this.usersService.IsEmailAvailable(input.Email))
+            {
+                return this.Error("Email already taken.");
+            }
+
+            this.usersService.CreateUser(input.Username, input.Email, input.Password);
+            return this.Redirect("/Users/Login");
         }
 
         public HttpResponse Logout()
         {
             if (!this.IsUserSignedIn())
             {
-                return this.Error("Only logged-in users can log-out");
+                return this.Error("Only logged-in users can logout.");
             }
 
             this.SignOut();
