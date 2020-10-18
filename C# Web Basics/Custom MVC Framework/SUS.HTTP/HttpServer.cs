@@ -87,6 +87,7 @@ namespace SUS.HTTP
                     var route = this.routeTable.FirstOrDefault(
                         x => string.Compare(x.Path, request.Path, true) == 0
                             && x.Method == request.Method);
+
                     if (route != null)
                     {
                         response = route.Action(request);
@@ -99,7 +100,7 @@ namespace SUS.HTTP
 
                     //We add this headers/cookies to each response 
 
-                    response.Headers.Add(new Header("Server", "SUS Server 1.69"));
+                    response.Headers.Add(new Header("Server", "SUS Custom Server 1.69"));
                     //Set-Cookie: Gosho's Cookie=fc0c3724-c519-4722-abd6-d39eb5522536; Path=/;Max-Age=2073600; HttpOnly;
                     //response.Cookies.Add(new ResponseCookie("Gosho's Cookie", Guid.NewGuid().ToString()) { HttpOnly = "true", MaxAge = 60 * 24 * 24 * 60 });
 
@@ -128,14 +129,12 @@ namespace SUS.HTTP
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
-                Console.WriteLine(ex.Source);
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine(ex);
+                //Console.WriteLine(ex.Message);
+                //Console.WriteLine(ex.StackTrace);
+                //Console.WriteLine(ex.Source);
+                //Console.WriteLine(ex.InnerException);
             }
-
-
         }
-
     }
 }

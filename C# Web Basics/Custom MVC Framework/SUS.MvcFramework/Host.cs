@@ -99,6 +99,7 @@ namespace SUS.MvcFramework
             foreach (var parameter in parameters)
             {
                 var httpParamerValue = GetParameterFromRequest(request, parameter.Name);
+                //We don't want to explicitly cast the type every time, so this will do it automatically for us.
                 var parameterValue = Convert.ChangeType(httpParamerValue, parameter.ParameterType);
                 if (parameterValue == null &&
                     parameter.ParameterType != typeof(string)

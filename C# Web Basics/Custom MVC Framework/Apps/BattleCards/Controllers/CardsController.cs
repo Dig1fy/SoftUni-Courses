@@ -29,6 +29,7 @@ namespace BattleCards.Controllers
         [HttpPost]
         public HttpResponse Add(AddCardInputModel model)
         {
+            //In ASP Net, these validations will happen via attributes
             if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
