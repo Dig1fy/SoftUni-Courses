@@ -10,5 +10,8 @@ namespace SULS.Controllers
         {
             return this.View(); //Views/Home(HomeController)/Index (Action name -> Index)
         }
+
+        
+       
     }
 }

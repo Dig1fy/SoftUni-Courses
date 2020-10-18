@@ -6,32 +6,25 @@ namespace SULS.Data
     {
         public ApplicationDbContext()
         {
-
         }
 
-        public ApplicationDbContext(DbContextOptions options)
-            : base(options)
+        public ApplicationDbContext(DbContextOptions db)
+            : base(db)
         {
-
         }
+
+        public DbSet<User> Users { get; set; }
 
         public DbSet<Problem> Problems { get; set; }
 
         public DbSet<Submission> Submissions { get; set; }
 
-        public DbSet<User> Users { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.;Database=SULS;Integrated Security=true;");
+                optionsBuilder.UseSqlServer("Server=.;Database=SULS;Integrated Security=True;");
             }
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-           
         }
     }
 }

@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace SULS.Data
 {
@@ -13,16 +14,14 @@ namespace SULS.Data
             this.Submissions = new HashSet<Submission>();
         }
 
-        [Key]
         public string Id { get; set; }
 
         [Required]
         [MaxLength(20)]
         public string Name { get; set; }
 
-        public int Points { get; set; }
+        public ushort Points { get; set; }
 
-        public virtual ICollection<Submission> Submissions{ get; set; }
-
+        public virtual ICollection<Submission> Submissions { get; set; }
     }
 }

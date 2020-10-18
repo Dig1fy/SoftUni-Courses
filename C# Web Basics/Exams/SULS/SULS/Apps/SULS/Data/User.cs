@@ -12,7 +12,6 @@ namespace SULS.Data
             this.Submissions = new HashSet<Submission>();
         }
 
-        [Key]
         public string Id { get; set; }
 
         [Required]
@@ -23,10 +22,8 @@ namespace SULS.Data
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(20)]
         public string Password { get; set; }
 
         public virtual ICollection<Submission> Submissions { get; set; }
-
     }
 }

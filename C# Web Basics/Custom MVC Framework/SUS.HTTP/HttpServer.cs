@@ -129,7 +129,7 @@ namespace SUS.HTTP
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message + " **************** ERRRRRRRRRRRRRRRRROR");
                 //Console.WriteLine(ex.Message);
                 //Console.WriteLine(ex.StackTrace);
                 //Console.WriteLine(ex.Source);

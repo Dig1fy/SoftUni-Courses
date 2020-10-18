@@ -27,7 +27,7 @@ namespace SULS.Migrations
                     Id = table.Column<string>(nullable: false),
                     Username = table.Column<string>(maxLength: 20, nullable: false),
                     Email = table.Column<string>(nullable: false),
-                    Password = table.Column<string>(maxLength: 20, nullable: false)
+                    Password = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,37 +42,35 @@ namespace SULS.Migrations
                     Code = table.Column<string>(maxLength: 800, nullable: false),
                     AchievedResult = table.Column<int>(nullable: false),
                     CreatedOn = table.Column<DateTime>(nullable: false),
-                    ProblemId = table.Column<int>(nullable: false),
-                    ProblemId1 = table.Column<string>(nullable: true),
-                    UserId = table.Column<int>(nullable: false),
-                    UserId1 = table.Column<string>(nullable: true)
+                    UserId = table.Column<string>(nullable: true),
+                    ProblemId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Submissions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Submissions_Problems_ProblemId1",
-                        column: x => x.ProblemId1,
+                        name: "FK_Submissions_Problems_ProblemId",
+                        column: x => x.ProblemId,
                         principalTable: "Problems",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Submissions_Users_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Submissions_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Submissions_ProblemId1",
+                name: "IX_Submissions_ProblemId",
                 table: "Submissions",
-                column: "ProblemId1");
+                column: "ProblemId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Submissions_UserId1",
+                name: "IX_Submissions_UserId",
                 table: "Submissions",
-                column: "UserId1");
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
