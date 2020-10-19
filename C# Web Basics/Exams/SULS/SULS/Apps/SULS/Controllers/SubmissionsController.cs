@@ -19,6 +19,11 @@ namespace SULS.Controllers
         //Load submissions form for each problem
         public HttpResponse Create(string id)
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/users/login");
+            }
+
             var problemName = this.problemsService.GetNameById(id);
 
             var viewModel = new CreateSubmissionViewModel()
@@ -33,6 +38,11 @@ namespace SULS.Controllers
         [HttpPost]
         public HttpResponse Create(string code, string problemId)
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/users/login");
+            }
+
             if (string.IsNullOrWhiteSpace(code) || code.Length < 30 || code.Length > 800)
             {
                 return this.Error("Code should be between 30 and 800 characters long");
@@ -46,6 +56,11 @@ namespace SULS.Controllers
 
         public HttpResponse Delete(string id)
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/users/login");
+            }
+
             this.submissionsService.Delete(id);
             return this.Redirect("/");
         }
