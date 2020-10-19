@@ -5,7 +5,7 @@ using SUS.MvcFramework;
 using System.Collections.Generic;
 
 namespace SULS
-{
+{ //2:53:00 VID
     public class StartUp : IMvcApplication
     {
         public void Configure(List<Route> routeTable)

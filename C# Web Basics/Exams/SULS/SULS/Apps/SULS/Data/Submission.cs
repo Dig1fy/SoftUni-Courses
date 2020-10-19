@@ -16,7 +16,7 @@ namespace SULS.Data
         [MaxLength(800)]
         public string Code { get; set; }
 
-        public ushort AchievedResult { get; set; }
+        public int AchievedResult { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

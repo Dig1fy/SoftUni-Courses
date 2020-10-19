@@ -20,7 +20,7 @@ namespace SULS.Data
         [MaxLength(20)]
         public string Name { get; set; }
 
-        public ushort Points { get; set; }
+        public int Points { get; set; }
 
         public virtual ICollection<Submission> Submissions { get; set; }
     }
