@@ -1,4 +1,5 @@
 ﻿using SULS.ViewModels.Home;
+using SULS.ViewModels.Problems;
 using System.Collections.Generic;
 
 namespace SULS.Services
@@ -10,5 +11,7 @@ namespace SULS.Services
         IEnumerable<HomePageViewModel> GetAll();
 
         string GetNameById(string id);
+
+        public ProblemViewModel GetModеlById(string id);
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SULS.Migrations
 {
@@ -41,7 +40,7 @@ namespace SULS.Migrations
                     Id = table.Column<string>(nullable: false),
                     Code = table.Column<string>(maxLength: 800, nullable: false),
                     AchievedResult = table.Column<int>(nullable: false),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
+                    CreatedOn = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true),
                     ProblemId = table.Column<string>(nullable: true)
                 },

@@ -1,5 +1,6 @@
 ﻿using SULS.Data;
 using SULS.ViewModels.Home;
+using SULS.ViewModels.Problems;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -39,11 +40,28 @@ namespace SULS.Services
             return problems;
         }
 
+        public ProblemViewModel GetModеlById(string id)
+        {
+            return this.db.Problems.Where(x => x.Id == id)
+                 .Select(x => new ProblemViewModel
+                 {
+                     Name = x.Name,
+                     Submissions = x.Submissions.Select(s => new SubmissionViewModel
+                     {
+                         CreatedOn = s.CreatedOn,
+                         SubmissionId = s.Id,
+                         AchievedResult = s.AchievedResult,
+                         Username = s.User.Username,
+                         MaxPoints = x.Points,
+                     })
+                 }).FirstOrDefault();
+        }
+
         public string GetNameById(string id)
         {
             var problemName = this.db.Problems
-                .Where(x=>x.Id == id)
-                .Select(y=>y.Name)
+                .Where(x => x.Id == id)
+                .Select(y => y.Name)
                 .FirstOrDefault();
 
             return problemName;

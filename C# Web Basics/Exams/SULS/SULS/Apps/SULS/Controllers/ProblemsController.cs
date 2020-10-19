@@ -34,5 +34,15 @@ namespace SULS.Controllers
             this.problemsService.Create(name, points);
             return this.Redirect("/");
         }
+
+        //This Id comes from the form Path (query string)
+        public HttpResponse Details(string id)
+        {
+            var viewModel = this.problemsService.GetModеlById(id);
+
+            return this.View(viewModel);
+        }
+
+        
     }
 }

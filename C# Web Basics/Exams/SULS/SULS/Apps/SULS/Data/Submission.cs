@@ -18,7 +18,7 @@ namespace SULS.Data
 
         public int AchievedResult { get; set; }
 
-        public DateTime CreatedOn { get; set; }
+        public string CreatedOn { get; set; }
 
         public string UserId { get; set; }
 

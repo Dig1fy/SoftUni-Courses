@@ -33,9 +33,20 @@ namespace SULS.Controllers
         [HttpPost]
         public HttpResponse Create(string code, string problemId)
         {
+            if (string.IsNullOrWhiteSpace(code) || code.Length < 30 || code.Length > 800)
+            {
+                return this.Error("Code should be between 30 and 800 characters long");
+            }
+
             var userId = this.GetUserId();
             this.submissionsService.Create(code, userId, problemId);
 
+            return this.Redirect("/");
+        }
+
+        public HttpResponse Delete(string id)
+        {
+            this.submissionsService.Delete(id);
             return this.Redirect("/");
         }
     }
