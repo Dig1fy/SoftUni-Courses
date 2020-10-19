@@ -8,12 +8,15 @@ namespace SULS.Controllers
     public class SubmissionsController: Controller
     {
         private readonly IProblemsService problemsService;
+        private readonly ISubmissionsService submissionsService;
 
-        public SubmissionsController(IProblemsService problemsService)
+        public SubmissionsController(IProblemsService problemsService, ISubmissionsService submissionsService)
         {
             this.problemsService = problemsService;
+            this.submissionsService = submissionsService;
         }
 
+        //Load submissions form for each problem
         public HttpResponse Create(string id)
         {
             var problemName = this.problemsService.GetNameById(id);
@@ -28,8 +31,11 @@ namespace SULS.Controllers
         }
 
         [HttpPost]
-        public HttpResponse Create(string x, string y)
+        public HttpResponse Create(string code, string problemId)
         {
+            var userId = this.GetUserId();
+            this.submissionsService.Create(code, userId, problemId);
+
             return this.Redirect("/");
         }
     }

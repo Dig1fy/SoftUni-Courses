@@ -2,6 +2,6 @@
 {
     public interface ISubmissionsService
     {
-        public void Create(string code);
+        public void Create(string code, string userId, string problemId);
     }
 }
