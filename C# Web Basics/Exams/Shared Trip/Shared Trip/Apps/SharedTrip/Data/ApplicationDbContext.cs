@@ -2,7 +2,7 @@
 
 namespace SharedTrip.Data
 {
-    class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: DbContext
     {
         public ApplicationDbContext()
         {
