@@ -1,10 +1,20 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SharedTrip.Data;
+using SUS.MvcFramework;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SharedTrip
 {
-    class StartUp
+    public class StartUp : IMvcApplication
     {
+        public void Configure(List<Route> routeTable)
+        {
+            new ApplicationDbContext().Database.Migrate();
+        }
+
+        public void ConfigureServices(IServiceCollection serviceCollection)
+        {
+           
+        }
     }
 }

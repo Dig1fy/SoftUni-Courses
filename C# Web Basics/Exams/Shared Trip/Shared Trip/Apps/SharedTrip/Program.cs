@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUS.MvcFramework;
+using System;
 using System.Threading.Tasks;
 
 namespace SharedTrip
@@ -7,7 +8,7 @@ namespace SharedTrip
     {
         public static async Task Main(string[] args)
         {
-            
+            await Host.CreateHostAsync(new StartUp());
         }
     }
 }
