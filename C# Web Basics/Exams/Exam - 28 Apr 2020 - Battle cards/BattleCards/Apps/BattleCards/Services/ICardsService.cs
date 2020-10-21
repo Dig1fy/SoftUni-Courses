@@ -10,5 +10,9 @@ namespace BattleCards.Services
         int AddCard(AddCardInputModel inputModel); //returns the id of the new card
 
         void AddToCollection(string userId, int cardId);
+
+        IEnumerable<CardViewModel> GetCollectionByUserId(string userId);
+
+        void RemoveCardFromCollection(int cardId, string userId);
     }
 }

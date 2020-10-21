@@ -19,7 +19,6 @@ namespace BattleCards.Services
             var card = new Card
             {
                 Attack = inputModel.Attack,
-                Id = inputModel.Id,
                 Description = inputModel.Description,
                 Health = inputModel.Health,
                 ImageUrl = inputModel.Image,
@@ -34,7 +33,7 @@ namespace BattleCards.Services
 
         public void AddToCollection(string userId, int cardId)
         {
-            if (this.db.UserCards.Any(x=>x.UserId == userId && x.CardId == cardId))
+            if (this.db.UserCards.Any(x => x.UserId == userId && x.CardId == cardId))
             {
                 return;
             }
@@ -63,6 +62,36 @@ namespace BattleCards.Services
             }).ToArray();
 
             return cards;
+        }
+
+        public IEnumerable<CardViewModel> GetCollectionByUserId(string userId)
+        {
+            var cards = this.db.UserCards.Where(x => x.UserId == userId)
+                .Select(y => new CardViewModel
+                {
+                    Attack = y.Card.Attack,
+                    Description = y.Card.Description,
+                    Health = y.Card.Health,
+                    Id = y.CardId,
+                    ImageUrl = y.Card.ImageUrl,
+                    Name = y.Card.Name,
+                    Type = y.Card.Keyword
+                }).ToList();
+
+            return cards;
+        }
+
+        public void RemoveCardFromCollection(int cardId, string userId)
+        {
+            var userCard = this.db.UserCards.FirstOrDefault(x => x.UserId == userId && x.CardId == cardId);
+
+            if (userCard == null)
+            {
+                return;
+            }
+
+            this.db.UserCards.Remove(userCard);
+            this.db.SaveChanges();
         }
     }
 }
