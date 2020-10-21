@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using System.Text;
 using System.Security.Cryptography;
 using SUS.MvcFramework;
+using BattleCards.ViewModels.Users;
 
 namespace BattleCards.Services
 {
@@ -16,23 +17,23 @@ namespace BattleCards.Services
             this.db = db;
         }
 
-        public string CreateUser(string username, string email, string password)
+        public string CreateUser(RegisterInputModel inputModel)
         {
             var user = new User
             {
-                Username = username,
-                Email = email,
-                Password = ComputeHash(password),
+                Username = inputModel.Username,
+                Email = inputModel.Email,
+                Password = ComputeHash(inputModel.Password),
             };
             this.db.Users.Add(user);
             this.db.SaveChanges();
             return user.Id;
         }
 
-        public string GetUserId(string username, string password)
+        public string GetUserId(LoginInputModel inputModel)
         {
-            var user = this.db.Users.FirstOrDefault(x => x.Username == username);
-            if (user?.Password != ComputeHash(password))
+            var user = this.db.Users.FirstOrDefault(x => x.Username == inputModel.Username);
+            if (user?.Password != ComputeHash(inputModel.Password))
             {
                 return null;
             }
