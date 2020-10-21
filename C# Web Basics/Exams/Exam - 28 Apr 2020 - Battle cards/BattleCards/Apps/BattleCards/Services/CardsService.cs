@@ -13,6 +13,42 @@ namespace BattleCards.Services
         {
             this.db = db;
         }
+
+        public int AddCard(AddCardInputModel inputModel)
+        {
+            var card = new Card
+            {
+                Attack = inputModel.Attack,
+                Id = inputModel.Id,
+                Description = inputModel.Description,
+                Health = inputModel.Health,
+                ImageUrl = inputModel.Image,
+                Keyword = inputModel.Keyword,
+                Name = inputModel.Name,
+            };
+
+            this.db.Cards.Add(card);
+            this.db.SaveChanges();
+            return card.Id;
+        }
+
+        public void AddToCollection(string userId, int cardId)
+        {
+            if (this.db.UserCards.Any(x=>x.UserId == userId && x.CardId == cardId))
+            {
+                return;
+            }
+
+            var uc = new UserCard
+            {
+                UserId = userId,
+                CardId = cardId
+            };
+
+            this.db.UserCards.Add(uc);
+            this.db.SaveChanges();
+        }
+
         public IEnumerable<CardViewModel> GetAll()
         {
             var cards = this.db.Cards.Select(x => new CardViewModel

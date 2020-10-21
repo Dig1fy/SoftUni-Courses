@@ -134,7 +134,7 @@ namespace ViewNamespace
 
             if (viewModel != null)
             {
-                //In case the type of our view model is generic, we add all references of the type 
+                //In case the type of our view inputModel is generic, we add all references of the type 
                 if (viewModel.GetType().IsGenericType)
                 {
                     //get an array of the generic type arguments
