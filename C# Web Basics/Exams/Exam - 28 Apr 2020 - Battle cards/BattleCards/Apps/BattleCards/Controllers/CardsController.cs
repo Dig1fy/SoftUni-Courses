@@ -17,6 +17,11 @@ namespace BattleCards.Controllers
 
         public HttpResponse All()
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
             var viewModel = this.cardsService.GetAll();
             return this.View(viewModel);
         }
@@ -29,6 +34,10 @@ namespace BattleCards.Controllers
         [HttpPost]
         public HttpResponse Add(AddCardInputModel inputModel)
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
 
             if (string.IsNullOrEmpty(inputModel.Name) || inputModel.Name.Length < 5 || inputModel.Name.Length > 15)
             {
@@ -74,14 +83,24 @@ namespace BattleCards.Controllers
 
         public HttpResponse Collection()
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
             var userId = this.GetUserId();
             var viewModel = this.cardsService.GetCollectionByUserId(userId);
             return this.View(viewModel);
         }
 
-        
+
         public HttpResponse RemoveFromCollection(int cardId)
         {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
             var userId = this.GetUserId();
             this.cardsService.RemoveCardFromCollection(cardId, userId);
             return this.Redirect("/");
