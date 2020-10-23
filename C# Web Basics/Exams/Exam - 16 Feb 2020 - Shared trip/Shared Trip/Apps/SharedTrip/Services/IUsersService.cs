@@ -6,11 +6,11 @@ namespace SharedTrip.Services
     {
         void CreateUser(RegisterInputModel inputModel);
 
-        //string GetUserId(string username, string password);
+        string GetUserId(string username, string password);
 
-        //bool IsUsernameAvailable(string username);
+        bool IsUsernameAvailable(string username);
 
-        //bool IsEmailAvailable(string email);
+        bool IsEmailAvailable(string email);
 
     }
 }

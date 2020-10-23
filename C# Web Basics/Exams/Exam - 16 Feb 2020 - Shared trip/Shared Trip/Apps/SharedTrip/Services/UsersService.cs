@@ -28,19 +28,15 @@ namespace SharedTrip.Services
             this.db.SaveChanges();
         }
 
-        //public string GetUserId(string username, string password)
-        //{
+        public string GetUserId(string username, string password) =>
+            this.db.Users.Where(x => x.Username == username || x.Password == password)
+            .Select(y => y.Id)
+            .FirstOrDefault();
 
-        //}
+        public bool IsEmailAvailable(string email) =>
+            !this.db.Users.Any(x => x.Email == email);
 
-        //public bool IsEmailAvailable(string email)
-        //{
-
-        //}
-
-        //public bool IsUsernameAvailable(string username)
-        //{
-
-        //}
+        public bool IsUsernameAvailable(string username) =>
+            !this.db.Users.Any(x => x.Username == username);
     }
 }
