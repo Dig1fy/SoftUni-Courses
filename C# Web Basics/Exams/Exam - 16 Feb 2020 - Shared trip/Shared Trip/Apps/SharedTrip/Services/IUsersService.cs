@@ -1,14 +1,16 @@
-﻿namespace SharedTrip.Services
+﻿using SharedTrip.ViewModels.Users;
+
+namespace SharedTrip.Services
 {
     public interface IUsersService
     {
-        void CreateUser(string username, string email, string password);
+        void CreateUser(RegisterInputModel inputModel);
 
-        string GetUserId(string username, string password);
+        //string GetUserId(string username, string password);
 
-        bool IsUsernameAvailable(string username);
+        //bool IsUsernameAvailable(string username);
 
-        bool IsEmailAvailable(string email);
+        //bool IsEmailAvailable(string email);
 
     }
 }
