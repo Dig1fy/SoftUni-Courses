@@ -7,13 +7,17 @@ namespace SharedTrip.Services
 {
     public interface ITripsService
     {
-        IEnumerable<HomePageProblemViewModel> GetAll();
+        IEnumerable<TripViewModel> GetAll();
 
         //returns the id of the new trip so we can use it in AddTripToUser(tripId, userId)
-        string CreateTrip(TripViewModel inputModel);
+        string CreateTrip(AddTripInputModel inputModel);
 
         void AddUserToTrip(string tripId, string userId);
 
-        TripViewModel GetTripById(string tripId);
+        TripDetailsViewModel GetTripById(string tripId);
+
+        bool HasAvailableSeats(string tripId);
+
+        bool IsUserAlreadyInThisTrip(string userId, string tripId);
     }
 }
