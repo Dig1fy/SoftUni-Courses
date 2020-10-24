@@ -61,4 +61,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\Home\" />
+    <Folder Include="ViewModels\Problems\" />
+    <Folder Include="ViewModels\Submissions\" />
+  </ItemGroup>
+
 </Project>

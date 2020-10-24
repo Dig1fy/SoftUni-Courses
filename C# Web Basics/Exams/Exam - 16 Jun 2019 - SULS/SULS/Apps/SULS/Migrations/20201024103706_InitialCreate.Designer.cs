@@ -9,7 +9,7 @@ using SULS.Data;
 namespace SULS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201019111248_InitialCreate")]
+    [Migration("20201024103706_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

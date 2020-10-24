@@ -1,6 +1,6 @@
-﻿
-
+﻿using Microsoft.EntityFrameworkCore.Internal;
 using SULS.Data;
+using SULS.ViewModels.Users;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -15,31 +15,21 @@ namespace SULS.Services
         {
             this.db = db;
         }
-
-        public void CreateUser(string username, string email, string password)
+        public string CreateUser(RegisterInputModel inputModel)
         {
-            var user = new User()
+            var user = new User
             {
-                Username = username,
-                Email = email,
-                Password = ComputeHash(password)
+                Email = inputModel.Email,
+                Username = inputModel.Username,
+                Password = ComputeHash(inputModel.Password)
             };
 
             this.db.Users.Add(user);
             this.db.SaveChanges();
+            return user.Id;
         }
 
-        public string GetUserId(string username, string password)
-        {
-            var passHash = ComputeHash(password);
-            var user = this.db.Users
-                .Where(x => x.Username == username && x.Password == passHash)
-                .FirstOrDefault();
-
-            return user?.Id;
-        }
-
-        public bool IsEmailAvailable(string email)=>
+        public bool IsEmailAvailable(string email) =>
             !this.db.Users.Any(x => x.Email == email);
 
         public bool IsUsernameAvailable(string username) =>
@@ -56,6 +46,16 @@ namespace SULS.Services
             foreach (var b in hashedInputBytes)
                 hashedInputStringBuilder.Append(b.ToString("X2"));
             return hashedInputStringBuilder.ToString();
+        }
+
+        public string GetUserId(LoginInputViewModel inputViewModel)
+        {
+            var userId = this.db.Users
+                .Where(x => x.Username == inputViewModel.Username && x.Password == ComputeHash(inputViewModel.Password))
+                .Select(y => y.Id)
+                .FirstOrDefault();
+
+            return userId;
         }
     }
 }

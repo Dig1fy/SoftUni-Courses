@@ -1,14 +1,16 @@
-﻿namespace SULS.Services
+﻿using SULS.ViewModels.Users;
+
+namespace SULS.Services
 {
     public interface IUsersService
     {
-        void CreateUser(string username, string email, string password);
+        //Will return the new user Id so we can sign him in
+        string CreateUser(RegisterInputModel inputModel);
 
-        string GetUserId(string username, string password);
-
-        bool IsUsernameAvailable(string username);
+        string GetUserId(LoginInputViewModel inputViewModel);
 
         bool IsEmailAvailable(string email);
 
+        bool IsUsernameAvailable(string username);
     }
 }
