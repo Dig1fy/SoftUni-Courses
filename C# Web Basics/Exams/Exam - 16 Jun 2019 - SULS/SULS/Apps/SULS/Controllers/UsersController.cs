@@ -17,12 +17,22 @@ namespace SULS.Controllers
 
         public HttpResponse Register()
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/");
+            }
+
             return this.View();
         }
 
         [HttpPost]
         public HttpResponse Register(RegisterInputModel inputModel)
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/");
+            }
+
             if (string.IsNullOrWhiteSpace(inputModel.Username) || inputModel.Username.Length < 5 || inputModel.Username.Length > 20)
             {
                 return this.Error("Username should be between 5 and 20 characters long.");
@@ -59,13 +69,23 @@ namespace SULS.Controllers
 
         public HttpResponse Login()
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/");
+            }
+
             return this.View();
         }
 
         [HttpPost]
         public HttpResponse Login(LoginInputViewModel inputModel)
         {
-           var userId = this.usersService.GetUserId(inputModel);
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/");
+
+            }
+            var userId = this.usersService.GetUserId(inputModel);
 
             if (userId == null)
             {

@@ -13,5 +13,7 @@ namespace SULS.Services
         void Create(CreateProblemInputModel inputModel);
 
         string GetNameById(string id);
+
+        ProblemViewModel getProblemById(string id);
     }
 }

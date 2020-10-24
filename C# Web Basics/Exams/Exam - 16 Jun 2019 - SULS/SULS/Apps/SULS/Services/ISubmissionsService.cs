@@ -4,6 +4,8 @@ namespace SULS.Services
 {
     public interface ISubmissionsService
     {
-        void GetNameById(CreateSubmissionViewModel inputModel);
+        void Create(string problemId, string userId, string code);
+
+        void Delete(string id);
     }
 }
