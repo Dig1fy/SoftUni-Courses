@@ -17,8 +17,8 @@ namespace SULS
         {
             //Dependency container
             serviceCollection.Add<IUsersService, UsersService>();
-            //serviceCollection.Add<IProblemsService, ProblemsService>();
-            //serviceCollection.Add<ISubmissionsService, SubmissionsService>();
+            serviceCollection.Add<IProblemsService, ProblemsService>();
+            serviceCollection.Add<ISubmissionsService, SubmissionsService>();
         }
     }
 }
