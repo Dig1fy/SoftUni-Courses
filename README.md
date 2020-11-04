@@ -1271,7 +1271,7 @@ C# / JavaScript / MS SQL - homeworks and exams according to the Software Univers
          <tbody>
             <tr>
                <th align="left" width="50%">C# Web Basics - September 2020 <br /> 15.09.2020 - 25.10.2020</th>
-               <th width="40%" align="left">Grade: X.XX (out of 6.00)<br /> Issue Date: XX/XX/XXXX:</th>
+               <th width="40%" align="left">Grade: 6.00 (out of 6.00)<br /> Issue Date: XX/XX/XXXX:</th>
                <th align="left">
                  <p><a title="MSSQL advanced - Entity Framework Core" href="https://softuni.bg/certificates/details/86322/358ff520" target="_blank">Certificate</a></p>
                </th>
