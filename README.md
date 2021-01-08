@@ -1271,9 +1271,9 @@ C# / JavaScript / MS SQL - homeworks and exams according to the Software Univers
          <tbody>
             <tr>
                <th align="left" width="50%">C# Web Basics - September 2020 <br /> 15.09.2020 - 25.10.2020</th>
-               <th width="40%" align="left">Grade: 6.00 (out of 6.00)<br /> Issue Date: XX/XX/XXXX:</th>
+               <th width="40%" align="left">Grade: 6.00 (out of 6.00)<br /> Issue Date: 09/11/2020:</th>
                <th align="left">
-                 <p><a title="MSSQL advanced - Entity Framework Core" href="https://softuni.bg/certificates/details/86322/358ff520" target="_blank">Certificate</a></p>
+                 <p><a title="MSSQL advanced - Entity Framework Core" href="https://softuni.bg/certificates/details/91058/7bb4d95c" target="_blank">Certificate</a></p>
                </th>
             </tr>
          </tbody>
@@ -1335,6 +1335,41 @@ C# / JavaScript / MS SQL - homeworks and exams according to the Software Univers
          </td>
       </tr>      
       <!-- C# Web Basics END -->  
+      </tbody>
+   </table>
+</details>
+
+<!-- ASP.NET Core START -->  
+<details>
+   <summary>
+      <strong> Click </strong> for more detailed information
+		<table width="100%" cellspacing="11" cellpadding="14" align="center">
+         <tbody>
+            <tr>
+               <th align="left" width="50%">ASP.NET Core - October 2020 <br /> 15.10.2020 - 29.12.2020</th>
+               <th width="40%" align="left">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/01/2021:</th>
+               <th align="left">
+                 <p><a title="MSSQL advanced - Entity Framework Core" href="https://softuni.bg/certificates/details/96171/0912cc38" target="_blank">Certificate</a></p>
+               </th>
+            </tr>
+         </tbody>
+      </table>  
+   </summary>
+   <!-- Summary End -->
+	
+   <table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+      <!-- Course Body -->
+      <tr >
+         <td width="19.5%">
+            <ul >
+               <li>
+                  <p><a title="ADO.Net" href="https://github.com/q2kPetrov/ProSeeker-">My MVC project</a>
+                  </p>
+               </li>
+            </ul>
+         </td>         
+      </tr>           
+      <!-- ASP.NET Core END -->  
       </tbody>
    </table>
 </details>
