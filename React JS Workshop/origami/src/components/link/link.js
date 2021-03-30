@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './link.module.css'
 
-const Link = ({reff, number}) => {
+const Link = ({reff, number, type}) => {
     
     return (
-        <div className={styles.listItem}>
-            <a href={reff}>
+        <div className={styles[`${type}-list-item`]}>
+            <a href={reff} className ={styles[`${type}-link`]}>
                 {`Going to ${number}`}
             </a>
         </div>

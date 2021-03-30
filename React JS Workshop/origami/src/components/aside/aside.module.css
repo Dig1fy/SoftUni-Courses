@@ -7,7 +7,7 @@
     vertical-align: top;
 }
 
-aside .listItem {
+.list-item {
     display: block;
     width: 98%;
     border-left: 2px solid #234465;
@@ -17,7 +17,7 @@ aside .listItem {
     text-align: center;
 }
 
-aside .listItem a {
+.list-item a {
     color: #234465;
     text-align: center;
     text-decoration: none;
@@ -26,7 +26,7 @@ aside .listItem a {
     display: block;
 }
 
-aside .listItem:hover {
+.list-item:hover {
     border-left: none;
     border-right: none;
     font-weight: bold;

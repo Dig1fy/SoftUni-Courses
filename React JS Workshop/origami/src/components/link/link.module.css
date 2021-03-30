@@ -1,9 +1,14 @@
-.listItem a {
+.header-link {
     color: white;
     text-decoration: none;
 }
 
-.listItem {
+.footer-link {
+    color: #234465;
+    text-decoration: none;
+}
+
+.header-list-item, .footer-list-item {
     display: inline-block;
     height: auto;
     margin-right: 2%;
@@ -13,14 +18,58 @@
     vertical-align: top;
 }
 
-.listItem:not(:first-child) {
+.footer-list-item:nth-child(1) {
+    margin-left: 1%;
+}
+
+.header-list-item:not(:first-child) {
     padding: 2%;
     margin-top: 1.5%;
     border-top: 2px solid #ffa000;
 }
 
-.listItem:hover {
+.footer-list-item:not(:last-child) {
+    padding: 2%;
+    margin-top: 1.5%;
+    border-bottom: 2px solid #234465;
+}
+
+.header-list-item:hover {
     border-top: none;
-    border-bottom: 5px solid #ffa000;
+    border-bottom: 6px solid #ffa000;
     font-weight: bold;
+}
+
+.footer-list-item:hover {
+    border-bottom: none;
+    border-top: 2px solid #234465;
+    font-weight: bold;
+}
+
+.aside-list-item {
+    display: block;
+    width: 98%;
+    border-left: 2px solid #234465;
+    border-right: 2px solid #234465;
+    margin-bottom: 11%;
+    height: 5vh;
+    text-align: center;
+}
+
+.aside-link {
+    color: #234465;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 5%;
+    height: 60%;
+    display: block;
+}
+
+.aside-list-item:hover {
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+    border-top: 2px solid #234465;
+    border-bottom: 2px solid #234465;
+    color: #ffa000;
 }
