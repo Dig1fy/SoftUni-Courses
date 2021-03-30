@@ -6,7 +6,8 @@ const secret = 'secret';
 module.exports = (app) => {
     app.use(cors());
 
-    app.use(bodyParser.urlencoded({
+    app.use(express.json())
+    app.use(express.urlencoded({
         extended: true
     }));
 
