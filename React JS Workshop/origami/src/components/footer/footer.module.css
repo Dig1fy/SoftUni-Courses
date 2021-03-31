@@ -1,0 +1,35 @@
+.footer {
+    width: 100%;
+    height: 18vh;
+    background-color: #ffa000;
+    color: #234465;
+    border-top: 2px solid #234465;
+    border-bottom: 2px solid #234465;
+    margin-bottom: 1%;
+}
+
+.footer p {
+    text-align: center;
+    font-weight: bold;;
+}
+
+.footer-listItem a {
+    color: #234465;
+    text-decoration: none;
+}
+
+.footer-listItem:nth-child(1) {
+    margin-left: 1%;
+}
+
+.footer-listItem:not(:last-child) {
+    padding: 2%;
+    margin-top: 1.5%;
+    border-bottom: 2px solid #234465;
+}
+
+.footer-listItem:hover {
+    border-bottom: none;
+    border-top: 2px solid #234465;
+    font-weight: bold;
+}

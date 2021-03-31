@@ -1,12 +1,12 @@
-.post {
+.container {
     width: 100%;
     height: auto;
     border: 1px solid #234465;
     margin-bottom: 3%;
     border-radius: 4px;
-}
-
-.post-description {
+  }
+  
+  .description {
     word-wrap: break-word;
     padding: 0.5%;
     font-style: italic;
@@ -16,23 +16,23 @@
     display: inline-block;
     vertical-align: top;
     ;
-}
-
-.post div {
+  }
+  
+  .container p {
     /* border:1px solid red; */
     height: auto;
     text-align: right;
     margin-bottom: 0.5%;
-}
-
-.post div span {
+  }
+  
+  .user {
     text-decoration: underline;
     text-align: right;
     /* border:1px solid green; */
     padding-right: 1%;
-}
-
-.post img {
+  }
+  
+  .image {
     width: 32px;
     height: 32px;
-}
+  }

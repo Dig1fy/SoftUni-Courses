@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import styles from './App.module.css';
 import Header from './components/header/header'
 import Aside from './components/aside/aside'
+import Posts from './components/posts/posts'
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <div>
         <Aside/>
+        <Posts/>
       </div>
     </div>
   );
