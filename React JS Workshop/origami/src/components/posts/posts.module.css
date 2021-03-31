@@ -1,11 +1,14 @@
 .posts {
-    display: inline-block;
-    width: 84%;
+    display  : inline-block;
+    width    : 84%;
     /* border:1px solid red; */
-    height: 45vh;
+    height   : 45vh;
 }
 
-.title{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.title {
+    text-align     : center;
+    color          : #234465;
+    text-decoration: underline;
+    margin-bottom  : 2%;
+
 }
