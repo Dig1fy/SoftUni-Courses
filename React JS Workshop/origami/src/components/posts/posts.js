@@ -1,42 +1,41 @@
-import React, { useState, useEffect } from 'react'
-import Post from '../post/post'
-import styles from './posts.module.css'
+import React from "react";
+import Post from "../post/post";
+import styles from "./posts.module.css";
 
 class Posts extends React.Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = ({ origamis: [] })
-    }
+    this.state = { origamis: [] };
+  }
 
-    getOrigamis = async () => {
-        fetch('http://localhost:9999/api/origami')
-        .then(x=>x.json())
-        .then(data=> this.setState({origamis: data}))
-        .catch(err=>console.log(err))
-        // this.setState({ origamis: origamis })
-    }
+  getOrigamis = async () => {
+    fetch("http://localhost:9999/api/origami")
+      .then((x) => x.json())
+      .then((data) => this.setState({ origamis: data }))
+      .catch((err) => console.log(err));
+    // this.setState({ origamis: origamis })
+  };
 
-    renderOrigamis() {
-        const {origamis} = this.state;
-        return origamis.map((origam, currentIndex) => {
-            return <Post key={origam._id} index ={currentIndex+1} {...origam}/>
-        })
-    }
+  renderOrigamis() {
+    const { origamis } = this.state;
+    return origamis.map((origam, currentIndex) => {
+      return <Post key={origam._id} index={currentIndex + 1} {...origam} />;
+    });
+  }
 
-    componentDidMount() {
-        this.getOrigamis();
-    }
+  componentDidMount() {
+    this.getOrigamis();
+  }
 
-    render() {
-        return (
-            <div className={styles.posts}>
-                <h1 className = {styles.title}>ORIGAMIS</h1>
-                {this.renderOrigamis()}
-
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className={styles.posts}>
+        <h1 className={styles.title}>ORIGAMIS</h1>
+        {this.renderOrigamis()}
+      </div>
+    );
+  }
 }
 
-export default Posts
+export default Posts;

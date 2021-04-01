@@ -1,22 +1,25 @@
-import React, { useContext } from 'react'
-import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
-import HomePage from './pages/home/home'
-import LoginPage from './pages/login/login'
-// import ErrorPage from './pages/error/error'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PageLayout from "./components/layout/layout";
+import NotFoundPage from "./pages/error/error";
+import HomePage from "./pages/home/home";
+import LoginPage from "./pages/login/login";
+import RegisterPage from "./pages/register/register";
 
 const Navigation = () => {
-    let loggedIn = false;
+  return (
+    <Router>
+      {/* <PageLayout> */}
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" exact component={LoginPage} />
+          <Route path="/register" exact component={RegisterPage} />
 
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/login" >
-                    {loggedIn ? (<Redirect to="/" />) : (<LoginPage />)}
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    )
-}
+          <Route component={NotFoundPage} />
+        </Switch>
+      {/* </PageLayout> */}
+    </Router>
+  );
+};
 
-export default Navigation
+export default Navigation;

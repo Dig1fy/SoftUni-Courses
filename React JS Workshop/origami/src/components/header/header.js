@@ -1,24 +1,35 @@
-import React from 'react'
-import styles from './header.module.css'
-import Link from '../link/link'
-import logo from '../../images/white-origami-bird.png'
+import React from "react";
+import { useHistory } from "react-router-dom";
+import logo from "../../images/white-origami-bird.png";
+import LinkCustom from "../link/link";
+import styles from "./header.module.css";
 
 const Header = () => {
-    return (
-        <header className={styles.header}>
-             <img src={logo} className={styles.image}/>
-             
-             <Link linkContent="LOGIN" 
-                href="/login"
-                title="LOg mEejqijdfiqwjdoqw"
-                type="header" />
-            <Link linkContent="####" type="header" reff={'#'} />
-            <Link linkContent={"####"} type="header" reff={'#'} />
-            <Link linkContent={"####"} type="header" reff={'#'} />
-            <Link linkContent={"####"} type="header" reff={'#'} />
-            <Link linkContent={"####"} type="header" reff={'#'} />
-        </header>
-    )
-}
+  const { push } = useHistory();
 
-export default Header
+  return (
+    <header className={styles.header}>
+      <img
+        onClick={() => push("/")}
+        src={logo}
+        alt=""
+        className={styles.image}
+      />
+      <LinkCustom
+        linkContent="LOGIN"
+        reff="/login"
+        title="TEST LOGIN"
+        to="/login"
+        type="header"
+      />
+      <LinkCustom
+        linkContent="REGISTER"
+        reff="/register"
+        title="TEST REGISTER"
+        type="header"
+      />
+    </header>
+  );
+};
+
+export default Header;

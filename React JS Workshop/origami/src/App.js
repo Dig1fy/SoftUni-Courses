@@ -1,20 +1,8 @@
-import logo from './logo.svg';
-import styles from './App.module.css';
-import Header from './components/header/header'
-import Aside from './components/aside/aside'
-import Posts from './components/posts/posts'
-import Footer from './components/footer/footer'
+import React from 'react'
 
 const App = () => {
   return (
-    <div className={styles.container}>
-      <Header />
-      <div>
-        <Aside/>
-        <Posts/>
-      </div>
-      <Footer/>
-    </div>
+    <div>{"APP"}</div>
   );
 }
 
