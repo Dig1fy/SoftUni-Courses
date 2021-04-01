@@ -11,7 +11,7 @@ const Layout = (props) => {
       <div>
         <Aside />
         <div>{props.children}</div>
-        {/* <Posts /> */}
+        
       </div>
       <Footer />
     </div>
