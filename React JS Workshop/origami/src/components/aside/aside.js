@@ -11,6 +11,7 @@ const Aside = () => {
             {links.map(navLink => {
                 return (
                     <Link
+                        key={navLink.title}
                         linkContent={navLink.linkContent}
                         reff={navLink.endPoint}
                         title={navLink.title}

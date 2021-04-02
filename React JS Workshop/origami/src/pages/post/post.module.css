@@ -1,0 +1,19 @@
+
+
+.textarea{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    resize: none;
+    padding: 2%;
+    height: 10vh;
+    font-style: italic;
+    border-radius: 6px;
+    border:1px solid #234465;
+    color: #234465;
+
+}
+
+.container{
+    text-align: center;
+}

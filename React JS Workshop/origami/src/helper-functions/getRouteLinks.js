@@ -6,6 +6,11 @@ const getRouteLinks = function (user) {
             linkContent:"Home"
         },
         {
+            title: "Post",
+            endPoint: "/post",
+            linkContent:"Post"
+        },
+        {
             title: "Share your thoughts",
             endPoint: "/share",
             linkContent: "Share"
@@ -22,6 +27,11 @@ const getRouteLinks = function (user) {
             title: "Home",
             endPoint: "/",
             linkContent: "Home"
+        },
+        {
+            title: "Post",
+            endPoint: "/post",
+            linkContent:"Post"
         },
         {
             title: "Login",

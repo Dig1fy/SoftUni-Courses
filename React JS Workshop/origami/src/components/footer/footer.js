@@ -10,15 +10,16 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       {links.map(navLink => {
-                return (
-                    <Link
-                        linkContent={navLink.linkContent}
-                        reff={navLink.endPoint}
-                        title={navLink.title}
-                        type="footer"
-                    />
-                )
-            })}
+        return (
+          <Link
+            key={navLink.title}
+            linkContent={navLink.linkContent}
+            reff={navLink.endPoint}
+            title={navLink.title}
+            type="footer"
+          />
+        )
+      })}
       <img src={logo} alt="" className={styles.image} />
     </footer>
   );

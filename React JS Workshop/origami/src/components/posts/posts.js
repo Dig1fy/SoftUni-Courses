@@ -31,7 +31,6 @@ class Posts extends React.Component {
   render() {
     return (
       <div className={styles.posts}>
-        <h1 className={styles.title}>ORIGAMIS</h1>
         {this.renderOrigamis()}
       </div>
     );

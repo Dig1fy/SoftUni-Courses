@@ -22,7 +22,7 @@ class ErrorBoundary extends React.Component {
       return <div>
         <div className={styles.textContainer}>The page you're looking for is missing. Are you missing something? </div>;
         <div className={styles.image}>
-          <img src={image} className={styles.image}></img>
+          <img src={image} alt="" className={styles.image}></img>
         </div>
       </div>
     }

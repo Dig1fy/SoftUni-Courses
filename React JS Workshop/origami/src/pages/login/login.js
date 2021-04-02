@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PageLayout from '../../components/layout/layout'
+import Title from '../../components/title/title'
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ const LoginPage = () => {
 
   return (
     <PageLayout>
-      <h1>LOGINNNNNNNNNNN</h1>
+      <Title title="Login"/>
       <form onSubmit={handleSubmit}>
         <title title="Login" />
         <input

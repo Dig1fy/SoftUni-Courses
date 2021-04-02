@@ -1,13 +1,13 @@
 import React from 'react'
 import PageLayout from '../../components/layout/layout'
-import styles from './home.module.css'
 import Posts from '../../components/posts/posts'
+import Title from '../../components/title/title'
 
 const HomePage = () => {
 
     return (
         <PageLayout>
-            {/* <div className={styles.container}>HOME PAGEEEEEE</div> */}
+            <Title title={'Home page publications'}/>
             <Posts />
         </PageLayout>
     )

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styles from './register.module.css'
 import PageLayout from '../../components/layout/layout'
+import Title from '../../components/title/title'
+import SubmitButton from '../../components/submitButton/submitButton'
 
 const RegisterPage = () => {
     const [username, setUsername] = useState('')
@@ -11,30 +13,37 @@ const RegisterPage = () => {
         e.preventDefault();
     }
 
-    function changeUsername(event) {
+    const changeUsername = (event) => {
         setUsername(event.target.value)
     }
 
-    function changePassword(event) {
+    const changePassword = (event) => {
         setPassword(event.target.value)
     }
 
-    function changeRePassword(event) {
+    const changeRePassword = (event) => {
         setRePassword(event.target.value)
     }
 
     return (
         <PageLayout>
-            <div>TEST</div>
-            <form className={styles.wrapper} onSubmit={(e) => handleSubmit(e)}>
-                <h1>REGISTER TEST </h1>
-                <input value={"zzzz"} value={username} onChange={(e) => changeUsername(e)} />
-
-                <input type="password" value={password} onChange={(e) => changePassword(e)} />
-
-                <input type="password" value={rePassword} onChange={(e) => changeRePassword(e)} />
-
-                <button title="Register">Submit</button>
+            <Title title="Register" />
+            <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
+                <div>
+                    <label htmlFor={"username"}>Username</label> <br></br>
+                    <input value={"zzzz"} id="username" value={username} onChange={(e) => changeUsername(e)} />
+                </div>
+                <div>
+                <label htmlFor={"password"}>Password</label> <br></br>
+                    <input type="password" id="password" value={password} onChange={(e) => changePassword(e)} />
+                </div>
+                <div>
+                <label htmlFor={"rePassword"}>Re-password</label> <br></br>
+                    <input type="password" id="rePassword" value={rePassword} onChange={(e) => changeRePassword(e)} />
+                </div>
+                <div>
+                    <SubmitButton buttonValue="Submit" />
+                </div>
             </form>
         </PageLayout>
     )

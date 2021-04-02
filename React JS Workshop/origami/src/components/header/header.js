@@ -21,6 +21,7 @@ const Header = () => {
       {links.map(navLink=>{
         return (
           <LinkCustom
+            key = {navLink.title}
             linkContent={navLink.linkContent}
             reff={navLink.endPoint}
             title={navLink.title}
