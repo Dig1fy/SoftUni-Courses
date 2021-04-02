@@ -2,37 +2,44 @@ const getRouteLinks = function (user) {
     const userLinks = [
         {
             title: "Home",
-            endPoint: "/"
+            endPoint: "/",
+            linkContent:"Home"
         },
         {
             title: "Share your thoughts",
-            endPoint: "/share"
-        }, 
+            endPoint: "/share",
+            linkContent: "Share"
+        },
         {
             title: "Profile",
-            endPoint: "/profile"
+            endPoint: "/profile",
+            linkContent: "Profile"
         }
     ]
 
     const guestLinks = [
         {
             title: "Home",
-            endPoint: "/"
+            endPoint: "/",
+            linkContent: "Home"
         },
         {
             title: "Login",
-            endPoint: "/login"
+            endPoint: "/login",
+            linkContent: "Login"
         },
         {
             title: "Register",
-            endPoint: "/register"
-        }, 
+            endPoint: "/register",
+            linkContent: "Register"
+        },
         {
             title: "Profile",
-            endPoint: "/profile"
+            endPoint: "/profile",
+            linkContent: "Profile"
         }
     ]
-    
+
     const loggedIn = user && user.loggedIn
     return loggedIn ? userLinks : guestLinks
 }

@@ -6,12 +6,13 @@ import Aside from "../aside/aside";
 
 const Layout = (props) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.app}>
       <Header />
-      <div>
+      <div className={styles.container}>
         <Aside />
-        <div>{props.children}</div>
-        
+        <div className={styles['inner-container']}>
+          <div>{props.children}</div>
+        </div>
       </div>
       <Footer />
     </div>
