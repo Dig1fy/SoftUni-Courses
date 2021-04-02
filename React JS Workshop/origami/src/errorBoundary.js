@@ -1,4 +1,6 @@
 import React from "react";
+import image from './images/404.png'
+import styles from './errorBoundary.module.css'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,9 +19,13 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.isThereAnError) {
-      return <div>{"Something went wrong (error boundary)"}</div>;
+      return <div>
+        <div className={styles.textContainer}>The page you're looking for is missing. Are you missing something? </div>;
+        <div className={styles.image}>
+          <img src={image} className={styles.image}></img>
+        </div>
+      </div>
     }
-
     return this.props.children;
   }
 }
