@@ -1,37 +1,52 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
+import styles from './login.module.css'
 import PageLayout from '../../components/layout/layout'
 import Title from '../../components/title/title'
+import SubmitButton from '../../components/submitButton/submitButton'
+import Input from '../../components/input/input'
 
 const LoginPage = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-  };
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
 
-  return (
-    <PageLayout>
-      <Title title="Login"/>
-      <form onSubmit={handleSubmit}>
-        <title title="Login" />
-        <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          label="Username"
-          id="username"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          label="Password"
-          id="password"
-        />
-        <button type="submit" title="Login" />
-      </form>
-    </PageLayout>
-  );
-};
+    const changeUsername = (event) => {
+        setUsername(event.target.value)
+    }
 
-export default LoginPage;
+    const changePassword = (event) => {
+        setPassword(event.target.value)
+    }
+
+    return (
+        <PageLayout>
+            <Title title="Login" />
+            <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
+                <div>
+                    <Input
+                        labelContent="Username"
+                        id="username"
+                        value={username}
+                        onChange={(e) => changeUsername(e)}
+                    />
+                </div>
+                <div>                    
+                <Input
+                        labelContent="Password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => changePassword(e)}
+                    />
+                </div>
+                <div>
+                    <SubmitButton buttonValue="Submit" />
+                </div>
+            </form>
+        </PageLayout>
+    )
+}
+
+export default LoginPage

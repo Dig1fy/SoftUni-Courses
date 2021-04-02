@@ -1,0 +1,20 @@
+.input {
+    text-align   : center;
+    border       : 1px solid #234465;
+    padding      : 1%;
+    width        : 30%;
+    border-radius: 6px;
+    color        : #234465;
+
+}
+
+.container {
+    margin: 15px;
+}
+
+/* .label{
+    float: left;
+    width: 30%;
+    text-align: right;
+
+} */

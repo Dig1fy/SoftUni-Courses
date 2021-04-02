@@ -3,6 +3,7 @@ import styles from './register.module.css'
 import PageLayout from '../../components/layout/layout'
 import Title from '../../components/title/title'
 import SubmitButton from '../../components/submitButton/submitButton'
+import Input from '../../components/input/input'
 
 const RegisterPage = () => {
     const [username, setUsername] = useState('')
@@ -30,16 +31,28 @@ const RegisterPage = () => {
             <Title title="Register" />
             <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
                 <div>
-                    <label htmlFor={"username"}>Username</label> <br></br>
-                    <input value={"zzzz"} id="username" value={username} onChange={(e) => changeUsername(e)} />
+                    <Input
+                        labelContent="Username"
+                        id="username"
+                        value={username}
+                        onChange={(e) => changeUsername(e)}
+                    />
+                </div>
+                <div>                    
+                <Input
+                        labelContent="Password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => changePassword(e)}
+                    />
                 </div>
                 <div>
-                <label htmlFor={"password"}>Password</label> <br></br>
-                    <input type="password" id="password" value={password} onChange={(e) => changePassword(e)} />
-                </div>
-                <div>
-                <label htmlFor={"rePassword"}>Re-password</label> <br></br>
-                    <input type="password" id="rePassword" value={rePassword} onChange={(e) => changeRePassword(e)} />
+                <Input
+                        labelContent="Re-password"
+                        id="rePassword"
+                        value={rePassword}
+                        onChange={(e) => changeRePassword(e)}
+                    />
                 </div>
                 <div>
                     <SubmitButton buttonValue="Submit" />
