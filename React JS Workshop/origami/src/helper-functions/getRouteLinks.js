@@ -6,9 +6,9 @@ const getRouteLinks = function (user) {
             linkContent:"Home"
         },
         {
-            title: "Post",
-            endPoint: "/post",
-            linkContent:"Post"
+            title: "Publications",
+            endPoint: "/publications",
+            linkContent:"Publications"
         },
         {
             title: "Share your thoughts",
@@ -16,7 +16,7 @@ const getRouteLinks = function (user) {
             linkContent: "Share"
         },
         {
-            title: "Profile",
+            title: "My profile",
             endPoint: "/profile",
             linkContent: "Profile"
         }
@@ -29,9 +29,9 @@ const getRouteLinks = function (user) {
             linkContent: "Home"
         },
         {
-            title: "Post",
-            endPoint: "/post",
-            linkContent:"Post"
+            title: "Publications",
+            endPoint: "/publications",
+            linkContent:"Publications"
         },
         {
             title: "Login",
@@ -44,7 +44,7 @@ const getRouteLinks = function (user) {
             linkContent: "Register"
         },
         {
-            title: "Profile",
+            title: "My profile",
             endPoint: "/profile",
             linkContent: "Profile"
         }

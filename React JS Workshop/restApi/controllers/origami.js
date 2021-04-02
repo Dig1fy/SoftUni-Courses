@@ -2,8 +2,8 @@ const models = require('../models');
 
 module.exports = {
     get: (req, res, next) => {
-        models.Origami.find()
-            .populate('author') //We need to populate the whole entity (user). Otherwise, it returns only id
+        const length = req.query.length ? parseInt(req.query.length) : 20
+        models.Origami.find().sort('-created_at').limit(length).populate('author')
             .then((origamies) => res.send(origamies))
             .catch(next);
     },

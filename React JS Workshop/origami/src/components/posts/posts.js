@@ -10,7 +10,7 @@ class Posts extends React.Component {
   }
 
   getOrigamis = async () => {
-    fetch("http://localhost:9999/api/origami")
+    fetch(`http://localhost:9999/api/origami?length=${+this.props.length || 20}`)
       .then((x) => x.json())
       .then((data) => this.setState({ origamis: data }))
       .catch((err) => console.log(err));

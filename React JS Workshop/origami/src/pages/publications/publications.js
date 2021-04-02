@@ -1,10 +1,11 @@
 import React from 'react'
 import Title from '../../components/title/title'
 import PageLayout from '../../components/layout/layout'
-import styles from './post.module.css'
+import styles from './publications.module.css'
 import SubmitButton from '../../components/submitButton/submitButton'
+import Posts from '../../components/posts/posts'
 
-const PostPage = () => {
+const PublicationsPage = () => {
 
    const submitHandler = (e) => {
         e.preventDefault();
@@ -22,8 +23,10 @@ const PostPage = () => {
                     </div>
                 </div>
             </form>
+
+            <Posts length={3}/>
         </PageLayout>
     )
 }
 
-export default PostPage
+export default PublicationsPage

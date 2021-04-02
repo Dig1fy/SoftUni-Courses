@@ -1,6 +1,6 @@
 .posts {
     display  : inline-block;
-    width    : 84%;
+    width    : 100%;
     /* border:1px solid red; */
     height   : 45vh;
 }

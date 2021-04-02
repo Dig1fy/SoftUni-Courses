@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <PageLayout>
             <Title title={'Home page publications'}/>
-            <Posts />
+            <Posts length={20}/>
         </PageLayout>
     )
 }
