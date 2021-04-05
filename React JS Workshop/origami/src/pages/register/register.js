@@ -6,6 +6,7 @@ import SubmitButton from '../../components/submitButton/submitButton'
 import Input from '../../components/input/input'
 import { useHistory } from 'react-router-dom'
 import authenticate from '../../helper-functions/fetchRequests/authenticate'
+import UserContext from '../../Context'
 
 const RegisterPage = () => {
     const history = useHistory();
@@ -13,12 +14,15 @@ const RegisterPage = () => {
     const [password, setPassword] = useState('')
     const [rePassword, setRePassword] = useState('')
 
-    async function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        const context = UserContext;
 
         let body = { username, password };
-        let onSuccess = () => {
+        let onSuccess = (user) => {
             console.log("REGISTER ACTUALLY WORKED!!!");
+            context.logIn(user)
+            alert(context.user)
             history.push("/")
         }
         let onFailure = (e) => {

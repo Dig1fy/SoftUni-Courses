@@ -4,33 +4,41 @@ import logo from "../../images/white-origami-bird.png";
 import LinkCustom from "../link/link";
 import styles from "./header.module.css";
 import getRouteLinks from '../../helper-functions/getRouteLinks'
+import UserContext from '../../Context'
 
-const Header = () => {
-  const { push } = useHistory();
-  // const { user } = this.context
-  const links = getRouteLinks();
+class Header extends React.Component {
 
-  return (
-    <header className={styles.header}>
-      <img
-        onClick={() => push("/")}
-        src={logo}
-        alt=""
-        className={styles.image}
-      />
-      {links.map(navLink=>{
-        return (
-          <LinkCustom
-            key = {navLink.title}
-            linkContent={navLink.linkContent}
-            reff={navLink.endPoint}
-            title={navLink.title}
-            type="header"
-          />
-        )
-      })}
-    </header>
-  );
-};
+  static contextType = UserContext
+
+  render() {
+    const {
+      user
+    } = this.context
+
+    const links = getRouteLinks();
+
+    return (
+      <header className={styles.header}>
+        <img
+          onClick={() => this.props.history.push('/')}
+          src={logo}
+          alt=""
+          className={styles.image}
+        />
+        {links.map(navLink => {
+          return (
+            <LinkCustom
+              key={navLink.title}
+              linkContent={navLink.linkContent}
+              reff={navLink.endPoint}
+              title={navLink.title}
+              type="header"
+            />
+          )
+        })}
+      </header>
+    );
+  }
+}
 
 export default Header;
