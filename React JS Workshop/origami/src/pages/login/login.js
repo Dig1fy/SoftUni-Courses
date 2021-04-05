@@ -4,7 +4,8 @@ import PageLayout from '../../components/layout/layout'
 import Title from '../../components/title/title'
 import SubmitButton from '../../components/submitButton/submitButton'
 import Input from '../../components/input/input'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+import authenticate from '../../helper-functions/fetchRequests/authenticate'
 
 const LoginPage = () => {
     const history = useHistory();
@@ -13,33 +14,16 @@ const LoginPage = () => {
 
     async function handleSubmit(e) {
         e.preventDefault();
-
-        try {
-            const promise = await fetch('http://localhost:9999/api/user/login', {
-                method: "post",
-                //Depends how it's been configured in our restApi
-                body: JSON.stringify({
-                    username: username,
-                    password: password
-                }),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-
-            // console.log(promise);
-            //we access the cookie from the response like this: promise.headers.get("Authorization")
-            const authorizationCookie = promise.headers.get("Authorization")
-            document.cookie = `x-auth-token= ${authorizationCookie}`
-            const response = await promise.json()
-
-            if(response.username && authorizationCookie){
-               history.push("/");
-            }
-
-        } catch (e) {
-            console.log(e);
+        let body = { username, password };
+        let onSuccess = () => {
+            console.log("LOGIN ACTUALLY WORKED!!!");
+            history.push("/")
         }
+        let onFailure = (e) => {
+            console.log("ERROR: ", e);
+        }
+        await authenticate("http://localhost:9999/api/user/login", body, onSuccess, onFailure)
+
     }
 
     const changeUsername = (event) => {

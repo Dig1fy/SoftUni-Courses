@@ -4,15 +4,30 @@ import PageLayout from '../../components/layout/layout'
 import Title from '../../components/title/title'
 import SubmitButton from '../../components/submitButton/submitButton'
 import Input from '../../components/input/input'
+import { useHistory } from 'react-router-dom'
+import authenticate from '../../helper-functions/fetchRequests/authenticate'
 
 const RegisterPage = () => {
+    const history = useHistory();
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [rePassword, setRePassword] = useState('')
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
+
+        let body = { username, password };
+        let onSuccess = () => {
+            console.log("REGISTER ACTUALLY WORKED!!!");
+            history.push("/")
+        }
+        let onFailure = (e) => {
+            console.log("ERROR: ", e);
+        }
+        await authenticate("http://localhost:9999/api/user/register", body, onSuccess, onFailure)
+        
     }
+
 
     const changeUsername = (event) => {
         setUsername(event.target.value)
@@ -38,8 +53,9 @@ const RegisterPage = () => {
                         onChange={(e) => changeUsername(e)}
                     />
                 </div>
-                <div>                    
-                <Input
+                <div>
+                    <Input
+                        type="password"
                         labelContent="Password"
                         id="password"
                         value={password}
@@ -47,7 +63,8 @@ const RegisterPage = () => {
                     />
                 </div>
                 <div>
-                <Input
+                    <Input
+                        type="password"
                         labelContent="Re-password"
                         id="rePassword"
                         value={rePassword}
