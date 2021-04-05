@@ -29,7 +29,8 @@ module.exports = {
           }
 
           const token = utils.jwt.createToken({ id: user._id });
-          res.cookie(config.authCookieName, token).send(user);
+          // res.cookie(config.authCookieName, token).send(user);  We need this adjustment for the jwt token
+           res.header("Authorization", token).send(user);
         })
         .catch(next);
     },
