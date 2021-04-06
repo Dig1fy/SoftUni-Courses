@@ -1,42 +1,51 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext, useCallback } from 'react'
 import PageLayout from '../../components/layout/layout'
 import Posts from '../../components/posts/posts'
 import { useParams, useHistory } from 'react-router-dom'
 import SubmitButton from '../../components/submitButton/submitButton'
+import UserContext from '../../Context'
 
 const ProfilePage = (props) => {
     const [username, setUsername] = useState(null)
     const [posts, setPosts] = useState(null)
     const history = useHistory();
+    const context = useContext(UserContext)
+    const params = useParams();
 
-    const params = useParams()
-  console.log(props.match.params);
+    console.log(props.match.params, "PARAMS");
 
     const logOut = () => {
+        context.logOut()
         history.push('/')
     }
 
-    const getUser = async () => {
-        const id = '22'
+    const getData = useCallback(async () => {
+        const id = context.user.id
+        const response = await fetch(`http://localhost:9999/api/user?id=${id}`)
 
-        const promise = await fetch(`http://localhost:9999/api/user?_id=${id}`)
-        if (!promise) {
-            history.push("/error")
-        }
-        const user = await promise.json();
-
-        if (!user) {
+        if (!response.ok) {
             history.push("/error")
         } else {
+            const user = await response.json();
             setUsername(user.username)
             setPosts(user.posts && user.posts.length)
         }
-    }
+
+    }, [params.userid, history])
+
+
 
     useEffect(() => {
+        getData()
+    }, [getData])
 
-        getUser()
-    }, [getUser])
+    if (!username) {
+        return (
+            <PageLayout>
+                <div>.............Loading.............</div>
+            </PageLayout>
+        )
+    }
 
     return (
         <PageLayout>
@@ -44,9 +53,10 @@ const ProfilePage = (props) => {
                 <p>User: {username}</p>
                 <p>Posts: {posts}</p>
 
-                <SubmitButton buttonValue="Logout" onClick={() => logOut()} />
+                <button onClick={logOut}>Logout</button>
             </div>
             <Posts length={3} />
+
         </PageLayout>
     )
 }

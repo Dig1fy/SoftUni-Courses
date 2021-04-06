@@ -1,5 +1,5 @@
 const getRouteLinks = function (user) {
-    console.log(user, "ROUTELINKS");
+    // console.log(user, "ROUTELINKS");
     const userLinks = [
         {
             title: "Home",

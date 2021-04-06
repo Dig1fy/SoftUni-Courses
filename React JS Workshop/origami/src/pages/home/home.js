@@ -20,7 +20,7 @@ class HomePage extends React.Component {
 
     static contextType = UserContext
     render() {
-        console.log(this.context, "HOME PAGEEEEEEE")
+        // console.log(this.context, "HOME PAGEEEEEEE")
         return (
             <PageLayout>
                 <Title title={'Home page publications'} />
