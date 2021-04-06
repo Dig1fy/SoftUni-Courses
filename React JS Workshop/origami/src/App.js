@@ -3,7 +3,7 @@ import UserContext from './Context'
 import getCookie from '../../origami/src/helper-functions/getCookie'
 import styles from './App.module.css'
 
-// // We're gonna use this upper logic to check whether the user is logged in or not (and show the appropriate pages accordingly)
+// We're gonna use this upper logic to check whether the user is logged in or not (and show the appropriate pages accordingly)
 const App = (props) => {
   const [user, setUser] = useState(props.user ? { ...props.user, loggedIn: true } : null)
   const origamis = props.origamis || []
@@ -34,8 +34,8 @@ const App = (props) => {
     }
 
     fetch('http://localhost:9999/api/user/verify', {
-      method: "post",
-      body: JSON.stringify({ token }),
+      method: "get",
+      // body: JSON.stringify({ token }),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': token

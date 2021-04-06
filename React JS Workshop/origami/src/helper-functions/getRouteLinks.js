@@ -12,14 +12,14 @@ const getRouteLinks = function (user) {
             linkContent:"Publications"
         },
         {
-            title: "Share your thoughts",
-            endPoint: "/share",
-            linkContent: "Fake"
-        },
-        {
             title: "My profile",
             endPoint: `/profile/${user && user.id}`,
             linkContent: "Profile"
+        },
+        {
+            title: "Share your thoughts",
+            endPoint: "/share",
+            linkContent: "Fake"
         }
     ]
 
