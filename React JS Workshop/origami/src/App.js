@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import UserContext from './Context'
 import getCookie from '../../origami/src/helper-functions/getCookie'
+import styles from './App.module.css'
 
 // // We're gonna use this upper logic to check whether the user is logged in or not (and show the appropriate pages accordingly)
 const App = (props) => {
@@ -55,6 +56,10 @@ const App = (props) => {
 
 
   }, [])
+
+  if(user === null){
+    return <div className = {styles.spinner}>LOADING... (App.js)</div>
+  }
 
   return (
     <UserContext.Provider

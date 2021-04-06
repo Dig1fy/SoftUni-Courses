@@ -49,3 +49,11 @@
     margin: 0 auto;
 }
 
+.spinner{
+  text-align: center;
+  font-size: 30px;
+  border-radius: solid 1px;
+  margin: 150px;
+  color: rgb(72, 112, 163)2fc;
+  background-color: #ffffff;
+}
