@@ -1,4 +1,5 @@
 const getRouteLinks = function (user) {
+    console.log(user, "ROUTELINKS");
     const userLinks = [
         {
             title: "Home",
@@ -13,11 +14,11 @@ const getRouteLinks = function (user) {
         {
             title: "Share your thoughts",
             endPoint: "/share",
-            linkContent: "Share"
+            linkContent: "Fake"
         },
         {
             title: "My profile",
-            endPoint: "/profile",
+            endPoint: `/profile/${user && user.id}`,
             linkContent: "Profile"
         }
     ]
@@ -29,11 +30,6 @@ const getRouteLinks = function (user) {
             linkContent: "Home"
         },
         {
-            title: "Publications",
-            endPoint: "/publications",
-            linkContent:"Publications"
-        },
-        {
             title: "Login",
             endPoint: "/login",
             linkContent: "Login"
@@ -42,11 +38,6 @@ const getRouteLinks = function (user) {
             title: "Register",
             endPoint: "/register",
             linkContent: "Register"
-        },
-        {
-            title: "My profile",
-            endPoint: "/profile",
-            linkContent: "Profile"
         }
     ]
 

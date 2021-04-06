@@ -13,7 +13,7 @@ const authenticate = async (url, body, onSuccess, onFailure) => {
       document.cookie = await `x-auth-token=${authToken}`
   
       const response = await promise.json()
-  
+      
       if (response.username && authToken) {
         onSuccess({
           username: response.username,

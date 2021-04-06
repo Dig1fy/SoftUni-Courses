@@ -2,7 +2,55 @@ import React, { useState, useEffect } from 'react'
 
 import UserContext from './Context'
 
-// We're gonna use this upper logic to check whether the user is logged in or not (and show the appropriate pages accordingly)
+// class App extends React.Component{
+//   constructor(props){
+//     super(props)
+//   }
+
+
+// }
+
+// const App = (props) => {
+
+//   const [user, setUser] = useState(props.user ? {
+//     ...props.user,
+//     loggedIn: true
+//   } : null)
+//   const origamis = props.origamis || []
+  
+//   const logIn = (userObject) => {
+//     setUser({
+//       ...userObject,
+//       loggedIn: true
+//     })
+//   }
+
+//   const logOut = () => {
+//    // document.cookie = "x-auth-token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+//     setUser({
+//       loggedIn: false
+//     })
+//   }
+  
+//   console.log('user', user)
+
+//   return (
+//     <UserContext.Provider value={{
+//       user,
+//       logIn,
+//       logOut,
+//       origamis
+//     }}>
+//       {props.children}
+//     </UserContext.Provider>
+//   )
+// }
+
+// export default App
+
+
+
+// // We're gonna use this upper logic to check whether the user is logged in or not (and show the appropriate pages accordingly)
 const App = (props) => {
   const [user, setUser] = useState(props.user ? { ...props.user, loggedIn: true } : null)
   const origamis = props.origamis || []
@@ -19,6 +67,7 @@ const App = (props) => {
       loggedIn: false,
       user: null
     })
+    this.props.history.push('/')
   }
 
   return (
@@ -26,8 +75,8 @@ const App = (props) => {
       value={{
         origamis,
         user,
-        logIn: (e) => logIn,
-        logOut: () => logOut
+        logIn,
+        logOut
       }}
     >
       {props.children}

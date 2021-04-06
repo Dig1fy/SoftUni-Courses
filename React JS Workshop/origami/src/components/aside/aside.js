@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from '../link/link'
 import styles from './aside.module.css'
 import getRouteLinks from '../../helper-functions/getRouteLinks'
+import UserContext from '../../Context'
 
 const Aside = () => {
-    const links = getRouteLinks();
+    const context = useContext(UserContext)
+    const { user } = context
+    const links = getRouteLinks(user);
 
     return (
         <aside className={styles.container}>
