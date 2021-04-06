@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext, useCallback } from 'react'
 import PageLayout from '../../components/layout/layout'
 import Posts from '../../components/posts/posts'
 import { useParams, useHistory } from 'react-router-dom'
-import SubmitButton from '../../components/submitButton/submitButton'
 import UserContext from '../../Context'
+import styles from './profile.module.css'
 
 const ProfilePage = (props) => {
     const [username, setUsername] = useState(null)
@@ -53,7 +53,7 @@ const ProfilePage = (props) => {
                 <p>User: {username}</p>
                 <p>Posts: {posts}</p>
 
-                <button onClick={logOut}>Logout</button>
+                <button className ={styles['logout-button']} onClick={logOut}>Logout</button>
             </div>
             <Posts length={3} />
 
