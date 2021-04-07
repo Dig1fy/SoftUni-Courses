@@ -13,6 +13,10 @@ const origamiSchema = new Schema({
     type: ObjectId,
     ref: "User",
   },
-});
+},
+  { //We need this for sorting the data by date
+    timestamps:
+      { createdAt: 'createdOn' }
+  });
 
 module.exports = new Model("Origami", origamiSchema);
