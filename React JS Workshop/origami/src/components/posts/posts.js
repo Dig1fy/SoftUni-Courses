@@ -2,36 +2,28 @@ import React, { useCallback, useContext, useEffect, useMemo, useState } from "re
 import UserContext from "../../Context";
 import Post from "../post/post";
 import styles from "./posts.module.css";
+import fetchOrigamis from '../../helper-functions/getOrigamis'
 
 const Posts = (props) => {
   const context = useContext(UserContext)
   const [origamis, setOrigamis] = useState(context.origamis || []);
-
+  console.log(props)
 
   const getOrigamis = useCallback(async () => {
-    fetch(`http://localhost:9999/api/origami?length=${+props.length || 20}`)
-      .then((x) => x.json())
-      .then((data) => setOrigamis(data))
-      .catch((err) => console.log(err));
+    let origamis = await fetchOrigamis(props.length)
+    setOrigamis(origamis);
     // this.setState({ origamis: origamis })
   }, [props.length]);
 
-  // const renderOrigamis = () => {
-  //   return origamis.map((origam, currentIndex) => {
-  //     return <Post key={origam._id} index={currentIndex + 1} {...origam} />;
-  //   });
-  // }
-
   const renderOrigamis = () => {
-    console.log(origamis);
-    return origamis.map((origam, index) => {
-      return <Post key={origam._id} index={index + 1} {...origam} />;
-    })
+    return origamis.map((origam, currentIndex) => {
+      return <Post key={origam._id} index={currentIndex + 1} {...origam} />;
+    });
   }
 
   useEffect(() => {
     getOrigamis();
-  }, [])
+  }, [getOrigamis, props.updatedOrigami])
 
   return (
     <div className={styles.posts}>

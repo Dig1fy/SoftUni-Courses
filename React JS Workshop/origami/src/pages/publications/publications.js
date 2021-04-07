@@ -8,40 +8,42 @@ import getCookie from '../../helper-functions/getCookie'
 // import UserContext from '../../Context'
 
 const PublicationsPage = () => {
-    const [post, setPost] = useState('')
+    const [post, setTheFxxxingPost] = useState('')
+    const [updatedOrigami, setUpdatedOrigami] = useState([])
     // const context = UserContext
 
-    const submitHandler = (e) => {
-        e.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         const cookieToken = getCookie('x-auth-token')
         // console.log(cookieToken)
 
-        fetch('http://localhost:9999/api/origami', {
+        await fetch('http://localhost:9999/api/origami', {
             method: "POST",
             body: JSON.stringify({ description: post }), //it's named "description" in our restAPI
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `${cookieToken}`
             }
-        }).then(promise => promise.json())
-            .then(dataa => console.log(dataa))
-            .catch(err => console.log(err))
+        })
 
+        setTheFxxxingPost('')
+        //It just has to adjust the array and trigger the componentDIdUpdate (which will render the new Post)
+        setUpdatedOrigami(updatedOrigami.concat(1))
     }
 
     return (
         <PageLayout>
-            <form onSubmit={(e) => submitHandler(e)}>
+            <form onSubmit={(e) => handleSubmit(e)}>
                 <Title title="Share your thoughts" />
                 <div className={styles.container}>
-                    <textarea className={styles.textarea} onChange={e => setPost(e.target.value)}></textarea>
+                    <textarea className={styles.textarea} value={post} onChange={e => setTheFxxxingPost(e.target.value)} />
                     <div>
-                        <SubmitButton buttonValue={"Submit"} onClickHandler={(e) => submitHandler(e)} />
+                        <SubmitButton buttonValue={"Submit"} />
                     </div>
                 </div>
             </form>
 
-            <Posts length={3} />
+            <Posts length={3} updatedOrigami={updatedOrigami} />
         </PageLayout>
     )
 }
