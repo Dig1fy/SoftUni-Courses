@@ -8,7 +8,6 @@ import UserContext from '../../Context'
 const Header = () => {
   const context = useContext(UserContext)
   const { user } = context
-  console.log(user, "HEADER");
   const links = getRouteLinks(user);
 
   return (
@@ -40,7 +39,6 @@ export default Header
 
 //   render() {
 //     const { user } = this.context
-//     console.log(user, "HEADER");
 //     const links = getRouteLinks(user);
 
 //     return (

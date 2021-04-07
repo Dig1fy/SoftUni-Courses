@@ -12,8 +12,6 @@ const ProfilePage = (props) => {
     const context = useContext(UserContext)
     // const params = useParams();
 
-    console.log(props.match.params, "PARAMS");
-
     const logOut = () => {
         context.logOut()
         history.push('/')
