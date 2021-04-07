@@ -17,31 +17,21 @@ const LoginPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-
         let body = { username, password };
+
         let onSuccess = (user) => {
             context.logIn(user)
-            // console.log("LOGIN ACTUALLY WORKED!!!");
             // console.log(context, "LOGIN")
             // console.log(user);
             history.push("/")
         }
+
         let onFailure = (e) => {
             console.log("ERROR: ", e);
         }
 
         await authenticate(
             "http://localhost:9999/api/user/login", body, onSuccess, onFailure)
-
-    }
-
-    const changeUsername = (event) => {
-        setUsername(event.target.value)
-    }
-
-    const changePassword = (event) => {
-        setPassword(event.target.value)
     }
 
     return (
@@ -54,7 +44,7 @@ const LoginPage = () => {
                         labelContent="Username"
                         id="username"
                         value={username}
-                        onChange={(e) => changeUsername(e)}
+                        onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
                 <div>
@@ -63,7 +53,7 @@ const LoginPage = () => {
                         labelContent="Password"
                         id="password"
                         value={password}
-                        onChange={(e) => changePassword(e)}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
                 <div>

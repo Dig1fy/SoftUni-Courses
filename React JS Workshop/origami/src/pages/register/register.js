@@ -18,31 +18,16 @@ const RegisterPage = () => {
         e.preventDefault();
         const context = UserContext;
 
-        let body = { username, password };
+        let body = { username, password }
         let onSuccess = (user) => {
-            console.log("REGISTER ACTUALLY WORKED!!!");
             context.logIn(user)
-            alert(context.user)
             history.push("/")
         }
         let onFailure = (e) => {
-            console.log("ERROR: ", e);
+            console.log("ERROR: ", e)
         }
+
         await authenticate("http://localhost:9999/api/user/register", body, onSuccess, onFailure)
-        
-    }
-
-
-    const changeUsername = (event) => {
-        setUsername(event.target.value)
-    }
-
-    const changePassword = (event) => {
-        setPassword(event.target.value)
-    }
-
-    const changeRePassword = (event) => {
-        setRePassword(event.target.value)
     }
 
     return (
@@ -54,7 +39,7 @@ const RegisterPage = () => {
                         labelContent="Username"
                         id="username"
                         value={username}
-                        onChange={(e) => changeUsername(e)}
+                        onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
                 <div>
@@ -63,7 +48,7 @@ const RegisterPage = () => {
                         labelContent="Password"
                         id="password"
                         value={password}
-                        onChange={(e) => changePassword(e)}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
                 <div>
@@ -72,7 +57,7 @@ const RegisterPage = () => {
                         labelContent="Re-password"
                         id="rePassword"
                         value={rePassword}
-                        onChange={(e) => changeRePassword(e)}
+                        onChange={(e) => setRePassword(e.target.value)}
                     />
                 </div>
                 <div>

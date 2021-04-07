@@ -12,6 +12,7 @@ const HomePage = () => {
     )
 }
 
+// -------------- Class component ------------------
 // class HomePage extends React.Component {
 //     constructor(props) {
 //         super(props)
