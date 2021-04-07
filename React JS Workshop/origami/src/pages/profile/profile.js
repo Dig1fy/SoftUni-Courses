@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react'
 import PageLayout from '../../components/layout/layout'
 import Posts from '../../components/posts/posts'
-import { useParams, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import UserContext from '../../Context'
 import styles from './profile.module.css'
 
@@ -10,7 +10,7 @@ const ProfilePage = (props) => {
     const [posts, setPosts] = useState(null)
     const history = useHistory();
     const context = useContext(UserContext)
-    const params = useParams();
+    // const params = useParams();
 
     console.log(props.match.params, "PARAMS");
 
@@ -31,9 +31,7 @@ const ProfilePage = (props) => {
             setPosts(user.posts && user.posts.length)
         }
 
-    }, [params.userid, history])
-
-
+    }, [context.user.id, history])
 
     useEffect(() => {
         getData()
@@ -52,11 +50,9 @@ const ProfilePage = (props) => {
             <div>
                 <p>User: {username}</p>
                 <p>Posts: {posts}</p>
-
-                <button className ={styles['logout-button']} onClick={logOut}>Logout</button>
+                <button className={styles['logout-button']} onClick={logOut}>Logout</button>
             </div>
             <Posts length={3} />
-
         </PageLayout>
     )
 }

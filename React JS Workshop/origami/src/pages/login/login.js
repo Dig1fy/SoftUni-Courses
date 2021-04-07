@@ -21,8 +21,6 @@ const LoginPage = () => {
 
         let onSuccess = (user) => {
             context.logIn(user)
-            // console.log(context, "LOGIN")
-            // console.log(user);
             history.push("/")
         }
 
@@ -95,11 +93,7 @@ export default LoginPage
 //             "http://localhost:9999/api/user/login",
 //             { username, password },
 //             (user) => {
-//                 // console.log("LOGIN ACTUALLY WORKED!!!");
-
 //                 this.context.logIn({user:user})
-//                 console.log(this.context, "LOGIN")
-
 //                 //username: "sd", id: "606aeaa0b1c8992b48240b12"
 //                 // console.log(user);
 //                 this.props.history.push("/")

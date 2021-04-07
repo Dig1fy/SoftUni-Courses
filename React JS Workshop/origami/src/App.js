@@ -35,7 +35,6 @@ const App = (props) => {
 
     fetch('http://localhost:9999/api/user/verify', {
       method: "get",
-      // body: JSON.stringify({ token }),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': token
@@ -43,7 +42,6 @@ const App = (props) => {
     }).then(promise => {
       return promise.json()
     }).then(response => {
-      console.log(response, "RESPONSEEEEEEEEEEEEEEEEEEEEEEEEEE")
       if (response.status) {
         logIn({
           username: response.user.username,
@@ -53,7 +51,6 @@ const App = (props) => {
         logOut()
       }
     }).catch(err => console.log(err))
-
 
   }, [])
 

@@ -9,7 +9,7 @@ const Input = ({ labelContent, id, value, onChange, type }) => {
                 <label htmlFor={id}>{labelContent}: </label>
             </div>
             <div>
-                <input className={styles.input} id={id} value={value} onChange={onChange} type={type || "text"} />
+                <input autoComplete={id} className={styles.input} id={id} value={value} onChange={onChange} type={type || "text"} />
             </div>
         </div>
     )
