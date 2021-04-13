@@ -7,12 +7,10 @@ import fetchOrigamis from '../../helper-functions/getOrigamis'
 const Posts = (props) => {
   const context = useContext(UserContext)
   const [origamis, setOrigamis] = useState(context.origamis || []);
-  console.log(props)
 
   const getOrigamis = useCallback(async () => {
     let origamis = await fetchOrigamis(props.length)
     setOrigamis(origamis);
-    // this.setState({ origamis: origamis })
   }, [props.length]);
 
   const renderOrigamis = () => {

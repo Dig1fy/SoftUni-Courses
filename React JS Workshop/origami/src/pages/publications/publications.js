@@ -15,7 +15,6 @@ const PublicationsPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const cookieToken = getCookie('x-auth-token')
-        // console.log(cookieToken)
 
         await fetch('http://localhost:9999/api/origami', {
             method: "POST",
